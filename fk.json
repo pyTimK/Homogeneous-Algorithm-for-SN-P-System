@@ -1,0 +1,95 @@
+{
+  "content": {
+    "li-d65cNFFep": {
+      "id": "li-d65cNFFep",
+      "position": { "x": "280.17216624156003", "y": "-5.703981701145079" },
+      "rules": "a/a->0;0 2a/2a->a;0 3a/3a->a;0 3a/3a->a;1 4a/4a->0;0 2a(5a)+/7a->a;1 4a(5a)+/4a->a;0",
+      "startingSpikes": "2",
+      "delay": "0",
+      "spikes": "2",
+      "isOutput": "false",
+      "isInput": "false",
+      "out": ["r-C8RfnVCeZ", "bi1-noVrFoydn"],
+      "outWeights": {
+        "ai2-j9PTQoP6g": "2",
+        "ai1-A_fxLzMxW": "3",
+        "r-C8RfnVCeZ": "2",
+        "bi1-noVrFoydn": "2"
+      }
+    },
+    "r-C8RfnVCeZ": {
+      "id": "r-C8RfnVCeZ",
+      "position": { "x": "523.4642822664727", "y": "199.35651609128126" },
+      "rules": "a/a->0;0 2a/2a->a;0 3a/3a->a;0 3a/3a->a;1 4a/4a->0;0 2a(5a)+/7a->a;1 4a(5a)+/4a->a;0",
+      "startingSpikes": "5",
+      "delay": "0",
+      "spikes": "5",
+      "isOutput": "false",
+      "isInput": "false",
+      "out": ["lk-p705edJIl", "lj-dIuEGjeWE"],
+      "outWeights": { "lk-p705edJIl": "1", "lj-dIuEGjeWE": "1" }
+    },
+    "lj-dIuEGjeWE": {
+      "id": "lj-dIuEGjeWE",
+      "position": { "x": "448.92990203718796", "y": "383.62222909362197" },
+      "rules": "a/a->0;0 2a/2a->a;0 3a/3a->a;0 3a/3a->a;1 4a/4a->0;0 2a(5a)+/7a->a;1 4a(5a)+/4a->a;0",
+      "startingSpikes": "0",
+      "delay": "0",
+      "spikes": "0",
+      "isOutput": "false",
+      "isInput": "false",
+      "out": "ljo-uydstpRiw",
+      "outWeights": { "ljo-uydstpRiw": "1" }
+    },
+    "lk-p705edJIl": {
+      "id": "lk-p705edJIl",
+      "position": { "x": "160.26390905785289", "y": "385.30120476746447" },
+      "rules": "a/a->0;0 2a/2a->a;0 3a/3a->a;0 3a/3a->a;1 4a/4a->0;0 2a(5a)+/7a->a;1 4a(5a)+/4a->a;0",
+      "startingSpikes": "0",
+      "delay": "0",
+      "spikes": "0",
+      "isOutput": "false",
+      "isInput": "false",
+      "out": "lko-_xmL42L_b",
+      "outWeights": { "lko-_xmL42L_b": "1" }
+    },
+    "ljo-uydstpRiw": {
+      "id": "ljo-uydstpRiw",
+      "position": { "x": "447.9299020371879", "y": "589.6222290936221" },
+      "isOutput": "true",
+      "spikes": "0",
+      "bitstring": null
+    },
+    "lko-_xmL42L_b": {
+      "id": "lko-_xmL42L_b",
+      "position": { "x": "179.379718174096", "y": "600.788507532387" },
+      "isOutput": "true",
+      "spikes": "0",
+      "bitstring": null
+    },
+    "bi1-noVrFoydn": {
+      "id": "bi1-noVrFoydn",
+      "position": { "x": "50.78245684664241", "y": "188.929711118785" },
+      "rules": "a/a->0;0 2a/2a->a;0 3a/3a->a;0 3a/3a->a;1 4a/4a->0;0 2a(5a)+/7a->a;1 4a(5a)+/4a->a;0",
+      "startingSpikes": "0",
+      "delay": "0",
+      "spikes": "0",
+      "isOutput": "false",
+      "isInput": "false",
+      "out": ["bi2-s2AhWa1_6", "lk-p705edJIl"],
+      "outWeights": { "bi2-s2AhWa1_6": "2", "lk-p705edJIl": "1" }
+    },
+    "bi2-s2AhWa1_6": {
+      "id": "bi2-s2AhWa1_6",
+      "position": { "x": "289.92990203718807", "y": "189.62222909362194" },
+      "rules": "a/a->0;0 2a/2a->a;0 3a/3a->a;0 3a/3a->a;1 4a/4a->0;0 2a(5a)+/7a->a;1 4a(5a)+/4a->a;0",
+      "startingSpikes": "0",
+      "delay": "0",
+      "spikes": "0",
+      "isOutput": "false",
+      "isInput": "false",
+      "out": "lj-dIuEGjeWE",
+      "outWeights": { "lj-dIuEGjeWE": "1" }
+    }
+  }
+}
