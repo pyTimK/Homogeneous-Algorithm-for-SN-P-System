@@ -20,3 +20,6 @@ This is an algorithm implementation from the paper of Tristan that homogenizes a
 
 5. Install packages using
 	`pip install -r requirements.txt`
+
+6. Run
+	`python main.py`
