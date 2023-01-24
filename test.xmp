@@ -5,7 +5,7 @@
             <x>100</x>
             <y>100</y>
         </position>
-        <rules>(2a)*/a-&gt;a;0 (3a)*/2a-&gt;a;0</rules>
+        <rules>4a(2a)*U(3a)*/a-&gt;a;0 (3a)*/2a-&gt;a;0</rules>
         <startingSpikes>2</startingSpikes>
         <delay>0</delay>
         <spikes>2</spikes>
