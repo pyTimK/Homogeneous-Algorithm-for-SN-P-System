@@ -1,3 +1,5 @@
+from copy import deepcopy
+
 class Event:
     """
     Represents the application of a rule.
@@ -24,6 +26,9 @@ class Event:
     
     def __hash__(self):
         return hash((self.consume, self.beta))
+    
+    def scale(self, x: int):
+        return Event(self.alpha * x, deepcopy(self.beta))
 
 class Beta:
     """

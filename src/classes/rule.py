@@ -91,7 +91,7 @@ class Rule:
 
             period_constants_pairs.append(PeriodConstantsPair(period, {constant}))
         
-        return PeriodConstantsPair.combine(period_constants_pairs)
+        return PeriodConstantsPair.union(period_constants_pairs)
 
     @staticmethod
     def __get_consume(consume_str: str):

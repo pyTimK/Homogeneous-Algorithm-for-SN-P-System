@@ -1,5 +1,8 @@
 from .period_constants_pair import PeriodConstantsPair
 from .event import Event
+from copy import deepcopy
+from typing import Set
+import itertools
 
 class RuleTransition:
     """Representation of a transition rule in the form `(s,e)` where `s` is a state in period-constants pair `(p, Q)` and `e` is the event `(α,β)`"""
@@ -22,3 +25,14 @@ class RuleTransition:
     
     def __hash__(self):
         return hash((self.state, self.event))
+
+    def scale(self, x: int):
+        return RuleTransition(self.state.scale(x), self.event.scale(x))
+
+    def translate(self, x: int):
+        return RuleTransition(self.state.translate(x), deepcopy(self.event))
+
+    
+
+    
+
