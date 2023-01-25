@@ -8,7 +8,7 @@ from src.algorithms.homogenize import homogenize
 def main():
     input_json = FileManager.load_xmp("./input/test.xmp")
     snp_system = Snp_system(input_json)
-    homogenize(snp_system.get_unique_rules())
+    homogenize(snp_system.get_unique_rule_transition_set())
     print ()
 
     FileManager.save_json("./output/fk.json", input_json)

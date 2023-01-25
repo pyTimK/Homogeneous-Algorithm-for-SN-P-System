@@ -2,6 +2,7 @@ from collections import OrderedDict
 from typing import Any, List, Set
 from .rule import Rule
 from .neuron import Neuron
+from .rule_transition import RuleTransition
 
 import itertools
 
@@ -20,18 +21,18 @@ class Snp_system:
             self.neurons.append(Neuron(neuron_json))
 
     
-    def get_rules(self) -> List[Rule]:
+    def get_rule_set(self) -> List[Rule]:
         return list(itertools.chain.from_iterable([neuron.rules for neuron in self.neurons]))
         
-    def get_unique_rules(self) -> Set[Rule]:
-        return set(self.get_rules())
-        
-        # rules = self.get_rules()
-        # unique_rules: Set[Rule] = set()
+    def get_unique_rule_set(self) -> Set[Rule]:
+        return set(self.get_rule_set())
 
-        # for r1 in rules:
-        #     for r2 in unique_rules:
-        #         if r1
+    def get_rule_transition_set(self) -> List[RuleTransition]:
+        return [rule.rule_transition for rule in self.get_rule_set()]
+        
+    def get_unique_rule_transition_set(self) -> Set[RuleTransition]:
+        return set(self.get_rule_transition_set())
+
         
 
 
