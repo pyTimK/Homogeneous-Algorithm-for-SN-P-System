@@ -22,7 +22,7 @@
             <x>319.9037491790188</x>
             <y>90.09977515003808</y>
         </position>
-        <rules>(6a)*/3a-&gt;a;0</rules>
+        <rules>(6a)*/3a-&gt;a;0 (3a)*/2a-&gt;a;0</rules>
         <startingSpikes>3</startingSpikes>
         <delay>0</delay>
         <spikes>3</spikes>
