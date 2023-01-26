@@ -1,4 +1,4 @@
-from .parition_events import PartitionEvents
+from .partition_events import PartitionEvents
 from .period_constants_pair import PeriodConstantsPair
 
 class PartitionEventsSet(set[PartitionEvents]):

@@ -1,6 +1,6 @@
 from typing import Set, List, Tuple, Iterable
 from functools import reduce
-from .my_math import MyMath
+from src.helpers.my_math import MyMath
 from .constants import Constants
 
 class PeriodConstantsPair:
