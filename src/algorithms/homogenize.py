@@ -1,12 +1,13 @@
 from typing import Set
 from copy import deepcopy
+from src.classes.snp_system import Snp_system
 from src.classes.rule_transition_set import RuleTransitionSet
 from .match import match
 
 #! ALGORITHM 5
-def homogenize(rule_transition_sets_input: Set[RuleTransitionSet]) -> Set[RuleTransitionSet]:
-    # print(rule_transition_sets_input)
-    rule_transition_sets = deepcopy(rule_transition_sets_input)
+def homogenize(snp_system: Snp_system) -> Set[RuleTransitionSet]:
+    rule_transition_sets = snp_system.get_set_of_rule_transition_set()
+    
     if len(rule_transition_sets) == 0:
         raise ValueError("Not a single rule is given")
     
@@ -17,14 +18,7 @@ def homogenize(rule_transition_sets_input: Set[RuleTransitionSet]) -> Set[RuleTr
 
     for R_prime in rule_transition_sets:
         u1, t1, u2, t2 = match(R, R_prime)
-        # u1, t1, u2, t2 = 2, 1, 2, 0
-        # print(u1, t1, u2, t2)
-        # print("R")
-        # print(R)
-        # print(R.scale(u1).translate(t1))
-        # print("R'")
-        # print(R_prime)
-        # print(R_prime.scale(u2).translate(t2))
+
         
         R_double_prime = R.scale(u1).translate(t1).minimized_union(R_prime.scale(u2).translate(t2))
 
@@ -46,7 +40,17 @@ def homogenize(rule_transition_sets_input: Set[RuleTransitionSet]) -> Set[RuleTr
     return R
 
 
+    # print(rule_transition_sets_input)
 
+
+        # u1, t1, u2, t2 = 2, 1, 2, 0
+        # print(u1, t1, u2, t2)
+        # print("R")
+        # print(R)
+        # print(R.scale(u1).translate(t1))
+        # print("R'")
+        # print(R_prime)
+        # print(R_prime.scale(u2).translate(t2))
 
 
 

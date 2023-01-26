@@ -8,17 +8,11 @@ from src.algorithms.homogenize import homogenize
 def main():
     input_json = FileManager.load_xmp("./input/test.xmp")
     snp_system = Snp_system(input_json)
-    # print(snp_system.get_set_of_rule_transition_set())
-    R = homogenize(snp_system.get_set_of_rule_transition_set())
-    print("-------------------R")
+    R = homogenize(snp_system)
     print(R)
 
+
     FileManager.save_json("./output/fk.json", input_json)
-
-
-
-def xmp_to_snp(input_xmp: OrderedDict[str, Any]):
-    return 
 
 
 
@@ -26,3 +20,8 @@ def xmp_to_snp(input_xmp: OrderedDict[str, Any]):
 
 if __name__ == "__main__":
     main()
+
+    # print(snp_system.get_set_of_rule_transition_set())
+
+    # print("-------------------R")
+    # print(R)
