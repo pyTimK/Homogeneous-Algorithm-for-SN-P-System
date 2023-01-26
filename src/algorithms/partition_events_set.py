@@ -14,7 +14,9 @@ def partition_events_set(R: RuleTransitionSet) -> PartitionEventsSet:
         S = {rule_transition.state for rule_transition in T}
         S_prime = {rule_transition.state for rule_transition in T_prime}
         E_prime = {rule_transition.event for rule_transition in T}
-        b_prime = PeriodConstantsPair.intersection(*S) - PeriodConstantsPair.union(S_prime)
+        # print(f"Intersection: {PeriodConstantsPair.intersection(*S)}")
+        # print(f"Union: {PeriodConstantsPair.union(S_prime)}")
+        b_prime = PeriodConstantsPair.intersection(*S) - PeriodConstantsPair.union(*S_prime)
 
         if not b_prime.is_empty:
             P0.add(PartitionEvents(b_prime, E_prime))

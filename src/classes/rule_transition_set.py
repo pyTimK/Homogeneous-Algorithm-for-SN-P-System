@@ -6,7 +6,7 @@ from copy import deepcopy
 
 class RuleTransitionSet(set[RuleTransition]):
     def powerset(self) -> Set["RuleTransitionSet"]:
-        return RuleTransitionSet(set([set(x) for x in itertools.chain.from_iterable(itertools.combinations(self, r) for r in range(len(self) + 1))]))
+        return set({RuleTransitionSet(x) for x in itertools.chain.from_iterable(itertools.combinations(self, r) for r in range(len(self) + 1))})
 
 
     def scope(self):
@@ -36,3 +36,8 @@ class RuleTransitionSet(set[RuleTransition]):
     def translate(self, x: int):
         return RuleTransitionSet({rt.translate(x) for rt in self})
 
+    def __hash__(self):
+        return hash(tuple(self))
+    
+    def __eq__(self, other):
+        return set(self) == set(other)

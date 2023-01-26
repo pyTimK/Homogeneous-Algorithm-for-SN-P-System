@@ -22,17 +22,17 @@ class Snp_system:
             self.neurons.append(Neuron(neuron_json))
 
     
-    def get_rule_list(self) -> List[Rule]:
-        return list(itertools.chain.from_iterable([neuron.rules for neuron in self.neurons]))
+    # def get_rule_list(self) -> List[Rule]:
+    #     return list(itertools.chain.from_iterable()
         
-    def get_rule_set(self) -> Set[Rule]:
-        return set(self.get_rule_list())
+    # def get_rule_set(self) -> Set[Rule]:
+    #     return set(self.get_rule_list())
 
-    def get_rule_transition_list(self) -> List[RuleTransition]:
-        return [rule.rule_transition for rule in self.get_rule_list()]
+    # def get_rule_transition_list(self) -> List[RuleTransition]:
+    #     return [rule.rule_transition for rule in self.get_rule_list()]
         
-    def get_rule_transition_set(self) -> RuleTransitionSet:
-        return set(self.get_rule_transition_list())
+    def get_set_of_rule_transition_set(self) -> Set[RuleTransitionSet]:
+        return {RuleTransitionSet({rule.rule_transition for rule in neuron.rules}) for neuron in self.neurons}
 
         
 

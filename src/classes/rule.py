@@ -5,6 +5,7 @@ from .event import Event
 from .rule_transition import RuleTransition
 from src.errors.not_unbounded_error import NotUnboundedError
 from typing import List, Set
+from .constants import Constants
 
 class Rule:
     """Represents a rule in a neuron of an SN P system"""
@@ -21,6 +22,7 @@ class Rule:
 
         #! Period-constants pair (p, Q)
         self.period_constants_pair = Rule.__get_period_constants_pair(reg_exp_str)
+        # print(self.period_constants_pair)
 
         #! Consume
         self.consume = Rule.__get_consume(consume_str)
@@ -32,7 +34,7 @@ class Rule:
         self.delay = Rule.__get_delay(delay_str)
 
         #! Rule Transition Representation
-        self.rule_transition = RuleTransition(self.period_constants_pair, Event(self.consume, self.release, self.delay))
+        self.rule_transition = self.__get_rule_transition()
 
     
     @staticmethod
@@ -81,8 +83,8 @@ class Rule:
             # 3. the period would be the single element of the star set
             period = star_set.pop()
 
-            period_constants_pairs.append(PeriodConstantsPair(period, {constant}))
-        
+            period_constants_pairs.append(PeriodConstantsPair(period, Constants({constant})))
+
         return PeriodConstantsPair.union(*period_constants_pairs)
 
     @staticmethod
@@ -102,6 +104,9 @@ class Rule:
     @staticmethod
     def __get_delay(delay_str: str):
         return int(delay_str)
+
+    def __get_rule_transition(self):
+        return RuleTransition(self.period_constants_pair, Event(self.consume, self.release, self.delay))
 
 
     def __str__(self) -> str:

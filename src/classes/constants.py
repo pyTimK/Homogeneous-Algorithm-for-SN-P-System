@@ -10,7 +10,10 @@ class Constants(set[int]):
     def mod(self, x: int):
         return Constants({c % x for c in self})
 
-    def intersection(self, *s: Iterable["Constants"]) -> "Constants":
+    def union(self, *s: "Constants") -> "Constants":
+        return Constants(super().union(*s))
+
+    def intersection(self, *s: "Constants") -> "Constants":
         return Constants(super().intersection(*s))
 
     def __sub__(constants1, constants2: "Constants") -> "Constants":

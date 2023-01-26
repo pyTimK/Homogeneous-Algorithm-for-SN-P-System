@@ -9,9 +9,13 @@ class PeriodConstantsPair:
         self.constants = constants
 
     @staticmethod
+    def empty():
+        return PeriodConstantsPair(0, Constants())
+
+    @staticmethod
     def intersection(*period_constants_pairs: "PeriodConstantsPair"):
         if len(period_constants_pairs) == 0:
-            raise ValueError("Called \"intersection\" with no item in period_constant_pairs list")
+            return PeriodConstantsPair.empty()
         
         if len(period_constants_pairs) == 1:
             return period_constants_pairs[0]
@@ -28,7 +32,10 @@ class PeriodConstantsPair:
         
         return PeriodConstantsPair(l, q_intersection)
     
-    def __sub__(pcp1, pcp2):
+    def __sub__(pcp1, pcp2: "PeriodConstantsPair"):
+        if pcp1.is_empty() or pcp2.is_empty():
+            return pcp1
+
         l, q_pcp1, q_pcp2 = pcp1.get_combine_params(pcp2)
 
         return PeriodConstantsPair(l, q_pcp1 - q_pcp2)
@@ -37,11 +44,14 @@ class PeriodConstantsPair:
 
     @staticmethod
     def union(*period_constants_pairs: "PeriodConstantsPair"):
+        # print(f"union called: {period_constants_pairs}")
         if len(period_constants_pairs) == 0:
-            raise ValueError("Called \"union\" with no item in period_constant_pairs list")
+            return PeriodConstantsPair.empty()
         
         if len(period_constants_pairs) == 1:
             return period_constants_pairs[0]
+        
+        # print(f"union return: {reduce(PeriodConstantsPair.__union_two, period_constants_pairs)}")
 
         return reduce(PeriodConstantsPair.__union_two, period_constants_pairs)
 
@@ -55,8 +65,8 @@ class PeriodConstantsPair:
     def get_combine_params(pcp1, pcp2: "PeriodConstantsPair") -> Tuple[int, Constants, Constants]:
         p, q, p_prime, q_prime = pcp1.period, pcp1.constants, pcp2.period, pcp2.constants
         l = MyMath.lcm(p, p_prime)
-        q_bar: Constants = set()
-        q_bar_prime: Constants = set()
+        q_bar= Constants()
+        q_bar_prime= Constants()
         for p_mult in range(0, l - p + 1, p):
             for q_item in q:
                 q_bar.add(q_item + p_mult)

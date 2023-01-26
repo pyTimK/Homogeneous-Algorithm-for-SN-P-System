@@ -1,4 +1,5 @@
 from copy import deepcopy
+from .beta import Beta
 
 class Event:
     """
@@ -10,6 +11,10 @@ class Event:
     def __init__(self, consume: int, release: int, delay: int) -> None:
         self.alpha = consume
         self.beta = Beta(release, delay)
+
+    # def __init__(self, consume: int, beta: Beta) -> None:
+    #     self.alpha = consume
+    #     self.beta = beta
     
     def __str__(self) -> str:
         return f"({self.alpha}, {self.beta})"
@@ -20,36 +25,12 @@ class Event:
     
     def __eq__(self, __o: object) -> bool:
         if isinstance(__o, Event):
-            return self.consume == __o.consume and self.beta == __o.beta
+            return self.alpha == __o.alpha and self.beta == __o.beta
         
         return False
     
     def __hash__(self):
-        return hash((self.consume, self.beta))
+        return hash((self.alpha, self.beta))
     
     def scale(self, x: int):
-        return Event(self.alpha * x, deepcopy(self.beta))
-
-class Beta:
-    """
-    Part of an event that represents the spiking action with delay `β = a^p:d = (p, d)`
-    """
-    def __init__(self, release: int, delay: int) -> None:
-        self.release = release
-        self.delay = delay
-    
-    def __str__(self) -> str:
-        return f"({self.release}, {self.delay})"
-        # return f"Period: {self.period}\tConstants: {self.constants}"
-
-    def __repr__(self) -> str:
-        return self.__str__()
-
-    def __eq__(self, __o: object) -> bool:
-        if isinstance(__o, Beta):
-            return self.release == __o.release and self.delay == __o.delay
-        
-        return False
-
-    def __hash__(self):
-        return hash((self.release, self.delay))
+        return Event(self.alpha * x, self.beta.release, self.beta.delay)
