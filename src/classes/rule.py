@@ -34,14 +34,6 @@ class Rule:
         #! Rule Transition Representation
         self.rule_transition = RuleTransition(self.period_constants_pair, Event(self.consume, self.release, self.delay))
 
-        # print(f"Regexp bounded: {self.bounded}")
-        # print(f"Regexp star: {self.star}")
-        # print(f"Regexp plus: {self.plus}")
-        # print(f"Consume: {self.consume}")
-        # print(f"Release: {self.release}")
-        # print(f"Delay: {self.delay}")
-
-    
     
     @staticmethod
     def __get_period_constants_pair(reg_exp_str: str):
@@ -91,7 +83,7 @@ class Rule:
 
             period_constants_pairs.append(PeriodConstantsPair(period, {constant}))
         
-        return PeriodConstantsPair.union(period_constants_pairs)
+        return PeriodConstantsPair.union(*period_constants_pairs)
 
     @staticmethod
     def __get_consume(consume_str: str):

@@ -1,4 +1,4 @@
-from typing import Set, List, Tuple
+from typing import Set, List, Tuple, Iterable
 from functools import reduce
 from .my_math import MyMath
 from .constants import Constants
@@ -9,14 +9,14 @@ class PeriodConstantsPair:
         self.constants = constants
 
     @staticmethod
-    def intersection(period_constants_pairs: List["PeriodConstantsPair"]):
+    def intersection(*period_constants_pairs: "PeriodConstantsPair"):
         if len(period_constants_pairs) == 0:
             raise ValueError("Called \"intersection\" with no item in period_constant_pairs list")
         
         if len(period_constants_pairs) == 1:
             return period_constants_pairs[0]
         
-        union = PeriodConstantsPair.union(period_constants_pairs)
+        union = PeriodConstantsPair.union(*period_constants_pairs)
 
         pcp0 = period_constants_pairs[0]
         l, q_intersection, _ = pcp0.get_combine_params(union)
@@ -36,7 +36,7 @@ class PeriodConstantsPair:
 
 
     @staticmethod
-    def union(period_constants_pairs: List["PeriodConstantsPair"]):
+    def union(*period_constants_pairs: "PeriodConstantsPair"):
         if len(period_constants_pairs) == 0:
             raise ValueError("Called \"union\" with no item in period_constant_pairs list")
         

@@ -5,7 +5,8 @@ from src.classes.rule_transition import RuleTransition
 from src.classes.rule_transition_set import RuleTransitionSet
 from src.classes.period_constants_pair import PeriodConstantsPair
 from src.classes.constants import Constants
-from src.classes.parition_events_set import PartitionEventsSet
+from src.classes.parition_events import PartitionEvents
+from src.classes.partition_events_set import PartitionEventsSet
 
 #! ALGORITHM 5
 def homogenize(rules_input: RuleTransitionSet) -> RuleTransitionSet:
@@ -101,31 +102,34 @@ def get_parameters(s: PeriodConstantsPair, s_prime: PeriodConstantsPair) -> Tupl
 
 
 #! ALGORITHM 2
-def compatible(R: RuleTransitionSet, R_prime: RuleTransitionSet):
+def compatible(R: RuleTransitionSet, R_prime: RuleTransitionSet) -> bool:
     P = partition_events_set(R)
     P_prime = partition_events_set(R_prime)
-    # csp = TODO continue
+    csp = P.scope().intersection(P_prime.scope())
+    P_bar = PartitionEventsSet({PartitionEvents(pe.block.intersection(csp), deepcopy(pe.events)) for pe in P if not pe.block.intersection(csp).is_empty()})
+    P_bar_prime = PartitionEventsSet({PartitionEvents(pe.block.intersection(csp), deepcopy(pe.events)) for pe in P_prime if not pe.block.intersection(csp).is_empty()})
+    return P_bar == P_bar_prime
 
 
 #! ALGORITHM 1
-def partition_events_set(R: RuleTransitionSet) -> Set[PartitionEventsSet]:
-    P0: Set[PartitionEventsSet] = set()
-    P: Set[PartitionEventsSet] = set()
+def partition_events_set(R: RuleTransitionSet) -> PartitionEventsSet:
+    P0: PartitionEventsSet = PartitionEventsSet()
+    P: PartitionEventsSet = PartitionEventsSet()
 
     for T in R.powerset():
         T_prime = R - T
         S = {rule_transition.state for rule_transition in T}
         S_prime = {rule_transition.state for rule_transition in T_prime}
         E_prime = {rule_transition.event for rule_transition in T}
-        b_prime = PeriodConstantsPair.intersection(S) - PeriodConstantsPair.union(S_prime)
+        b_prime = PeriodConstantsPair.intersection(*S) - PeriodConstantsPair.union(S_prime)
 
         if not b_prime.is_empty:
-            P0.add(PartitionEventsSet(b_prime, E_prime))
+            P0.add(PartitionEvents(b_prime, E_prime))
         
     EV = {partition_events.events for partition_events in P0}
 
     for events in EV:
-        b = PeriodConstantsPair.union([pes.block for pes in P0 if pes.events == events])
+        b = PeriodConstantsPair.union(*[pes.block for pes in P0 if pes.events == events])
         P.add(b, deepcopy(events))
     
     return P
