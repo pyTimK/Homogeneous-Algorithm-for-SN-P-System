@@ -16,3 +16,7 @@ class Position:
     @classmethod
     def from_json(cls, position_json: OrderedDict[str, str]):
         return cls(float(position_json["x"]), float(position_json["y"]))
+
+    def get_translate(self, dx: float, dy: float):
+        return Position(self.x + dx, self.y + dy)
+

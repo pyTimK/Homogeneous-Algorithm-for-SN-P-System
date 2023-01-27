@@ -8,11 +8,11 @@ from src.algorithms.homogenize import homogenize
 def main():
     input_json = FileManager.load_xmp("./input/test.xmp")
     snp_system = Snp_system(input_json)
-    R = homogenize(snp_system)
-    print(R)
+    homogenize(snp_system)
+    FileManager.save_xmp("./output/test_homogenized.xmp", snp_system.to_xmp())
 
 
-    FileManager.save_json("./output/fk.json", input_json)
+    # FileManager.save_json("./output/fk.json", input_json)
 
 
 

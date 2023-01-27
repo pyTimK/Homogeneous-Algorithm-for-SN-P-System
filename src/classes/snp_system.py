@@ -4,8 +4,7 @@ from .rule import Rule
 from .neuron import Neuron
 from .rule_transition import RuleTransition
 from .rule_transition_set import RuleTransitionSet
-
-import itertools
+import xmltodict
 
 #! SNP SYSTEM
 class Snp_system:
@@ -19,24 +18,77 @@ class Snp_system:
 
         for neuron_id in neuron_ids:
             neuron_json: OrderedDict[str, Any] = content_json[neuron_id]
-            self.neurons.append(Neuron(neuron_json))
+            self.neurons.append(Neuron.from_neuron_json(neuron_json))
 
-    
-    # def get_rule_list(self) -> List[Rule]:
-    #     return list(itertools.chain.from_iterable()
-        
-    # def get_rule_set(self) -> Set[Rule]:
-    #     return set(self.get_rule_list())
-
-    # def get_rule_transition_list(self) -> List[RuleTransition]:
-    #     return [rule.rule_transition for rule in self.get_rule_list()]
         
     def get_set_of_rule_transition_set(self) -> Set[RuleTransitionSet]:
-        return {RuleTransitionSet({rule.rule_transition for rule in neuron.rules}) for neuron in self.neurons}
+        return {neuron.rule_transition_set for neuron in self.neurons}
 
+    def get_neuron_subsystem(self, neuron: Neuron) -> Set[Neuron]:
+        subsystem: List[Neuron] = []
+        for neuron_prime in self.neurons:
+            if neuron_prime == neuron:
+                continue
+
+            if neuron.id in neuron_prime.out:
+                subsystem.append(neuron_prime)
         
+        return subsystem
+
+    def type_2_subsystem_scaling(self, neuron: Neuron, x: int):
+        # TYPE 2 - SUBSYSTEM SCALING
+        subsystem = self.get_neuron_subsystem(neuron)
+
+        for neuron_prime in subsystem:
+            # 1. Create multiplier neurons and Connect it to the selected neuron
+            for i in range(x):
+                multiplier_neuron = Neuron.multiplier_neuron(neuron_prime, neuron, i)
+                self.neurons.append(multiplier_neuron)
+
+                # 2. Connect the subsystem neuron to multiplier neurons
+                neuron_prime.out.append(multiplier_neuron.id)
+                neuron_prime.out_weights[multiplier_neuron.id] = 1
+            
+            # 3. Disconnect the subsystem neuron to the selected neuron
+            if neuron.id in neuron_prime.out:
+                neuron_prime.out.remove(neuron.id)
+            
+            if neuron.id in neuron_prime.out_weights:
+                del neuron_prime.out_weights[neuron.id]
 
 
+    def to_xmp(self):
+        snp_system_dict = {
+            "content": {}
+        }
 
+        for neuron in self.neurons:
+            neuron_dict = {
+                "id": neuron.id,
+                "position": {
+                    "x": neuron.position.x,
+                    "y": neuron.position.y,
+                },
+                "rules": neuron.get_rules_xmp_str(),
+                "startingSpikes": neuron.starting_spikes,
+                "delay": neuron.delay,
+                "spikes": neuron.spikes,
+                "isOutput": neuron.is_output,
+                "isInput": neuron.is_input,
+                "out": neuron.out,
+                "outWeights": neuron.out_weights
+            }
+
+            # if len(neuron.out) > 0:
+            #     print(neuron.out)
+            #     neuron_dict["out"] = " ".join(neuron.out)
+            
+
+            snp_system_dict["content"][neuron.id] = neuron_dict
+
+        xml_str = xmltodict.unparse(snp_system_dict, pretty=True)
+        xml_str = '\n'.join(xml_str.split('\n')[1:])
+
+        return xml_str
 
 

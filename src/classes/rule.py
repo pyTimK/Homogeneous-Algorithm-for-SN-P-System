@@ -6,6 +6,7 @@ from .rule_transition import RuleTransition
 from src.errors.not_unbounded_error import NotUnboundedError
 from typing import List, Set
 from .constants import Constants
+from copy import deepcopy
 
 class Rule:
     """Represents a rule in a neuron of an SN P system"""
@@ -13,28 +14,25 @@ class Rule:
     __symbol = "a"
     __reg_exp_delimeter = "U"
 
+    def __init__(self, period_constants_pair: PeriodConstantsPair, consume: int, release: int, delay: int) -> None:
+        self.period_constants_pair = period_constants_pair
+        self. consume = consume
+        self.release = release
+        self.delay = delay
+        self.rule_transition = Rule.__get_rule_transition(period_constants_pair, consume, release, delay)
 
-    def __init__(self, rule_str: str) -> None:
-        self.rule_str = rule_str
 
+    @staticmethod
+    def from_rule_str(rule_str: str):
         match = re.match(fr"(.*)/(\w+)->(\w*);(\w*)", rule_str)
         reg_exp_str, consume_str, release_str, delay_str = match.groups()
 
-        #! Period-constants pair (p, Q)
-        self.period_constants_pair = Rule.__get_period_constants_pair(reg_exp_str)
-        # print(self.period_constants_pair)
+        period_constants_pair = Rule.__get_period_constants_pair(reg_exp_str)
+        consume = Rule.__get_consume(consume_str)
+        release = Rule.__get_release(release_str)
+        delay = Rule.__get_delay(delay_str)
 
-        #! Consume
-        self.consume = Rule.__get_consume(consume_str)
-
-        #! Release
-        self.release = Rule.__get_release(release_str)
-
-        #! Delay
-        self.delay = Rule.__get_delay(delay_str)
-
-        #! Rule Transition Representation
-        self.rule_transition = self.__get_rule_transition()
+        return Rule(period_constants_pair, consume, release, delay)
 
     
     @staticmethod
@@ -86,28 +84,105 @@ class Rule:
             period_constants_pairs.append(PeriodConstantsPair(period, Constants({constant})))
 
         return PeriodConstantsPair.union(*period_constants_pairs)
+    
+    @staticmethod
+    def __get_bounded_str(constant: int):
+        if constant == 0:
+            return ""
+        
+        if constant == 1:
+            return Rule.__symbol
+        
+        return f"{constant}{Rule.__symbol}"
+
+    @staticmethod
+    def __get_star_str(period: int):
+        if period == 0:
+            return ""
+        
+        if period == 1:
+            return f"({Rule.__symbol})*"
+        
+        return f"({period}{Rule.__symbol})*"
+
+    @staticmethod
+    def __get_reg_exp_str(pcp: PeriodConstantsPair):
+        reg_exp_union: List[str] = []
+
+        star_str = Rule.__get_star_str(pcp.period)
+        for constant in pcp.constants:
+            bounded_str = Rule.__get_bounded_str(constant)
+            reg_exp_union.append(f"{bounded_str}{star_str}")
+        
+        return reg_exp_union
 
     @staticmethod
     def __get_consume(consume_str: str):
-        return 1 if consume_str == "a" else int(consume_str.replace(Rule.__symbol, ""))
+        if consume_str == Rule.__symbol:
+            return 1
+
+        return int(consume_str.replace(Rule.__symbol, ""))
+    
+    @staticmethod
+    def __get_consume_str(consume: int) -> str:
+        if consume == 1:
+            return Rule.__symbol
+        
+        return f"{consume}{Rule.__symbol}"
     
     @staticmethod
     def __get_release(release_str: str):
-        if (release_str == "0"):
+        if release_str == "0":
             return 0
 
-        if (release_str == "a"):
+        if release_str == Rule.__symbol:
             return 1
         
         return int(release_str.replace(Rule.__symbol, ""))
+
+
+    @staticmethod
+    def __get_release_str(release: int) -> str:
+        if release == 0:
+            return "0"
+
+        if release == 1:
+            return Rule.__symbol
+        
+        return f"{release}{Rule.__symbol}"
+
     
     @staticmethod
     def __get_delay(delay_str: str):
         return int(delay_str)
+    
+    @staticmethod
+    def __get_delay_str(delay: int) -> str:
+        return str(delay)
 
-    def __get_rule_transition(self):
-        return RuleTransition(self.period_constants_pair, Event(self.consume, self.release, self.delay))
+    @staticmethod
+    def __get_rule_transition(period_constants_pair: PeriodConstantsPair, consume: int, release: int, delay: int):
+        return RuleTransition(period_constants_pair, Event(consume, release, delay))
 
+    
+    @staticmethod
+    def from_rule_transition(rule_transition: RuleTransition):
+        return Rule(rule_transition.state, rule_transition.event.alpha, rule_transition.event.beta.release, rule_transition.event.beta.delay)
+
+
+    def to_xmp_str(self):
+        reg_exp_union = Rule.__get_reg_exp_str(self.period_constants_pair)
+        consume_str = Rule.__get_consume_str(self.consume)
+        release_str = Rule.__get_release_str(self.release)
+        delay_str = Rule.__get_delay_str(self.delay)
+
+        rule_str_list: List[str] = []
+
+        for reg_exp in reg_exp_union:
+            rule_str = f"{reg_exp}/{consume_str}->;{release_str};{delay_str}"
+            rule_str_list.append(rule_str)
+        
+        return " ".join(rule_str_list)
 
     def __str__(self) -> str:
         return str(self.rule_transition)

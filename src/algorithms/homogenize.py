@@ -1,5 +1,4 @@
 from typing import Set
-from copy import deepcopy
 from src.classes.snp_system import Snp_system
 from src.classes.rule_transition_set import RuleTransitionSet
 from .match import match
@@ -22,18 +21,31 @@ def homogenize(snp_system: Snp_system) -> Set[RuleTransitionSet]:
         
         R_double_prime = R.scale(u1).translate(t1).minimized_union(R_prime.scale(u2).translate(t2))
 
-        # TODO
-        # Neurons containing rule sets represented by R is translated by t1 
-        # while their subsystems are type-2 scaled by a factor of u1.;
+        
+        for neuron in snp_system.neurons:
+            # Neurons containing rule sets represented by R is translated by t1 
+            # while their subsystems are type-2 scaled by a factor of u1.;
+            if neuron.rule_transition_set == R:
+                neuron.translate(t1)
+                neuron.scale(u1)
+                snp_system.type_2_subsystem_scaling(neuron, u1)
 
-        # TODO
-        # Neurons containing rule sets represented by R′ is translated by t2
-        # while their subsystems are type-2 scaled by a factor of u2.;
 
-        # TODO
-        # The rule set of the neurons that initially contains rules represented
-        # by R or R′ will be replaced by the new common rule set
-        # represented by R′′;
+                # The rule set of the neurons that initially contains rules represented
+                # by R will be replaced by the new common rule set represented by R′′;
+                neuron.rule_transition_set = R_double_prime
+
+            # Neurons containing rule sets represented by R′ is translated by t2
+            # while their subsystems are type-2 scaled by a factor of u2.;
+            elif neuron.rule_transition_set == R_prime:
+                neuron.translate(t2)
+                neuron.scale(u2)
+                snp_system.type_2_subsystem_scaling(neuron, u2)
+
+                # The rule set of the neurons that initially contains rules represented
+                # by R′ will be replaced by the new common rule set represented by R′′;
+                neuron.rule_transition_set = R_double_prime
+
 
         R = R_double_prime
     
