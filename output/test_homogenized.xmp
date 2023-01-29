@@ -5,7 +5,7 @@
 			<x>100.0</x>
 			<y>100.0</y>
 		</position>
-		<rules>(6a)*/3a-&gt;;a;0 (9a)*/6a-&gt;;a;0</rules>
+		<rules>(6a)*/3a-&gt;;a;0 (36a)*/18a-&gt;;a;0 (9a)*/6a-&gt;;a;0</rules>
 		<startingSpikes>2</startingSpikes>
 		<delay>0</delay>
 		<spikes>6</spikes>
@@ -32,7 +32,7 @@
 			<x>319.9037491790188</x>
 			<y>90.09977515003808</y>
 		</position>
-		<rules>(36a)*/18a-&gt;;a;0</rules>
+		<rules>(6a)*/3a-&gt;;a;0 (36a)*/18a-&gt;;a;0 (9a)*/6a-&gt;;a;0</rules>
 		<startingSpikes>3</startingSpikes>
 		<delay>0</delay>
 		<spikes>18</spikes>

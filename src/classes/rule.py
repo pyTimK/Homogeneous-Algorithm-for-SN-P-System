@@ -71,15 +71,15 @@ class Rule:
 
             # Note that the star_set must contain a single element,
             # else the input is invalid and the algorithm cannot proceed
-            if len(star_set) == 0:
-                raise NotUnboundedError(0, reg_exp_str, unb_reg_exp)
+            # if len(star_set) == 0:
+            #     raise NotUnboundedError(0, reg_exp_str, unb_reg_exp)
             
-            elif len(star_set) > 1:
+            if len(star_set) > 1:
                 raise NotUnboundedError(2, reg_exp_str, unb_reg_exp)
 
 
             # 3. the period would be the single element of the star set
-            period = star_set.pop()
+            period = 0 if len(star_set) == 0 else star_set.pop()
 
             period_constants_pairs.append(PeriodConstantsPair(period, Constants({constant})))
 

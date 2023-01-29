@@ -3,6 +3,8 @@ from typing import Any
 from src.classes.snp_system import Snp_system
 from src.services.file_manager import FileManager
 from src.algorithms.homogenize import homogenize
+from src.classes.period_constants_pair import PeriodConstantsPair
+from src.classes.constants import Constants
 
 
 def main():
@@ -12,16 +14,6 @@ def main():
     FileManager.save_xmp("./output/test_homogenized.xmp", snp_system.to_xmp())
 
 
-    # FileManager.save_json("./output/fk.json", input_json)
-
-
-
-
 
 if __name__ == "__main__":
     main()
-
-    # print(snp_system.get_set_of_rule_transition_set())
-
-    # print("-------------------R")
-    # print(R)

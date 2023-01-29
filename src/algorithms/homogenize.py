@@ -1,6 +1,7 @@
 from typing import Set
 from src.classes.snp_system import Snp_system
 from src.classes.rule_transition_set import RuleTransitionSet
+from src.classes.rule import Rule
 from .match import match
 
 #! ALGORITHM 5
@@ -34,6 +35,7 @@ def homogenize(snp_system: Snp_system) -> Set[RuleTransitionSet]:
                 # The rule set of the neurons that initially contains rules represented
                 # by R will be replaced by the new common rule set represented by R′′;
                 neuron.rule_transition_set = R_double_prime
+                neuron.rules = [Rule.from_rule_transition(rt) for rt in neuron.rule_transition_set]
 
             # Neurons containing rule sets represented by R′ is translated by t2
             # while their subsystems are type-2 scaled by a factor of u2.;
@@ -45,6 +47,7 @@ def homogenize(snp_system: Snp_system) -> Set[RuleTransitionSet]:
                 # The rule set of the neurons that initially contains rules represented
                 # by R′ will be replaced by the new common rule set represented by R′′;
                 neuron.rule_transition_set = R_double_prime
+                neuron.rules = [Rule.from_rule_transition(rt) for rt in neuron.rule_transition_set]
 
 
         R = R_double_prime
