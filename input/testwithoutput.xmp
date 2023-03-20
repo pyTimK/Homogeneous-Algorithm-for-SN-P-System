@@ -31,5 +31,16 @@
         <outWeights>
             <n3-in3_yulLQ>1</n3-in3_yulLQ>
         </outWeights>
+        <out>n3-in3_yulLQ</out>
     </n2-X-yMkMmr5>
+    <n3-in3_yulLQ>
+        <id>n3-in3_yulLQ</id>
+        <position>
+            <x>771.5</x>
+            <y>232</y>
+        </position>
+        <isOutput>true</isOutput>
+        <spikes>0</spikes>
+        <bitstring> </bitstring>
+    </n3-in3_yulLQ>
 </content>

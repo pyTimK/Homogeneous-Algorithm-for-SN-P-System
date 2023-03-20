@@ -1,119 +1,81 @@
-from typing import Set
 from src.classes.snp_system import Snp_system
-from src.classes.rule_transition_set import RuleTransitionSet
-from src.classes.rule import Rule
-from .match import match
-from copy import copy, deepcopy
+from src.classes.rule import Rule, RuleSet
+from src.classes.rule_re import RuleRE, StarExpSet, PlusExpSet
+from copy import copy
+from src.classes.neuron import Neuron
+from typing import Dict, Set
 
 #! ALGORITHM 5
-def homogenize(snp_system: Snp_system) -> Set[RuleTransitionSet]:
-    rule_transition_sets = snp_system.get_set_of_rule_transition_set()
+def homogenize(snp_system: Snp_system) -> RuleSet:
+    rule_sets = snp_system.get_rule_sets()
 
+
+    p = len(rule_sets)
     
-    if len(rule_transition_sets) == 0:
+    if p == 0:
         raise ValueError("Not a single rule is given")
     
-    if len(rule_transition_sets) == 1:
-        return rule_transition_sets
 
-    R = rule_transition_sets.pop()
-
-    for R_prime in rule_transition_sets:
-        u1, t1, u2, t2 = match(R, R_prime)
-        print(f"final: {u1}, {t1}, {u2}, {t2}")
-
-        # print(f"R_prime: {R_prime}")
-        # print(f"R: {R}")
-
-        
-        R_double_prime = R.scale(u1).translate(t1).minimized_union(R_prime.scale(u2).translate(t2))
-        # print(f"R_double_prime: {R_double_prime}")
-
-        for neuron in copy(snp_system.neurons):
-            # Neurons containing rule sets represented by R is translated by t1 
-            # while their subsystems are type-2 scaled by a factor of u1.;
-            if neuron.rule_transition_set == R:
-                neuron.translate(t1)
-                neuron.scale(u1)
-                snp_system.type_2_subsystem_scaling(neuron, u1)
-
-
-                # The rule set of the neurons that initially contains rules represented
-                # by R will be replaced by the new common rule set represented by R′′;
-                neuron.rule_transition_set = R_double_prime
-                neuron.rules = [Rule.from_rule_transition(rt) for rt in neuron.rule_transition_set]
-
-            # Neurons containing rule sets represented by R′ is translated by t2
-            # while their subsystems are type-2 scaled by a factor of u2.;
-            elif neuron.rule_transition_set == R_prime:
-                neuron.translate(t2)
-                neuron.scale(u2)
-                snp_system.type_2_subsystem_scaling(neuron, u2)
-
-                # The rule set of the neurons that initially contains rules represented
-                # by R′ will be replaced by the new common rule set represented by R′′;
-                neuron.rule_transition_set = R_double_prime
-                neuron.rules = [Rule.from_rule_transition(rt) for rt in neuron.rule_transition_set]
-
-
-        
-
-        homogenized_neurons = [neuron for neuron in snp_system.neurons if neuron.rule_transition_set == R_double_prime]
-        multiplier_neurons = [neuron for neuron in snp_system.neurons if neuron.rule_transition_set != R_double_prime]
-
-        # Get the set of constants of forwarding rules in all multiplier neurons
-        forwarding_constants = [rule.consume for neuron in multiplier_neurons for rule in neuron.rules]
-
-        # Get the largest constant of a forwarding rule in multiplier neurons
-        largest_forwarding_rule = 0 if len(forwarding_constants) == 0 else max(forwarding_constants)
-
-        if largest_forwarding_rule > 0:
-            translate_param = largest_forwarding_rule + 1
-
-        # Translate the homogenized rule set
-            R_double_prime = R_double_prime.translate(translate_param)
-
-        # Merge the homogenized rule set with those of multiplier neurons
-            for neuron in multiplier_neurons:
-                R_double_prime = R_double_prime.minimized_union(neuron.rule_transition_set)
-
-        # Translate all homogenized neurons and update new homogenized rule set
-            for neuron in homogenized_neurons:
-                neuron.translate(translate_param)
-                neuron.rule_transition_set = R_double_prime
-                neuron.rules = [Rule.from_rule_transition(rt) for rt in neuron.rule_transition_set]
-
-        # Update new homogenized rule set in multiplier neurons
-            for neuron in multiplier_neurons:
-                neuron.rule_transition_set = R_double_prime
-                neuron.rules = [Rule.from_rule_transition(rt) for rt in neuron.rule_transition_set]
-
-        
-
-
-        R = R_double_prime
-        print(f"R'': {R}")
-            
-
-
-
-                
+    if p == 1:
+        return rule_sets.pop()
     
-    print(f"Neurons length: {len(snp_system.neurons)}")
+    # Used to remember the translate param of a neuron
+    neuron_to_translate_param: Dict[Neuron, int] = {}
+    
+    # Used to remember all j of multiplier neurons (aj -> aj)
+    multipliers: Set[int] = set()
+
+    #! Step 1
+    i = 0
+    R: RuleSet = RuleSet({})
+    for R_prime in rule_sets:
+        R = R.union(R_prime.scale(p).translate(i))
+
+        # Used to remember the translate param of a neuron
+        for neuron in snp_system.neurons:
+            if neuron.rules == R_prime:
+                neuron_to_translate_param[neuron] = i
+
+        i+=1
+
+    nonmultiplier_neurons = [neuron for neuron in copy(snp_system.neurons) if not neuron.is_input and not neuron.is_output]
+    #! Step 2
+    for neuron in nonmultiplier_neurons:
+        neuron.scale(p)
+        multipliers.update(snp_system.type_2_subsystem_scaling(neuron, p))
+
+
+    #! Step 3
+    for neuron in nonmultiplier_neurons:
+        neuron.translate(neuron_to_translate_param[neuron])
+
+
+    #! Step 4
+    R0 = RuleSet({Rule(
+        rule_re = RuleRE({(spike_produced, StarExpSet({}), PlusExpSet({}))}), 
+        consume = spike_produced, 
+        release = spike_produced, 
+        delay = 0, 
+        ) for spike_produced in multipliers})
+
+
+
+    #! Step 5
+    t = 0 if len(multipliers) == 0 else max(multipliers) + 1
+
+    #! Step 6
+    R = R0.union(R.translate(t))
+
+    #! Step 7
+    for neuron in nonmultiplier_neurons:
+        neuron.translate(t)
+
+    #! Step 8
+    for neuron in snp_system.neurons:
+        neuron.rules = R
+
     return R
 
-
-    # print(rule_transition_sets_input)
-
-
-        # u1, t1, u2, t2 = 2, 1, 2, 0
-        # print(u1, t1, u2, t2)
-        # print("R")
-        # print(R)
-        # print(R.scale(u1).translate(t1))
-        # print("R'")
-        # print(R_prime)
-        # print(R_prime.scale(u2).translate(t2))
 
 
 

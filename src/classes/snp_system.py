@@ -1,9 +1,7 @@
 from collections import OrderedDict
 from typing import Any, List, Set
-from .rule import Rule
+from .rule import RuleSet
 from .neuron import Neuron
-from .rule_transition import RuleTransition
-from .rule_transition_set import RuleTransitionSet
 import xmltodict
 
 #! SNP SYSTEM
@@ -23,8 +21,8 @@ class Snp_system:
             
 
         
-    def get_set_of_rule_transition_set(self) -> Set[RuleTransitionSet]:
-        return {neuron.rule_transition_set for neuron in self.neurons}
+    def get_rule_sets(self):
+        return set({neuron.rules for neuron in self.neurons})
 
     def get_neuron_subsystem(self, neuron: Neuron) -> Set[Neuron]:
         subsystem: List[Neuron] = []
@@ -37,15 +35,18 @@ class Snp_system:
         
         return subsystem
 
-    def type_2_subsystem_scaling(self, neuron: Neuron, x: int):
+    def type_2_subsystem_scaling(self, neuron: Neuron, x: int) -> Set[int]:
         # TYPE 2 - SUBSYSTEM SCALING
         subsystem = self.get_neuron_subsystem(neuron)
+
+        multipliers: Set[int] = set()
 
         for neuron_prime in subsystem:
             # 1. Create multiplier neurons and Connect it to the selected neuron
             for i in range(x):
-                multiplier_neuron = Neuron.multiplier_neuron(neuron_prime, neuron, i)
+                multiplier_neuron, new_multipliers = Neuron.multiplier_neuron(neuron_prime, neuron, i)
                 self.neurons.append(multiplier_neuron)
+                multipliers.update(new_multipliers)
 
                 # 2. Connect the subsystem neuron to multiplier neurons
                 neuron_prime.out.append(multiplier_neuron.id)
@@ -59,6 +60,8 @@ class Snp_system:
             
             if neuron.id in neuron_prime.out_weights:
                 del neuron_prime.out_weights[neuron.id]
+
+        return multipliers
 
 
     def to_xmp(self):

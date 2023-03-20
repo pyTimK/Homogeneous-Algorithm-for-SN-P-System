@@ -2,13 +2,13 @@
 	<n1-bxrG78CHR>
 		<id>n1-bxrG78CHR</id>
 		<position>
-			<x>100.0</x>
-			<y>100.0</y>
+			<x>341.5</x>
+			<y>223.0</y>
 		</position>
-		<rules>19a/2a-&gt;a;0 2a(12a)*/6a-&gt;a;0 a/a-&gt;a;0 3a(6a)*/4a-&gt;a;0</rules>
+		<rules>3a(6a)*/4a-&gt;a;0 a/a-&gt;a;0 2a(12a)*/6a-&gt;a;0 19a/2a-&gt;a;0</rules>
 		<startingSpikes>2</startingSpikes>
 		<delay>0</delay>
-		<spikes>8</spikes>
+		<spikes>7</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
 		<out>n1-bxrG78CHR-n2-X-yMkMmr5-0</out>
@@ -21,24 +21,26 @@
 	<n2-X-yMkMmr5>
 		<id>n2-X-yMkMmr5</id>
 		<position>
-			<x>319.9037491790188</x>
-			<y>90.09977515003808</y>
+			<x>588.5</x>
+			<y>224.0</y>
 		</position>
-		<rules>19a/2a-&gt;a;0 2a(12a)*/6a-&gt;a;0 a/a-&gt;a;0 3a(6a)*/4a-&gt;a;0</rules>
+		<rules>3a(6a)*/4a-&gt;a;0 a/a-&gt;a;0 2a(12a)*/6a-&gt;a;0 19a/2a-&gt;a;0</rules>
 		<startingSpikes>3</startingSpikes>
 		<delay>0</delay>
 		<spikes>8</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<outWeights></outWeights>
+		<outWeights>
+			<n3-in3_yulLQ>1</n3-in3_yulLQ>
+		</outWeights>
 	</n2-X-yMkMmr5>
 	<n1-bxrG78CHR-n2-X-yMkMmr5-0>
 		<id>n1-bxrG78CHR-n2-X-yMkMmr5-0</id>
 		<position>
-			<x>100.0</x>
-			<y>100.0</y>
+			<x>341.5</x>
+			<y>223.0</y>
 		</position>
-		<rules>19a/2a-&gt;a;0 2a(12a)*/6a-&gt;a;0 a/a-&gt;a;0 3a(6a)*/4a-&gt;a;0</rules>
+		<rules>3a(6a)*/4a-&gt;a;0 a/a-&gt;a;0 2a(12a)*/6a-&gt;a;0 19a/2a-&gt;a;0</rules>
 		<startingSpikes>0</startingSpikes>
 		<delay>0</delay>
 		<spikes>0</spikes>
@@ -52,10 +54,10 @@
 	<n1-bxrG78CHR-n2-X-yMkMmr5-1>
 		<id>n1-bxrG78CHR-n2-X-yMkMmr5-1</id>
 		<position>
-			<x>130.0</x>
-			<y>100.0</y>
+			<x>371.5</x>
+			<y>223.0</y>
 		</position>
-		<rules>19a/2a-&gt;a;0 2a(12a)*/6a-&gt;a;0 a/a-&gt;a;0 3a(6a)*/4a-&gt;a;0</rules>
+		<rules>3a(6a)*/4a-&gt;a;0 a/a-&gt;a;0 2a(12a)*/6a-&gt;a;0 19a/2a-&gt;a;0</rules>
 		<startingSpikes>0</startingSpikes>
 		<delay>0</delay>
 		<spikes>0</spikes>

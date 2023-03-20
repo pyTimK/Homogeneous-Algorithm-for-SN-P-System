@@ -1,10 +1,6 @@
-from collections import OrderedDict
-from typing import Any
 from src.classes.snp_system import Snp_system
 from src.services.file_manager import FileManager
 from src.algorithms.homogenize import homogenize
-from src.classes.period_constants_pair import PeriodConstantsPair
-from src.classes.constants import Constants
 
 
 def main():
