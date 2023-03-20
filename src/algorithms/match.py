@@ -6,8 +6,11 @@ from .compatible import compatible
 
 #! ALGORITHM 4
 def match(R: RuleTransitionSet, R_prime: RuleTransitionSet) -> Tuple[int, int, int, int]:
+    # return 2, 0, 2, 1
     for r in R:
         for r_prime in R_prime:
+            print(f"~~~ R: {r}")
+            print(f"~~~ R': {r_prime}")
 
             s = r.state
             alpha = r.event.alpha
@@ -22,17 +25,21 @@ def match(R: RuleTransitionSet, R_prime: RuleTransitionSet) -> Tuple[int, int, i
 
             else:
                 l = MyMath.lcm(abs(alpha), abs(alpha_prime))
+                print(f"ll: {l}")
                 m1 = l // abs(alpha)
                 m2 = l // abs(alpha_prime)
 
                 u1_prime, t1, u2_prime, t2 = get_parameters(s.scale(m1), s_prime.scale(m2))
+                print(f"parameters: {u1_prime}, {t1}, {u2_prime}, {t2}")
                 u1, t1, u2, t2 = u1_prime * m1, t1, u2_prime * m2, t2
+                # u1, t1, u2, t2 = m1, 0, m2, 0
+                print(f"2nd parameters: {u1}, {t1}, {u2}, {t2}")
 
                 if t1 == -1 or t2 == -1:
                     continue
 
                 else:
-                    if compatible(R.scale(u1).translate(t1), R.scale(u2).translate(t2)):
+                    if compatible(R.scale(u1).translate(t1), R_prime.scale(u2).translate(t2)):
                         return u1, t1, u2, t2
                     
                     else:

@@ -1,9 +1,10 @@
 from typing import Set
 from .period_constants_pair import PeriodConstantsPair
 from .event import Event
+from .event_set import EventSet
 
 class PartitionEvents:
-    def __init__(self, block: PeriodConstantsPair, events: Set[Event]) -> None:
+    def __init__(self, block: PeriodConstantsPair, events: EventSet) -> None:
         self.block =  block
         self.events = events
 

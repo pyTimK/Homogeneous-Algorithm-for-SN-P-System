@@ -3,7 +3,7 @@ import re
 from .period_constants_pair import PeriodConstantsPair
 from .event import Event
 from .rule_transition import RuleTransition
-from src.errors.not_unbounded_error import NotUnboundedError
+from src.errors.multiple_stars_error import MultipleStarsError
 from typing import List, Set
 from .constants import Constants
 from copy import deepcopy
@@ -29,6 +29,10 @@ class Rule:
 
         period_constants_pair = Rule.__get_period_constants_pair(reg_exp_str)
         consume = Rule.__get_consume(consume_str)
+        # print(f"reg_exp_str: {reg_exp_str}")
+        # print(f"consume_str: {consume_str}")
+        # print(f"release_str: {release_str}")
+        # print(f"delay_str: {delay_str}")
         release = Rule.__get_release(release_str)
         delay = Rule.__get_delay(delay_str)
 
@@ -45,17 +49,21 @@ class Rule:
             #? Star Set
             star_pattern = r"\((.*)\)\*"
             stars_str: List[str] = re.findall(star_pattern, unb_reg_exp)
-            unb_reg_exp: str = re.sub(star_pattern, "", unb_reg_exp)
+            unb_reg_exp = re.sub(star_pattern, "", unb_reg_exp)
             star_set: Set[int] = {1 if x == "a" else int(x.replace("a", "")) for x in stars_str}
 
             #? Plus List
             plus_pattern = r"\((.*)\)\+"
             pluses_str: List[str] = re.findall(plus_pattern, unb_reg_exp)
-            unb_reg_exp: str = re.sub(plus_pattern, "", unb_reg_exp)
+            unb_reg_exp = re.sub(plus_pattern, "", unb_reg_exp)
             plus_list: List[int] = [1 if x == "a" else int(x.replace("a", "")) for x in pluses_str]
 
 
             #? Bounded List
+            # print(unb_reg_exp)
+            unb_reg_exp = unb_reg_exp.replace('(', '')
+            unb_reg_exp = unb_reg_exp.replace(')', '')
+            # print(unb_reg_exp)
             boundeds_str = unb_reg_exp.split(Rule.__symbol)[:-1]
             bounded_list: List[int] = [1 if x == "" else int(x) for x in boundeds_str]
 
@@ -69,13 +77,10 @@ class Rule:
             # 2. The constant will be the sum of all bounded ints
             constant = sum(bounded_list)
 
-            # Note that the star_set must contain a single element,
+            # Note that the star_set must not contain more than two elements,
             # else the input is invalid and the algorithm cannot proceed
-            # if len(star_set) == 0:
-            #     raise NotUnboundedError(0, reg_exp_str, unb_reg_exp)
-            
             if len(star_set) > 1:
-                raise NotUnboundedError(2, reg_exp_str, unb_reg_exp)
+                raise MultipleStarsError(reg_exp_str, unb_reg_exp)
 
 
             # 3. the period would be the single element of the star set
@@ -83,7 +88,7 @@ class Rule:
 
             period_constants_pairs.append(PeriodConstantsPair(period, Constants({constant})))
 
-        return PeriodConstantsPair.union(*period_constants_pairs)
+        return PeriodConstantsPair.union_unbounded(*period_constants_pairs)
     
     @staticmethod
     def __get_bounded_str(constant: int):
@@ -179,7 +184,7 @@ class Rule:
         rule_str_list: List[str] = []
 
         for reg_exp in reg_exp_union:
-            rule_str = f"{reg_exp}/{consume_str}->;{release_str};{delay_str}"
+            rule_str = f"{reg_exp}/{consume_str}->{release_str};{delay_str}"
             rule_str_list.append(rule_str)
         
         return " ".join(rule_str_list)

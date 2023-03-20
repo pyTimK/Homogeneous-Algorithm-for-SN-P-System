@@ -2,10 +2,10 @@
     <n1-bxrG78CHR>
         <id>n1-bxrG78CHR</id>
         <position>
-            <x>100</x>
-            <y>100</y>
+            <x>122.75444784519176</x>
+            <y>58.2961036480869</y>
         </position>
-        <rules>a(2a)(5a)/a-&gt;a;0 (3a)*/2a-&gt;a;0</rules>
+        <rules>(2a)*/a-&gt;a;0</rules>
         <startingSpikes>2</startingSpikes>
         <delay>0</delay>
         <spikes>2</spikes>
@@ -22,7 +22,7 @@
             <x>319.9037491790188</x>
             <y>90.09977515003808</y>
         </position>
-        <rules>(6a)*/3a-&gt;a;0</rules>
+        <rules>(a)*/3a-&gt;a;0</rules>
         <startingSpikes>3</startingSpikes>
         <delay>0</delay>
         <spikes>3</spikes>

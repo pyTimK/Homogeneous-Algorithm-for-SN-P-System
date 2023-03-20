@@ -2,6 +2,7 @@ from typing import Set, List, Tuple, Iterable
 from functools import reduce
 from src.helpers.my_math import MyMath
 from .constants import Constants
+from src.errors.not_bounded_error import NotBoundedError
 
 class PeriodConstantsPair:
     def __init__(self, period: int, constants: Constants) -> None:
@@ -11,16 +12,33 @@ class PeriodConstantsPair:
     @staticmethod
     def empty():
         return PeriodConstantsPair(0, Constants())
-
+    
     @staticmethod
-    def intersection(*period_constants_pairs: "PeriodConstantsPair"):
+    def intersection_bounded(*period_constants_pairs: "PeriodConstantsPair"):
+        for pcp in period_constants_pairs:
+            if pcp.period != 0:
+                raise NotBoundedError()
+            
         if len(period_constants_pairs) == 0:
             return PeriodConstantsPair.empty()
         
         if len(period_constants_pairs) == 1:
             return period_constants_pairs[0]
         
-        union = PeriodConstantsPair.union(*period_constants_pairs)
+        return PeriodConstantsPair(0, Constants.intersection(*[pcp.constants for pcp in period_constants_pairs]))
+
+    @staticmethod
+    def intersection_unbounded(*period_constants_pairs: "PeriodConstantsPair"):
+        for pcp in period_constants_pairs:
+            if pcp.is_empty():
+                return PeriodConstantsPair.empty()
+        if len(period_constants_pairs) == 0:
+            return PeriodConstantsPair.empty()
+        
+        if len(period_constants_pairs) == 1:
+            return period_constants_pairs[0]
+        
+        union = PeriodConstantsPair.union_unbounded(*period_constants_pairs)
 
         pcp0 = period_constants_pairs[0]
         l, q_intersection, _ = pcp0.get_combine_params(union)
@@ -32,18 +50,44 @@ class PeriodConstantsPair:
         
         return PeriodConstantsPair(l, q_intersection)
     
-    def __sub__(pcp1, pcp2: "PeriodConstantsPair"):
+    def sub_unbounded(pcp1, pcp2: "PeriodConstantsPair"):
         if pcp1.is_empty() or pcp2.is_empty():
             return pcp1
 
         l, q_pcp1, q_pcp2 = pcp1.get_combine_params(pcp2)
 
         return PeriodConstantsPair(l, q_pcp1 - q_pcp2)
+    
+    #TODO: sub bounded
+    def sub_bounded(pcp1, pcp2: "PeriodConstantsPair"):
+        if pcp1.period != 0:
+            raise NotBoundedError()
+        
+        if pcp2.period != 0:
+            raise NotBoundedError()
 
+        if pcp1.is_empty() or pcp2.is_empty():
+            return pcp1
+
+        return PeriodConstantsPair(0, pcp1.constants - pcp2.constants)
 
 
     @staticmethod
-    def union(*period_constants_pairs: "PeriodConstantsPair"):
+    def union_bounded(*period_constants_pairs: "PeriodConstantsPair"):
+        for pcp in period_constants_pairs:
+            if pcp.period != 0:
+                raise NotBoundedError()
+            
+        if len(period_constants_pairs) == 0:
+            return PeriodConstantsPair.empty()
+        
+        if len(period_constants_pairs) == 1:
+            return period_constants_pairs[0]
+        
+        return PeriodConstantsPair(0, Constants.union(*[pcp.constants for pcp in period_constants_pairs]))
+
+    @staticmethod
+    def union_unbounded(*period_constants_pairs: "PeriodConstantsPair"):
         # print(f"union called: {period_constants_pairs}")
         if len(period_constants_pairs) == 0:
             return PeriodConstantsPair.empty()
@@ -53,10 +97,10 @@ class PeriodConstantsPair:
         
         # print(f"union return: {reduce(PeriodConstantsPair.__union_two, period_constants_pairs)}")
 
-        return reduce(PeriodConstantsPair.__union_two, period_constants_pairs)
+        return reduce(PeriodConstantsPair.__union_two_unbounded, period_constants_pairs)
 
     @staticmethod
-    def __union_two(pcp1: "PeriodConstantsPair", pcp2: "PeriodConstantsPair"):
+    def __union_two_unbounded(pcp1: "PeriodConstantsPair", pcp2: "PeriodConstantsPair"):
         l, q_bar, q_bar_prime = pcp1.get_combine_params(pcp2)
         
         return PeriodConstantsPair(l, q_bar.union(q_bar_prime))

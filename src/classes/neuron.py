@@ -45,7 +45,8 @@ class Neuron:
         starting_spikes = int(neuron_json.get("startingSpikes") or 0)
         delay = int(neuron_json.get("delay") or 0)
         spikes = int(neuron_json.get("spikes") or 0)
-        out: List[str] = [] if neuron_json.get("out") == None else ([*neuron_json.get("out")] if neuron_json.get("out") is List else [neuron_json.get("out")])
+
+        out: List[str] = [] if neuron_json.get("out") == None else ([*neuron_json.get("out")] if type(neuron_json.get("out")) == list else [neuron_json.get("out")])
         out_weights_str: OrderedDict[str, str] = neuron_json.get("outWeights") or {}
         out_weights: OrderedDict[str, int] =  {k: int(v) for k, v in out_weights_str.items()}
 
@@ -77,14 +78,14 @@ class Neuron:
         '''Note that this function acts on the neuron itself'''
         self.spikes += x
         self.rule_transition_set = self.rule_transition_set.translate(x)
-        self.rules = [Rule.from_rule_transition(rt) for rt in self.rule_transition_set]
+        self.rules = {Rule.from_rule_transition(rt) for rt in self.rule_transition_set}
 
 
     def scale(self, x: int):
         '''Note that this function acts on the neuron itself'''
         self.spikes *= x
         self.rule_transition_set = self.rule_transition_set.scale(x)
-        self.rules = [Rule.from_rule_transition(rt) for rt in self.rule_transition_set]
+        self.rules = {Rule.from_rule_transition(rt) for rt in self.rule_transition_set}
 
 
     def get_rules_xmp_str(self):

@@ -10,23 +10,45 @@ class RuleTransitionSet(set[RuleTransition]):
 
 
     def scope(self):
-        return PeriodConstantsPair.union(*[rt.state for rt in self])
+        return PeriodConstantsPair.union_unbounded(*[rt.state for rt in self])
     
 
     def union(self, *rts2_tuple: "RuleTransitionSet"):
         return RuleTransitionSet(super().union(*rts2_tuple))
+    
+    def get_bounded(self):
+        return RuleTransitionSet({rt for rt in self if rt.state.period == 0})
+    
+    def get_unbounded(self):
+        return RuleTransitionSet({rt for rt in self if rt.state.period != 0})
 
 
-    def minimized_union(self, *rts2: "RuleTransitionSet"):
-        rtsU = self.union(*rts2)
-        EV = {rt.event for rt in rtsU}
-        rtsMin = RuleTransitionSet()
+    def minimized_union(self, rts2: "RuleTransitionSet"):
+        rts_bounded = self.get_bounded()
+        rts_unbounded = self.get_unbounded()
+        rts2_bounded = rts2.get_bounded()
+        rts2_unbounded = rts2.get_unbounded()
 
-        for event in EV:
-            s = PeriodConstantsPair.union(*[rts.state for rts in rtsU if rts.event == event])
-            rtsMin.add(RuleTransition(s, deepcopy(event)))
+        # For bounded
+        rtsU_bounded = rts_bounded.union(rts2_bounded)
+        EV_bounded = {rt.event for rt in rtsU_bounded}
+        rtsMin_bounded = RuleTransitionSet()
 
-        return rtsMin
+        for event in EV_bounded:
+            s = PeriodConstantsPair.union_bounded(*[rt.state for rt in rtsU_bounded if rt.event == event])
+            rtsMin_bounded.add(RuleTransition(s, deepcopy(event)))
+
+
+        # For unbounded
+        rtsU_unbounded = rts_unbounded.union(rts2_unbounded)
+        EV_unbounded = {rt.event for rt in rtsU_unbounded}
+        rtsMin_unbounded = RuleTransitionSet()
+
+        for event in EV_unbounded:
+            s = PeriodConstantsPair.union_unbounded(*[rt.state for rt in rtsU_unbounded if rt.event == event])
+            rtsMin_unbounded.add(RuleTransition(s, deepcopy(event)))
+
+        return rtsMin_bounded.union(rtsMin_unbounded)
 
 
     def scale(self, x: int):

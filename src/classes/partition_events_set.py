@@ -4,5 +4,5 @@ from .period_constants_pair import PeriodConstantsPair
 class PartitionEventsSet(set[PartitionEvents]):
 
     def scope(self):
-        return PeriodConstantsPair.union(*[pes.block for pes in self])
+        return PeriodConstantsPair.union_unbounded(*[pes.block for pes in self])
     

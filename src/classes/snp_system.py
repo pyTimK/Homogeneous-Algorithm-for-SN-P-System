@@ -18,7 +18,9 @@ class Snp_system:
 
         for neuron_id in neuron_ids:
             neuron_json: OrderedDict[str, Any] = content_json[neuron_id]
-            self.neurons.append(Neuron.from_neuron_json(neuron_json))
+            neuron = Neuron.from_neuron_json(neuron_json)
+            self.neurons.append(neuron)
+            
 
         
     def get_set_of_rule_transition_set(self) -> Set[RuleTransitionSet]:
@@ -47,6 +49,8 @@ class Snp_system:
 
                 # 2. Connect the subsystem neuron to multiplier neurons
                 neuron_prime.out.append(multiplier_neuron.id)
+                # print(f"multiplier_neuron.id:{multiplier_neuron.id}")
+                # print(f"neuron_prime.out: {neuron_prime.out}")
                 neuron_prime.out_weights[multiplier_neuron.id] = 1
             
             # 3. Disconnect the subsystem neuron to the selected neuron
@@ -78,6 +82,7 @@ class Snp_system:
                 "out": neuron.out,
                 "outWeights": neuron.out_weights
             }
+            # print(f"neuron.out: {neuron.out}")
 
             # if len(neuron.out) > 0:
             #     print(neuron.out)
