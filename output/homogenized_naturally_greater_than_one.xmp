@@ -5,10 +5,10 @@
 			<x>44.83656960439747</x>
 			<y>131.49515004838509</y>
 		</position>
-		<rules>11a/4a-&gt;4a;0 5a/4a-&gt;4a;0 7a/4a-&gt;0;0 5a/4a-&gt;4a;1 8a/8a-&gt;0;0 12a/12a-&gt;4a;0 4a/4a-&gt;4a;1</rules>
+		<rules>8a/3a-&gt;3a;0 5a/3a-&gt;0;0</rules>
 		<startingSpikes>2</startingSpikes>
 		<delay>0</delay>
-		<spikes>11</spikes>
+		<spikes>8</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
 		<out>n2</out>
@@ -24,10 +24,10 @@
 			<x>278.89362757711206</x>
 			<y>284.31354677945245</y>
 		</position>
-		<rules>11a/4a-&gt;4a;0 5a/4a-&gt;4a;0 7a/4a-&gt;0;0 5a/4a-&gt;4a;1 8a/8a-&gt;0;0 12a/12a-&gt;4a;0 4a/4a-&gt;4a;1</rules>
+		<rules>3a/3a-&gt;3a;1 9a/9a-&gt;3a;0 6a/6a-&gt;0;0</rules>
 		<startingSpikes>3</startingSpikes>
 		<delay>0</delay>
-		<spikes>12</spikes>
+		<spikes>9</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
 		<out>n4</out>
@@ -41,13 +41,10 @@
 			<x>508.270300085927</x>
 			<y>265.85795243966277</y>
 		</position>
-		<rules>11a/4a-&gt;4a;0 5a/4a-&gt;4a;0 7a/4a-&gt;0;0 5a/4a-&gt;4a;1 8a/8a-&gt;0;0 12a/12a-&gt;4a;0 4a/4a-&gt;4a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
 		<isOutput>true</isOutput>
 		<isInput>false</isInput>
-		<outWeights></outWeights>
+		<spikes>0</spikes>
+		<bitstring></bitstring>
 	</n4>
 	<n3-nm2MDs9Nh>
 		<id>n3-nm2MDs9Nh</id>
@@ -55,10 +52,10 @@
 			<x>77.20034657798169</x>
 			<y>370.000234785619</y>
 		</position>
-		<rules>11a/4a-&gt;4a;0 5a/4a-&gt;4a;0 7a/4a-&gt;0;0 5a/4a-&gt;4a;1 8a/8a-&gt;0;0 12a/12a-&gt;4a;0 4a/4a-&gt;4a;1</rules>
+		<rules>4a/3a-&gt;3a;0 4a/3a-&gt;3a;1</rules>
 		<startingSpikes>1</startingSpikes>
 		<delay>0</delay>
-		<spikes>5</spikes>
+		<spikes>4</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
 		<out>n2</out>

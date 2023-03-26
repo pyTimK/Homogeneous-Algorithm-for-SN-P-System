@@ -178,8 +178,7 @@ class Rule:
         return Rule(self.rule_re.translate(x), self.consume, self.release, self.delay)
 
     def scale(self, x: int):
-        print(self.rule_re)
-        return Rule(self.rule_re.scale(x), self.consume * x, self.release, self.delay)
+        return Rule(self.rule_re.scale(x), self.consume * x, self.release * x, self.delay)
 
 
     #! Low level

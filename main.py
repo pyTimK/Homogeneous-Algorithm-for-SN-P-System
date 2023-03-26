@@ -4,10 +4,14 @@ from src.algorithms.homogenize import homogenize
 
 
 def main():
-    input_json = FileManager.load_xmp("./input/test_natural.xmp")
+    # input_name = "naturally_greater_than_one"
+    input_name = "DEMO"
+    input_json = FileManager.load_xmp(f"./input/{input_name}.xmp")
     snp_system = Snp_system(input_json)
     homogenize(snp_system)
-    FileManager.save_xmp("./output/test_homogenized.xmp", snp_system.to_xmp())
+    output_name = f"./output/homogenized_{input_name}.xmp"
+    FileManager.save_xmp(output_name, snp_system.to_xmp())
+    print(f"Saved result to {output_name}")
 
 
 

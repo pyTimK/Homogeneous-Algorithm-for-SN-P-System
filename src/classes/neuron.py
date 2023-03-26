@@ -102,3 +102,9 @@ class Neuron:
     
     def __hash__(self):
         return hash(self.id)
+    
+    def __str__(self) -> str:
+        return f"{self.id}"
+
+    def __repr__(self) -> str:
+        return self.__str__()

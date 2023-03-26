@@ -22,7 +22,7 @@ class Snp_system:
 
         
     def get_rule_sets(self):
-        return set({neuron.rules for neuron in self.neurons})
+        return set({neuron.rules for neuron in self.neurons if len(neuron.rules) > 0})
 
     def get_neuron_subsystem(self, neuron: Neuron) -> Set[Neuron]:
         subsystem: List[Neuron] = []
@@ -70,27 +70,36 @@ class Snp_system:
         }
 
         for neuron in self.neurons:
-            neuron_dict = {
-                "id": neuron.id,
-                "position": {
-                    "x": neuron.position.x,
-                    "y": neuron.position.y,
-                },
-                "rules": neuron.get_rules_xmp_str(),
-                "startingSpikes": neuron.starting_spikes,
-                "delay": neuron.delay,
-                "spikes": neuron.spikes,
-                "isOutput": neuron.is_output,
-                "isInput": neuron.is_input,
-                "out": neuron.out,
-                "outWeights": neuron.out_weights
-            }
-            # print(f"neuron.out: {neuron.out}")
-
-            # if len(neuron.out) > 0:
-            #     print(neuron.out)
-            #     neuron_dict["out"] = " ".join(neuron.out)
+            if neuron.is_output:
+                neuron_dict = {
+                    "id": neuron.id,
+                    "position": {
+                        "x": neuron.position.x,
+                        "y": neuron.position.y,
+                    },
+                    "isOutput": neuron.is_output,
+                    "isInput": neuron.is_input,
+                    "spikes": 0,
+                    "bitstring": "",
+                }
             
+            else:
+                neuron_dict = {
+                    "id": neuron.id,
+                    "position": {
+                        "x": neuron.position.x,
+                        "y": neuron.position.y,
+                    },
+                    "rules": neuron.get_rules_xmp_str(),
+                    "startingSpikes": neuron.starting_spikes,
+                    "delay": neuron.delay,
+                    "spikes": neuron.spikes,
+                    "isOutput": neuron.is_output,
+                    "isInput": neuron.is_input,
+                    "out": neuron.out,
+                    "outWeights": neuron.out_weights
+                }
+
 
             snp_system_dict["content"][neuron.id] = neuron_dict
 

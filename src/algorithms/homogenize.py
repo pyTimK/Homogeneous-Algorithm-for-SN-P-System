@@ -23,7 +23,6 @@ def homogenize(snp_system: Snp_system) -> RuleSet:
     neuron_to_translate_param: Dict[Neuron, int] = {}
     
     # Used to remember all j of multiplier neurons (aj -> aj)
-    multipliers: Set[int] = set()
 
     #! Step 1
     i = 0
@@ -38,37 +37,23 @@ def homogenize(snp_system: Snp_system) -> RuleSet:
 
         i+=1
 
-    nonmultiplier_neurons = [neuron for neuron in copy(snp_system.neurons) if not neuron.is_input and not neuron.is_output]
+    non_input_output_neurons = [neuron for neuron in copy(snp_system.neurons) if not neuron.is_input and not neuron.is_output]
+    # output_neuron = next(filter(lambda neuron: neuron.is_output, snp_system.neurons), None)
+    # neuron_connected_to_output_neuron = next(filter(lambda neuron: output_neuron.id in neuron.out, non_input_output_neurons), None)
+
     #! Step 2
-    for neuron in nonmultiplier_neurons:
+    for neuron in non_input_output_neurons:
+        print(f"{neuron.id}, {neuron.spikes} is scaled by {p}")
         neuron.scale(p)
-        multipliers.update(snp_system.type_2_subsystem_scaling(neuron, p))
 
 
     #! Step 3
-    for neuron in nonmultiplier_neurons:
-        neuron.translate(neuron_to_translate_param[neuron])
-
-
-    #! Step 4
-    R0 = RuleSet({Rule(
-        rule_re = RuleRE({(spike_produced, StarExpSet({}), PlusExpSet({}))}), 
-        consume = spike_produced, 
-        release = spike_produced, 
-        delay = 0, 
-        ) for spike_produced in multipliers})
-
-
-
-    #! Step 5
-    t = 0 if len(multipliers) == 0 else max(multipliers) + 1
-
-    #! Step 6
-    R = R0.union(R.translate(t))
-
-    #! Step 7
-    for neuron in nonmultiplier_neurons:
+    for neuron in non_input_output_neurons:
+        t = neuron_to_translate_param[neuron]
+        print(f"{neuron.id} is translated by {t}")
         neuron.translate(t)
+
+
 
     #! Step 8
     for neuron in snp_system.neurons:
