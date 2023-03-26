@@ -4,7 +4,7 @@ from src.algorithms.homogenize import homogenize
 
 
 def main():
-    input_json = FileManager.load_xmp("./input/test.xmp")
+    input_json = FileManager.load_xmp("./input/test_natural.xmp")
     snp_system = Snp_system(input_json)
     homogenize(snp_system)
     FileManager.save_xmp("./output/test_homogenized.xmp", snp_system.to_xmp())

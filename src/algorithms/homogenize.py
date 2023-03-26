@@ -5,7 +5,7 @@ from copy import copy
 from src.classes.neuron import Neuron
 from typing import Dict, Set
 
-#! ALGORITHM 5
+#! ALGORITHM 1
 def homogenize(snp_system: Snp_system) -> RuleSet:
     rule_sets = snp_system.get_rule_sets()
 
@@ -75,19 +75,3 @@ def homogenize(snp_system: Snp_system) -> RuleSet:
         neuron.rules = R
 
     return R
-
-
-
-
-                        
-
-
-
-
-
-
-
-
-
-
-
