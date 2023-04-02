@@ -200,14 +200,18 @@ class Rule:
 
 
 class RuleSet(set[Rule]):
+    """Represents a set of rules"""
     def union(self, *rule_set_tuple: "RuleSet"):
+        """combines two rule sets"""
         return RuleSet(super().union(*rule_set_tuple))
     
     #! Operations
     def translate(self, x: int):
+        """translates each rule in the rule set"""
         return RuleSet({rt.translate(x) for rt in self})
     
     def scale(self, x: int):
+        """scale each rule in the rule set"""
         return RuleSet({rt.scale(x) for rt in self})
     
     #! Low level

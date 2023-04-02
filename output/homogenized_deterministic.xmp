@@ -1,0 +1,48 @@
+<content>
+	<n1>
+		<id>n1</id>
+		<position>
+			<x>58.5</x>
+			<y>186.0</y>
+		</position>
+		<rules>18a/14a-&gt;8a;0 30a/30a-&gt;30a;0 28a/26a-&gt;6a;0 31a/30a-&gt;6a;0 7a/6a-&gt;0;0 33a/32a-&gt;8a;0 9a/8a-&gt;0;0 32a/32a-&gt;32a;0 26a/22a-&gt;8a;0 16a/14a-&gt;6a;0</rules>
+		<startingSpikes>1</startingSpikes>
+		<delay>0</delay>
+		<spikes>2</spikes>
+		<isOutput>false</isOutput>
+		<isInput>false</isInput>
+		<out>n2</out>
+		<outWeights>
+			<n2>1</n2>
+			<n3-nm2MDs9Nh>1</n3-nm2MDs9Nh>
+		</outWeights>
+	</n1>
+	<n2>
+		<id>n2</id>
+		<position>
+			<x>240.5</x>
+			<y>161.8125</y>
+		</position>
+		<rules>18a/14a-&gt;8a;0 30a/30a-&gt;30a;0 28a/26a-&gt;6a;0 31a/30a-&gt;6a;0 7a/6a-&gt;0;0 33a/32a-&gt;8a;0 9a/8a-&gt;0;0 32a/32a-&gt;32a;0 26a/22a-&gt;8a;0 16a/14a-&gt;6a;0</rules>
+		<startingSpikes>0</startingSpikes>
+		<delay>0</delay>
+		<spikes>1</spikes>
+		<isOutput>false</isOutput>
+		<isInput>false</isInput>
+		<out>n4</out>
+		<outWeights>
+			<n4>1</n4>
+		</outWeights>
+	</n2>
+	<n4>
+		<id>n4</id>
+		<position>
+			<x>466.5</x>
+			<y>141.8125</y>
+		</position>
+		<isOutput>true</isOutput>
+		<isInput>false</isInput>
+		<spikes>0</spikes>
+		<bitstring></bitstring>
+	</n4>
+</content>

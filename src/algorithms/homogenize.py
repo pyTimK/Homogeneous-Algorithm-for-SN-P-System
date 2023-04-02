@@ -9,7 +9,6 @@ from typing import Dict, Set
 def homogenize(snp_system: Snp_system) -> RuleSet:
     rule_sets = snp_system.get_rule_sets()
 
-
     p = len(rule_sets)
     
     if p == 0:
@@ -40,14 +39,16 @@ def homogenize(snp_system: Snp_system) -> RuleSet:
     non_input_output_neurons = [neuron for neuron in copy(snp_system.neurons) if not neuron.is_input and not neuron.is_output]
     # output_neuron = next(filter(lambda neuron: neuron.is_output, snp_system.neurons), None)
     # neuron_connected_to_output_neuron = next(filter(lambda neuron: output_neuron.id in neuron.out, non_input_output_neurons), None)
+    # TODO: 1. Add case when there is input neuron, should also be scaled
 
-    #! Step 2
+
+    #! Step 2-3
     for neuron in non_input_output_neurons:
         print(f"{neuron.id}, {neuron.spikes} is scaled by {p}")
         neuron.scale(p)
 
 
-    #! Step 3
+    #! Step 4
     for neuron in non_input_output_neurons:
         t = neuron_to_translate_param[neuron]
         print(f"{neuron.id} is translated by {t}")
@@ -55,7 +56,7 @@ def homogenize(snp_system: Snp_system) -> RuleSet:
 
 
 
-    #! Step 8
+    #! Step 5
     for neuron in snp_system.neurons:
         neuron.rules = R
 

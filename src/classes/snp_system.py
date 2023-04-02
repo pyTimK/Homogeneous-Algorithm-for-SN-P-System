@@ -22,6 +22,7 @@ class Snp_system:
 
         
     def get_rule_sets(self):
+        """Returns a set of unique rule sets"""
         return set({neuron.rules for neuron in self.neurons if len(neuron.rules) > 0})
 
     def get_neuron_subsystem(self, neuron: Neuron) -> Set[Neuron]:
