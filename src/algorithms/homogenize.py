@@ -1,8 +1,8 @@
-from src.classes.snp_system import Snp_system
-from src.classes.rule import Rule, RuleSet
-from src.classes.rule_re import RuleRE, StarExpSet, PlusExpSet
+from classes.snp_system import Snp_system
+from classes.rule import Rule, RuleSet
+from classes.rule_re import RuleRE, StarExpSet, PlusExpSet
 from copy import copy
-from src.classes.neuron import Neuron
+from classes.neuron import Neuron
 from typing import Dict, Set
 
 #! ALGORITHM 1

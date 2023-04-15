@@ -1,6 +1,6 @@
 
 import re
-from src.classes.rule_re import RuleRE, ConstantExp, PlusExpSet, StarExpSet
+from rule_re import RuleRE, ConstantExp, PlusExpSet, StarExpSet
 from typing import List, Set
 
 class Rule:

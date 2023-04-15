@@ -1,7 +1,7 @@
 from collections import OrderedDict
-from .rule import Rule, RuleSet
-from .rule_re import RuleRE, StarExpSet, PlusExpSet
-from .position import Position
+from rule import Rule, RuleSet
+from rule_re import RuleRE, StarExpSet, PlusExpSet
+from position import Position
 from typing import Any, List
 
 class Neuron:

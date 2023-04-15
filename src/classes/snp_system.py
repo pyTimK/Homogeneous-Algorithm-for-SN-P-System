@@ -1,7 +1,7 @@
 from collections import OrderedDict
 from typing import Any, List, Set
-from .rule import RuleSet
-from .neuron import Neuron
+from rule import RuleSet
+from neuron import Neuron
 import xmltodict
 
 #! SNP SYSTEM
