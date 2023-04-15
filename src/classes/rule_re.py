@@ -23,12 +23,17 @@ class PlusExpSet(set[int]):
 
 
 class RuleRE(set[tuple[ConstantExp, StarExpSet, PlusExpSet]]):
-    """Regular expression of a rule"""
+    """Regular expression of a rule \n
+    ex: \n
+    3a -> {(3,{},{})} \\
+    2a(3a)*(4a)*(5a)+ -> {(2,{3,4},{5})} \\
+    4a3a(3a)* U (2a)*(5a)+ -> {(7,{3},{}),(0,{2},{5})}
+    """
 
     def translate(self, x: int):
-        rule_re_new: RuleRE = RuleRE({})
+        rule_re_new: RuleRE = RuleRE()
         for constant, star_set, plus_set in self:
-            new_constant = constant + x
+            new_constant = constant + x 
             rule_re_new.add((new_constant, star_set, plus_set))
         
         return rule_re_new
