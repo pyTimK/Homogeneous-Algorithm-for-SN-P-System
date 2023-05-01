@@ -3,12 +3,12 @@
         <id>n1</id>
         <position>
             <x>66.5</x>
-            <y>200</y>
+            <y>222</y>
         </position>
         <rules>a/a-&gt;a;0 2a/a-&gt;a;0</rules>
-        <startingSpikes>2</startingSpikes>
+        <startingSpikes>1</startingSpikes>
         <delay>0</delay>
-        <spikes>2</spikes>
+        <spikes>1</spikes>
         <isOutput>false</isOutput>
         <isInput>false</isInput>
         <out>n2</out>
@@ -48,15 +48,15 @@
     <n0-j5Lto5JHr>
         <id>n0-j5Lto5JHr</id>
         <position>
-            <x>-99.03146026371645</x>
-            <y>203.33935202870637</y>
+            <x>-125.5</x>
+            <y>188</y>
         </position>
         <isInput>true</isInput>
         <isOutput>false</isOutput>
         <spikes>0</spikes>
         <delay>0</delay>
         <out>n1</out>
-        <bitstring>1,0,1,1</bitstring>
+        <bitstring>0,0,1</bitstring>
         <outWeights>
             <n1>1</n1>
         </outWeights>

@@ -1,63 +1,63 @@
-from classes.snp_system import Snp_system
-from classes.rule import Rule, RuleSet
-from classes.rule_re import RuleRE, StarExpSet, PlusExpSet
-from copy import copy
-from classes.neuron import Neuron
-from typing import Dict, Set
+from src.classes.snp_system import SnpSystem
+from src.classes.rule_set import RuleSet
+from src.classes.neuron import Neuron
+from typing import Dict
 
 #! ALGORITHM 1
-def homogenize(snp_system: Snp_system) -> RuleSet:
-    rule_sets = snp_system.get_rule_sets()
+def homogenize(snp_system: SnpSystem) -> RuleSet:
+    """
+    Turns a general SN P system to a Homogenized SN P system
 
-    p = len(rule_sets)
-    
-    if p == 0:
-        raise ValueError("Not a single rule is given")
+    Complexity: `O((n^2)k + nt)`
+    """
+    rule_sets = snp_system.get_rule_sets()  #! O(n)
+
+    p = len(rule_sets)  #! O(1)
+
+    if p == 0:  #! O(1)
+        raise ValueError("Not a single rule is given")  #! O(1)
     
 
-    if p == 1:
-        return rule_sets.pop()
+    if p == 1:  #! O(1)
+        return rule_sets.pop()  #! O(1)
     
     # Used to remember the translate param of a neuron
-    neuron_to_translate_param: Dict[Neuron, int] = {}
+    neuron_to_translate_param: Dict[Neuron, int] = {}  #! O(1)
     
     # Used to remember all j of multiplier neurons (aj -> aj)
 
     #! Step 1
-    i = 0
-    R: RuleSet = RuleSet({})
-    for R_prime in rule_sets:
-        R = R.union(R_prime.scale(p).translate(i))
+    i = 0  #! O(1)
+    R: RuleSet = RuleSet({})  #! O(1)
+    for R_prime in rule_sets:  #! O(n)
+
+        R_scaled = R_prime.scale(p)  #! O(nk)
+        R_translated = R_scaled.translate(i)  #! O(nk)
+        R = R.union(R_translated)  #! O((n^2)k)
 
         # Used to remember the translate param of a neuron
-        for neuron in snp_system.neurons:
-            if neuron.rules == R_prime:
-                neuron_to_translate_param[neuron] = i
+        for neuron in snp_system.neurons:  #! O(n^2)
+            if neuron.rules == R_prime:  #! O(n^2)
+                neuron_to_translate_param[neuron] = i  #! O(n^2)
 
-        i+=1
-
-    non_input_output_neurons = [neuron for neuron in copy(snp_system.neurons) if not neuron.is_input and not neuron.is_output]
-    # output_neuron = next(filter(lambda neuron: neuron.is_output, snp_system.neurons), None)
-    # neuron_connected_to_output_neuron = next(filter(lambda neuron: output_neuron.id in neuron.out, non_input_output_neurons), None)
-    # TODO: 1. Add case when there is input neuron, should also be scaled
+        i+=1  #! O(n)
 
 
-    #! Step 2-3
-    for neuron in non_input_output_neurons:
-        print(f"{neuron.id}, {neuron.spikes} is scaled by {p}")
-        neuron.scale(p)
+    #! Step 2-3: Scale Neurons
+    for neuron in snp_system.neurons:  #! O(n)
+        neuron.scale(p)  #! O(n(k + t))
 
 
-    #! Step 4
-    for neuron in non_input_output_neurons:
-        t = neuron_to_translate_param[neuron]
-        print(f"{neuron.id} is translated by {t}")
-        neuron.translate(t)
+    #! Step 4: Translate Neurons
+    for neuron in snp_system.neurons:  #! O(n)
+        t = neuron_to_translate_param.get(neuron, 0)  #! O(n)
+        neuron.translate(t)  #! O(nk)
+    
 
 
 
     #! Step 5
-    for neuron in snp_system.neurons:
-        neuron.rules = R
+    for neuron in snp_system.neurons:  #! O(n)
+        neuron.rules = R  #! O(n)
 
-    return R
+    return R  #! O(1)

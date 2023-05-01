@@ -1,21 +1,33 @@
-from collections import OrderedDict
+from src.types.position_dict import PositionDict
 
-class Position:
+class Position():
     """Contains the x and y coordinates of a neuron"""
-
+    
     def __init__(self, x: float, y: float) -> None:
-        self.x = x
-        self.y = y
+        """
+        Initializes a position
 
+        Complexity: `O(1)`
+        """
+        self.x = x  #! O(1)
+        self.y = y  #! O(1)
+
+    #! Dunder Methods
     def __str__(self) -> str:
         return f"({self.x}, {self.y})"
 
     def __repr__(self) -> str:
         return self.__str__()
 
-    @classmethod
-    def from_json(cls, position_json: OrderedDict[str, str]):
-        return cls(float(position_json["x"]), float(position_json["y"]))
+    #! Parsing
+    @staticmethod
+    def from_dict(position_dict: PositionDict):
+        """
+        Converts the input position dictionary to its equivalent Position object
+
+        Complexity: `O(1)`
+        """
+        return Position(float(position_dict.get("x")), float(position_dict.get("y")))  #! O(1)
 
     def get_translate(self, dx: float, dy: float):
         return Position(self.x + dx, self.y + dy)

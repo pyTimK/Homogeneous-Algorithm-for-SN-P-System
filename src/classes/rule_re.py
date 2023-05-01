@@ -4,6 +4,7 @@ class ConstantExp(int):
 
 class StarExpSet(set[int]):
     """Set of exponents of all stars of a regular expression"""
+    #! Dunder Methods
     def __hash__(self):
         return hash(tuple(self))
     
@@ -13,6 +14,7 @@ class StarExpSet(set[int]):
 
 class PlusExpSet(set[int]):
     """Set of exponents of all plus of a regular expression"""
+    #! Dunder Methods
     def __hash__(self):
         return hash(tuple(self))
     
@@ -31,23 +33,34 @@ class RuleRE(set[tuple[ConstantExp, StarExpSet, PlusExpSet]]):
     """
 
     def translate(self, x: int):
-        rule_re_new: RuleRE = RuleRE()
-        for constant, star_set, plus_set in self:
-            new_constant = constant + x 
-            rule_re_new.add((new_constant, star_set, plus_set))
+        """
+        translates the regular expression of a rule
+
+        Complexity: `O(1)`
+        """
+        rule_re_new: RuleRE = RuleRE()  #! O(1)
+        for constant, star_set, plus_set in self:  #! O(1)
+            new_constant = constant + x   #! O(1)
+            rule_re_new.add((new_constant, star_set, plus_set))  #! O(1)
         
         return rule_re_new
     
     def scale(self, x: int):
-        rule_re_new: RuleRE = RuleRE({})
-        for constant, star_set, plus_set in self:
-            new_constant = constant * x
-            new_star_set = StarExpSet({star * x for star in star_set})
-            new_plus_set = PlusExpSet({plus * x for plus in plus_set})
-            rule_re_new.add((new_constant, new_star_set, new_plus_set))
+        """
+        scales the regular expression of a rule
+
+        Complexity: `O(1)`
+        """
+        rule_re_new: RuleRE = RuleRE({})  #! O(1)
+        for constant, star_set, plus_set in self:  #! O(1)
+            new_constant = constant * x  #! O(1)
+            new_star_set = StarExpSet({star * x for star in star_set})  #! O(1)
+            new_plus_set = PlusExpSet({plus * x for plus in plus_set})  #! O(1)
+            rule_re_new.add((new_constant, new_star_set, new_plus_set))  #! O(1)
         
         return rule_re_new
     
+    #! Dunder Methods
     def __hash__(self):
         return hash(tuple(self))
     

@@ -1,31 +1,62 @@
 from collections import OrderedDict
 from typing import Any, List, Set
-from rule import RuleSet
-from neuron import Neuron
 import xmltodict
+from .neuron import Neuron
+from src.types.snp_system_dict import SnpSystemDict
 
 #! SNP SYSTEM
-class Snp_system:
+class SnpSystem:
     """Main class for SN P systems"""
 
-    def __init__(self, input_json: OrderedDict[str, Any]) -> None:
-        self.neurons: List[Neuron]= []
+    def __init__(self, neurons: List[Neuron]):
+        """
+        Initializes an SnpSystem
 
-        content_json = input_json["content"]
-        neuron_ids = list(content_json.keys())
-
-        for neuron_id in neuron_ids:
-            neuron_json: OrderedDict[str, Any] = content_json[neuron_id]
-            neuron = Neuron.from_neuron_json(neuron_json)
-            self.neurons.append(neuron)
-            
-
+        Complexity: `O(1)`
+        """
+        self.neurons = neurons  #! O(1)
+        
         
     def get_rule_sets(self):
-        """Returns a set of unique rule sets"""
-        return set({neuron.rules for neuron in self.neurons if len(neuron.rules) > 0})
+        """
+        Returns a set of unique rule sets
+
+        Complexity: `O(n)`
+        """
+        return set({neuron.rules for neuron in self.neurons if len(neuron.rules) > 0})  #! O(n)
+    
+    def get_input_neurons(self):
+        """
+        Returns a list of all input neurons
+        
+        Complexity: `O(n)`
+        """
+        return [neuron for neuron in self.neurons if neuron.is_input] #! O(n)
+    
+    def get_output_neurons(self):
+        """
+        Returns a list of all output neurons
+        
+        Complexity: `O(n)`
+        """
+        return [neuron for neuron in self.neurons if neuron.is_output] #! O(n)
+
+    def get_non_input_and_non_output_neurons(self):
+        """
+        Returns a list of all non-input and non-output neurons
+        
+        Complexity: `O(n)`
+        """
+        return [neuron for neuron in self.neurons if not (neuron.is_input or neuron.is_output)] #! O(n)
+
+
 
     def get_neuron_subsystem(self, neuron: Neuron) -> Set[Neuron]:
+        """
+        returns all neurons connected to the given neuron
+
+        NOTE: not included when using the type-3-subsystem scaling
+        """
         subsystem: List[Neuron] = []
         for neuron_prime in self.neurons:
             if neuron_prime == neuron:
@@ -37,7 +68,11 @@ class Snp_system:
         return subsystem
 
     def type_2_subsystem_scaling(self, neuron: Neuron, x: int) -> Set[int]:
-        # TYPE 2 - SUBSYSTEM SCALING
+        """
+        TYPE 2 - SUBSYSTEM SCALING
+
+        NOTE: not included when using the type-3-subsystem scaling
+        """
         subsystem = self.get_neuron_subsystem(neuron)
 
         multipliers: Set[int] = set()
@@ -65,46 +100,34 @@ class Snp_system:
         return multipliers
 
 
+    #! Parsing
+    @staticmethod
+    def from_dict(snp_system_dict: SnpSystemDict):
+        """
+        Converts the input SN P System dictionary to its equivalent SnpSystem object
+
+        Complexity: `O(n^2 + nk + nt)`
+        """
+
+        content_dict = snp_system_dict.get("content")  #! O(1)
+
+        if content_dict == None:  #! O(1)
+            raise ValueError("Input SNP System xmp file does not contain `content` key")  #! O(1)
+        
+        return SnpSystem([Neuron.from_dict(neuron_dict) for neuron_dict in content_dict.values()])  #! O(n^2 + nk + nt)
+    
+
     def to_xmp(self):
-        snp_system_dict = {
-            "content": {}
-        }
-
+        """
+        Converts the Snp_system object to its equivalent xmp string
+        """
+        content = {}
         for neuron in self.neurons:
-            if neuron.is_output:
-                neuron_dict = {
-                    "id": neuron.id,
-                    "position": {
-                        "x": neuron.position.x,
-                        "y": neuron.position.y,
-                    },
-                    "isOutput": neuron.is_output,
-                    "isInput": neuron.is_input,
-                    "spikes": 0,
-                    "bitstring": "",
-                }
-            
-            else:
-                neuron_dict = {
-                    "id": neuron.id,
-                    "position": {
-                        "x": neuron.position.x,
-                        "y": neuron.position.y,
-                    },
-                    "rules": neuron.get_rules_xmp_str(),
-                    "startingSpikes": neuron.starting_spikes,
-                    "delay": neuron.delay,
-                    "spikes": neuron.spikes,
-                    "isOutput": neuron.is_output,
-                    "isInput": neuron.is_input,
-                    "out": neuron.out,
-                    "outWeights": neuron.out_weights
-                }
+            neuron_xmp = neuron.to_xmp()
+            content[neuron.id] = neuron_xmp
 
-
-            snp_system_dict["content"][neuron.id] = neuron_dict
-
-        xml_str = xmltodict.unparse(snp_system_dict, pretty=True)
+        snp_system_xmp = {"content": content}
+        xml_str = xmltodict.unparse(snp_system_xmp, pretty=True)
         xml_str = '\n'.join(xml_str.split('\n')[1:])
 
         return xml_str

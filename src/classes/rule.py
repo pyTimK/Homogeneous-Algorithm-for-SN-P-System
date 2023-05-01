@@ -1,23 +1,37 @@
 
 import re
-from rule_re import RuleRE, ConstantExp, PlusExpSet, StarExpSet
+from .rule_re import RuleRE, ConstantExp, PlusExpSet, StarExpSet
 from typing import List, Set
 
 class Rule:
-    """Represents a rule in a neuron of an SN P system"""
+    """
+    Represents a rule in a neuron of an SN P system
+    """
 
     __symbol = "a"
     __re_delimeter = "U"
 
     def __init__(self, rule_re: RuleRE, consume: int, release: int, delay: int) -> None:
-        self. rule_re = rule_re
-        self.consume = consume
-        self.release = release
-        self.delay = delay
+        """
+        Initializes a rule
+
+        Complexity: `O(1)`
+        """
+        self. rule_re = rule_re  #! O(1)
+        self.consume = consume  #! O(1)
+        self.release = release  #! O(1)
+        self.delay = delay  #! O(1)
 
 
+    #! Parsing
     @staticmethod
-    def from_rule_str(rule_str: str):
+    def from_dict(rule_str: str):
+        """
+        Converts the input rule dictionary to its equivalent Rule object
+
+        Complexity: `O(1)`
+        """
+
         match = re.match(fr"(.*)/(\w+)->(\w*);(\w*)", rule_str)
         rule_re_str, consume_str, release_str, delay_str = match.groups()
 
@@ -161,7 +175,6 @@ class Rule:
     def __get_delay_str(delay: int) -> str:
         return str(delay)
 
-
     def to_xmp_str(self):
         re_str = Rule.__get_re_str(self.rule_re)
         consume_str = Rule.__get_consume_str(self.consume)
@@ -175,13 +188,23 @@ class Rule:
 
     #! Operations
     def translate(self, x: int):
-        return Rule(self.rule_re.translate(x), self.consume, self.release, self.delay)
+        """
+        translates a rule
+
+        Complexity: `O(1)`
+        """
+        return Rule(self.rule_re.translate(x), self.consume, self.release, self.delay)  #! O(1)
 
     def scale(self, x: int):
-        return Rule(self.rule_re.scale(x), self.consume * x, self.release * x, self.delay)
+        """
+        scales a rule
+
+        Complexity: `O(1)`
+        """
+        return Rule(self.rule_re.scale(x), self.consume * x, self.release * x, self.delay)  #! O(1)
 
 
-    #! Low level
+    #! Dunder Methods
     def __str__(self) -> str:
         return str(self.to_xmp_str())
 
@@ -198,35 +221,6 @@ class Rule:
         return hash((frozenset(self.rule_re), self.consume, self.release, self.delay))
 
 
-
-class RuleSet(set[Rule]):
-    """Represents a set of rules"""
-    def union(self, *rule_set_tuple: "RuleSet"):
-        """combines two rule sets"""
-        return RuleSet(super().union(*rule_set_tuple))
-    
-    #! Operations
-    def translate(self, x: int):
-        """translates each rule in the rule set"""
-        return RuleSet({rt.translate(x) for rt in self})
-    
-    def scale(self, x: int):
-        """scale each rule in the rule set"""
-        return RuleSet({rt.scale(x) for rt in self})
-    
-    #! Low level
-    def __str__(self) -> str:
-        return f"{set(self)}"
-
-    def __repr__(self) -> str:
-        return self.__str__()
-    
-    def __hash__(self):
-        return hash(tuple(self))
-    
-    def __eq__(self, other):
-        return set(self) == set(other)
-    
 
 
     
