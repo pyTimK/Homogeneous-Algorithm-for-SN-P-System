@@ -46,8 +46,6 @@ class Neuron:
     def multiplier_neuron(neuron_prime: "Neuron", neuron: "Neuron", index: int):
         """
         Returns the necessary multiplier neuron
-
-        NOTE: not included when using the type-3-subsystem scaling
         """
 
         spikes_produced = {rule.release * neuron_prime.out_weights[neuron.id] for rule in neuron_prime.rules}
@@ -68,7 +66,8 @@ class Neuron:
             delay = 0,
             spikes = 0,
             out = [neuron.id],
-            out_weights={neuron.id: 1}
+            out_weights={neuron.id: 1},
+            bitstring=[],
         ), spikes_produced
         
 
@@ -92,16 +91,16 @@ class Neuron:
             print(f"{self.id} is translated by {x}")
 
 
-    def scale(self, x: int):
+    def scale(self, x: int, scale_release = True):
         """
         Scales a neuron
 
         Note that this operation acts on the neuron itself
 
-        Complexity: `O(k + t)`
+        Complexity: `O(k)`
         """
         if self.is_input:  #! O(1)
-            self.bitstring = [b * x for b in self.bitstring]  #! O(t)
+            self.bitstring = [b * x for b in self.bitstring]  #! O(t) Note: In true SN P systems, the input neuron is not included in time analysis
             print(f"Input neuron {self.id} is scaled by {x}")
         
         elif self.is_output:  #! O(1)
@@ -109,7 +108,7 @@ class Neuron:
 
         else:
             self.spikes *= x  #! O(1)
-            self.rules = RuleSet({rule.scale(x) for rule in self.rules})  #! O(k)
+            self.rules = RuleSet({rule.scale(x, scale_release) for rule in self.rules})  #! O(k)
             print(f"{self.id} is scaled by {x}")
 
 

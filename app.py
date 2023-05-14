@@ -1,6 +1,6 @@
 from src.classes.snp_system import SnpSystem
 from src.types.snp_system_dict import SnpSystemDict
-from src.algorithms.homogenize import homogenize
+from algorithms.modified_homogenize import modified_homogenize
 from flask import Flask, request
 from flask_cors import CORS
 from typing import Dict
@@ -22,7 +22,7 @@ def homogenize_input():
     snp_system_dict = SnpSystemDict(xmltodict.parse(input_snp_system_xmp_str))
     # print(f">>>>>> snp_system_dict: {snp_system_dict}")
     snp_system = SnpSystem.from_dict(snp_system_dict)  #! O(n^2 + nk + nt)
-    homogenize(snp_system)  #! O((n^2)k + nt)
+    modified_homogenize(snp_system)  #! O(nk)
     print(f"Homogenized an SN P System")
     
     return {

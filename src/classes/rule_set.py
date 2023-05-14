@@ -9,6 +9,14 @@ class RuleSet(set[Rule]):
     Note that there could be a maximum of `nk` rules a RuleSet can have
     """
     #! Operations
+    def update(self, rule_set: "RuleSet"):
+        """
+        appends a set of rules
+
+        Complexity: `O(k)`
+        """
+        super().update(rule_set)  #! O(k)
+
     def union(self, *rule_set_tuple: "RuleSet"):
         """
         combines two or more rule sets
@@ -25,14 +33,14 @@ class RuleSet(set[Rule]):
         """
         return RuleSet({rt.translate(x) for rt in self})  #! O(k)
     
-    def scale(self, x: int):
+    def scale(self, x: int, scale_release = True):
         """
         scale each rule in the rule set
 
         Complexity: `O(k)`
         """
         
-        return RuleSet({rt.scale(x) for rt in self})  #! O(k)
+        return RuleSet({rt.scale(x, scale_release) for rt in self})  #! O(k)
     
     #! Parsing
     @staticmethod

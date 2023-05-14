@@ -17,13 +17,13 @@ class SnpSystem:
         self.neurons = neurons  #! O(1)
         
         
-    def get_rule_sets(self):
+    def get_unique_rule_sets(self):
         """
         Returns a set of unique rule sets
 
-        Complexity: `O(n)`
+        Complexity: `O(nk)`
         """
-        return set({neuron.rules for neuron in self.neurons if len(neuron.rules) > 0})  #! O(n)
+        return set({neuron.rules for neuron in self.neurons if len(neuron.rules) > 0})  #! O(nk)
     
     def get_input_neurons(self):
         """
@@ -54,8 +54,6 @@ class SnpSystem:
     def get_neuron_subsystem(self, neuron: Neuron) -> Set[Neuron]:
         """
         returns all neurons connected to the given neuron
-
-        NOTE: not included when using the type-3-subsystem scaling
         """
         subsystem: List[Neuron] = []
         for neuron_prime in self.neurons:
@@ -70,8 +68,6 @@ class SnpSystem:
     def type_2_subsystem_scaling(self, neuron: Neuron, x: int) -> Set[int]:
         """
         TYPE 2 - SUBSYSTEM SCALING
-
-        NOTE: not included when using the type-3-subsystem scaling
         """
         subsystem = self.get_neuron_subsystem(neuron)
 

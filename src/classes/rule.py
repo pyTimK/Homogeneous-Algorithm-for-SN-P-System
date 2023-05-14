@@ -195,13 +195,14 @@ class Rule:
         """
         return Rule(self.rule_re.translate(x), self.consume, self.release, self.delay)  #! O(1)
 
-    def scale(self, x: int):
+    def scale(self, x: int, scale_release = True):
         """
         scales a rule
 
         Complexity: `O(1)`
         """
-        return Rule(self.rule_re.scale(x), self.consume * x, self.release * x, self.delay)  #! O(1)
+        _release = self.release * x if scale_release else self.release
+        return Rule(self.rule_re.scale(x), self.consume * x, _release, self.delay)  #! O(1)
 
 
     #! Dunder Methods
