@@ -11,7 +11,7 @@ def homogenize_type_2_scaling(snp_system: SnpSystem) -> RuleSet:
     """
     Turns a general SN P system to a Homogenized SN P system
 
-    Complexity: `O(nk)`
+    Complexity: `O(n^2k)`
     """
     rule_sets = snp_system.get_unique_rule_sets()  #! O(nk)
 
@@ -28,7 +28,7 @@ def homogenize_type_2_scaling(snp_system: SnpSystem) -> RuleSet:
     rule_set_to_translate_param: Dict[RuleSet, int] = {}  #! O(1)
     
     # Used to remember all j of multiplier neurons (aj -> aj)
-    multipliers: Set[int] = set()
+    multipliers: Set[int] = set() #! O(1)
 
     #! Step: 1 R <- (pR1+0) U (pR2+1) U ... U (pRp + (p-1))
     i = 0  #! O(1)
@@ -45,12 +45,12 @@ def homogenize_type_2_scaling(snp_system: SnpSystem) -> RuleSet:
 
         i+=1  #! O(n)
 
-    nonmultiplier_neurons = [neuron for neuron in copy(snp_system.neurons) if not neuron.is_input and not neuron.is_output]
+    nonmultiplier_neurons = [neuron for neuron in copy(snp_system.neurons) if not neuron.is_input and not neuron.is_output]  #! O(n)
 
     #! Step 2: Scale Neurons
     for neuron in nonmultiplier_neurons:  #! O(n)
         neuron.scale(p, scale_release=False)  #! O(nk)
-        multipliers.update(snp_system.type_2_subsystem_scaling(neuron, p))
+        multipliers.update(snp_system.type_2_subsystem_scaling(neuron, p))  #! O(n^2k)
 
     #! Step 3: Translate Neurons
     for neuron in nonmultiplier_neurons:
@@ -61,29 +61,29 @@ def homogenize_type_2_scaling(snp_system: SnpSystem) -> RuleSet:
 
     #! Step 4: Get union of rule sets of all multiplier neurons
     R0 = RuleSet({Rule(
-        rule_re = RuleRE({(spike_produced, StarExpSet({}), PlusExpSet({}))}), 
-        consume = spike_produced, 
-        release = spike_produced, 
-        delay = 0, 
-        ) for spike_produced in multipliers})
+        rule_re = RuleRE({(spike_produced, StarExpSet({}), PlusExpSet({}))}),  #! O(1)
+        consume = spike_produced,  #! O(1)
+        release = spike_produced,  #! O(1)
+        delay = 0,  #! O(1)
+        ) for spike_produced in multipliers})  #! O(nk)
     
-    print("R0")
-    print(R0)
+    # print("R0")
+    # print(R0)
 
 
     #! Step 5: Set the offset as the upper bound of the multipliers
-    t = 0 if len(multipliers) == 0 else max(multipliers) + 1
-    print("t")
-    print(t)
+    t = 0 if len(multipliers) == 0 else max(multipliers) + 1  #! O(1)
+    # print("t")
+    # print(t)
     #! Step 6: Get the final rule set
-    R = R0.union(R.translate(t))
+    R = R0.union(R.translate(t))  #! O(nk)
 
     #! Step 7: Translate all non-multiplier neurons by t
-    for neuron in nonmultiplier_neurons:
-        neuron.translate(t)
+    for neuron in nonmultiplier_neurons:  #! O(n)
+        neuron.translate(t)  #! O(nk)
 
     #! Step 8: 
-    for neuron in snp_system.neurons:
-        neuron.rules = R
+    for neuron in snp_system.neurons:  #! O(n)
+        neuron.rules = R  #! O(n)
 
     return R  #! O(1)

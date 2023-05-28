@@ -30,5 +30,10 @@ class Position():
         return Position(float(position_dict.get("x")), float(position_dict.get("y")))  #! O(1)
 
     def get_translate(self, dx: float, dy: float):
-        return Position(self.x + dx, self.y + dy)
+        """
+        Translates a position by dx horizontally and dy vertically
+
+        Complexity: `O(1)`
+        """
+        return Position(self.x + dx, self.y + dy)  #! O(1)
 

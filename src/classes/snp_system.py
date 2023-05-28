@@ -54,46 +54,50 @@ class SnpSystem:
     def get_neuron_subsystem(self, neuron: Neuron) -> Set[Neuron]:
         """
         returns all neurons connected to the given neuron
-        """
-        subsystem: List[Neuron] = []
-        for neuron_prime in self.neurons:
-            if neuron_prime == neuron:
-                continue
 
-            if neuron.id in neuron_prime.out:
-                subsystem.append(neuron_prime)
+        Complexity: `O(n)`
+        """
+        subsystem: List[Neuron] = []  #! O(1)
+        for neuron_prime in self.neurons:  #! O(n)
+            if neuron_prime == neuron:  #! O(n)
+                continue  #! O(n)
+
+            if neuron.id in neuron_prime.out:  #! O(n)
+                subsystem.append(neuron_prime)  #! O(n)
         
         return subsystem
 
     def type_2_subsystem_scaling(self, neuron: Neuron, x: int) -> Set[int]:
         """
         TYPE 2 - SUBSYSTEM SCALING
+
+        Complexity: `O(n^2k)`
         """
-        subsystem = self.get_neuron_subsystem(neuron)
+        subsystem = self.get_neuron_subsystem(neuron)  #! O(n)
 
-        multipliers: Set[int] = set()
+        multipliers: Set[int] = set()  #! O(1)
 
-        for neuron_prime in subsystem:
+        for neuron_prime in subsystem:  #! O(n)
             # 1. Create multiplier neurons and Connect it to the selected neuron
-            for i in range(x):
-                multiplier_neuron, new_multipliers = Neuron.multiplier_neuron(neuron_prime, neuron, i)
-                self.neurons.append(multiplier_neuron)
-                multipliers.update(new_multipliers)
+            for i in range(x):  #! O(n^2)
+                multiplier_neuron, new_multipliers = Neuron.multiplier_neuron(neuron_prime, neuron, i)  #! O(n^2k)
+                self.neurons.append(multiplier_neuron)  #! O(n^2)
+                multipliers.update(new_multipliers)  #! O(n^2k)
 
                 # 2. Connect the subsystem neuron to multiplier neurons
-                neuron_prime.out.append(multiplier_neuron.id)
+                neuron_prime.out.append(multiplier_neuron.id)  #! O(n^2)
                 # print(f"multiplier_neuron.id:{multiplier_neuron.id}")
                 # print(f"neuron_prime.out: {neuron_prime.out}")
-                neuron_prime.out_weights[multiplier_neuron.id] = 1
+                neuron_prime.out_weights[multiplier_neuron.id] = 1  #! O(n^2)
             
             # 3. Disconnect the subsystem neuron to the selected neuron
-            if neuron.id in neuron_prime.out:
-                neuron_prime.out.remove(neuron.id)
+            if neuron.id in neuron_prime.out:  #! O(n^2)
+                neuron_prime.out.remove(neuron.id)  #! O(n^2)
             
-            if neuron.id in neuron_prime.out_weights:
-                del neuron_prime.out_weights[neuron.id]
+            if neuron.id in neuron_prime.out_weights:  #! O(n^2)
+                del neuron_prime.out_weights[neuron.id]  #! O(n^2)
 
-        return multipliers
+        return multipliers  #! O(1)
 
 
     #! Parsing

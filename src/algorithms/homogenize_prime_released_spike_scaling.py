@@ -4,7 +4,7 @@ from src.classes.neuron import Neuron
 from typing import Dict
 
 #! ALGORITHM 1
-def modified_homogenize(snp_system: SnpSystem) -> RuleSet:
+def homogenize_prime_released_spike_scaling(snp_system: SnpSystem) -> RuleSet:
     """
     Turns a general SN P system to a Homogenized SN P system
 

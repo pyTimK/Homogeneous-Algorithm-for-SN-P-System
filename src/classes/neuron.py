@@ -46,29 +46,31 @@ class Neuron:
     def multiplier_neuron(neuron_prime: "Neuron", neuron: "Neuron", index: int):
         """
         Returns the necessary multiplier neuron
+
+        Complexity: `O(k)`
         """
 
-        spikes_produced = {rule.release * neuron_prime.out_weights[neuron.id] for rule in neuron_prime.rules}
+        spikes_produced = {rule.release * neuron_prime.out_weights[neuron.id] for rule in neuron_prime.rules}  #! O(k)
 
         return Neuron(
-            id = f"{neuron_prime.id}-{neuron.id}-{index}",
-            position = neuron_prime.position.get_translate(30 * index, 0),
-            is_input = False,
-            is_output = False,
+            id = f"{neuron_prime.id}-{neuron.id}-{index}",  #! O(1)
+            position = neuron_prime.position.get_translate(30 * index, 0),  #! O(1)
+            is_input = False,  #! O(1)
+            is_output = False,  #! O(1)
             rules = RuleSet({Rule(
-                rule_re = RuleRE({(spike_produced, StarExpSet({}), PlusExpSet({}))}), 
-                consume = spike_produced, 
-                release = spike_produced, 
-                delay = 0, 
-                ) for spike_produced in spikes_produced}),
+                rule_re = RuleRE({(spike_produced, StarExpSet({}), PlusExpSet({}))}),  #! O(1)
+                consume = spike_produced,  #! O(1)
+                release = spike_produced,  #! O(1)
+                delay = 0,  #! O(1)
+                ) for spike_produced in spikes_produced}),  #! O(k)
 
-            starting_spikes = 0,
-            delay = 0,
-            spikes = 0,
-            out = [neuron.id],
-            out_weights={neuron.id: 1},
-            bitstring=[],
-        ), spikes_produced
+            starting_spikes = 0,  #! O(1)
+            delay = 0,  #! O(1)
+            spikes = 0,  #! O(1)
+            out = [neuron.id],  #! O(1)
+            out_weights={neuron.id: 1},  #! O(1)
+            bitstring=[],  #! O(1)
+        ), spikes_produced  #! O(k)
         
 
     def translate(self, x: int):
