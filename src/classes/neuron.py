@@ -138,8 +138,9 @@ class Neuron:
         if type(out_dict) == str:  #! O(1)
             return [out_dict]  #! O(1)
         
-        if type(out_dict) == List[str]:  #! O(1)
+        if type(out_dict) == List[str] or type(out_dict) == list:  #! O(1)
             return out_dict  #! O(1)
+ 
 
     @staticmethod
     def from_dict(neuron_dict: NeuronDict):

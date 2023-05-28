@@ -22,7 +22,7 @@ def main():
     """
 
     # Set the name of the input xmp file to be used. It must be inside the `input` folder
-    input_name = "DEMO_with_input"
+    input_name = "homogenized_DEMO_with_input"
 
     # Set the scaling type to be used
     scaling_type = ScalingType.TYPE_2_SUBSYSTEM_SCALING

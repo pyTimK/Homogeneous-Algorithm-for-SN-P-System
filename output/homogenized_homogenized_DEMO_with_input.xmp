@@ -2,8 +2,8 @@
 	<n1>
 		<id>n1</id>
 		<position>
-			<x>288.71818817233594</x>
-			<y>335.29681414781027</y>
+			<x>297.47094232746974</x>
+			<y>337.8066805514847</y>
 		</position>
 		<rules>8a/4a-&gt;a;0 7a/2a-&gt;a;0 a/a-&gt;a;0 5a/2a-&gt;a;0</rules>
 		<startingSpikes>1</startingSpikes>
@@ -21,8 +21,8 @@
 	<n2>
 		<id>n2</id>
 		<position>
-			<x>93.13911982899108</x>
-			<y>-80.66744856668254</y>
+			<x>65.50288594420806</x>
+			<y>-81.0298452523852</y>
 		</position>
 		<rules>8a/4a-&gt;a;0 7a/2a-&gt;a;0 a/a-&gt;a;0 5a/2a-&gt;a;0</rules>
 		<startingSpikes>3</startingSpikes>
@@ -38,7 +38,7 @@
 	<n4>
 		<id>n4</id>
 		<position>
-			<x>-7.359618962569357</x>
+			<x>-53.32755079956456</x>
 			<y>-300.0</y>
 		</position>
 		<isInput>false</isInput>
@@ -49,8 +49,8 @@
 	<n0-j5Lto5JHr>
 		<id>n0-j5Lto5JHr</id>
 		<position>
-			<x>470.89484624587567</x>
-			<y>711.7861965630458</y>
+			<x>508.6105930128958</x>
+			<y>711.9582745513114</y>
 		</position>
 		<isInput>true</isInput>
 		<isOutput>false</isOutput>
@@ -67,8 +67,8 @@
 	<n0_n1_0>
 		<id>n0_n1_0</id>
 		<position>
-			<x>302.23336318648387</x>
-			<y>594.6779735583498</y>
+			<x>507.3931464803305</x>
+			<y>500.3501247998212</y>
 		</position>
 		<rules>8a/4a-&gt;a;0 7a/2a-&gt;a;0 a/a-&gt;a;0 5a/2a-&gt;a;0</rules>
 		<startingSpikes>0</startingSpikes>
@@ -84,8 +84,8 @@
 	<n0_n1_1>
 		<id>n0_n1_1</id>
 		<position>
-			<x>483.4850903381486</x>
-			<y>507.62818552520315</y>
+			<x>327.98934207096096</x>
+			<y>601.4563804853074</y>
 		</position>
 		<rules>8a/4a-&gt;a;0 7a/2a-&gt;a;0 a/a-&gt;a;0 5a/2a-&gt;a;0</rules>
 		<startingSpikes>0</startingSpikes>
@@ -101,8 +101,8 @@
 	<n1_n2_0>
 		<id>n1_n2_0</id>
 		<position>
-			<x>101.00214814986771</x>
-			<y>155.23342099379585</y>
+			<x>91.04408809005375</x>
+			<y>160.27630720186403</y>
 		</position>
 		<rules>8a/4a-&gt;a;0 7a/2a-&gt;a;0 a/a-&gt;a;0 5a/2a-&gt;a;0</rules>
 		<startingSpikes>0</startingSpikes>
@@ -118,8 +118,8 @@
 	<n1_n2_1>
 		<id>n1_n2_1</id>
 		<position>
-			<x>267.8868630408667</x>
-			<y>76.04485777847785</y>
+			<x>255.31655287364578</x>
+			<y>69.1820776625965</y>
 		</position>
 		<rules>8a/4a-&gt;a;0 7a/2a-&gt;a;0 a/a-&gt;a;0 5a/2a-&gt;a;0</rules>
 		<startingSpikes>0</startingSpikes>
