@@ -53,7 +53,7 @@ class Neuron:
         spikes_produced = {rule.release * neuron_prime.out_weights[neuron.id] for rule in neuron_prime.rules}  #! O(k)
 
         return Neuron(
-            id = f"{neuron_prime.id}_{neuron.id}_{index}",  #! O(1)
+            id = f"{neuron_prime.id.split('-')[0]}_{neuron.id.split('-')[0]}_{index}",  #! O(1)
             position = neuron_prime.position.get_translate(30 * index, 0),  #! O(1)
             is_input = False,  #! O(1)
             is_output = False,  #! O(1)
