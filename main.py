@@ -22,7 +22,7 @@ def main():
     """
 
     # Set the name of the input xmp file to be used. It must be inside the `input` folder
-    input_name = "ex3"
+    input_name = "ex4"
 
     # Set the scaling type to be used
     scaling_type = ScalingType.TYPE_2_SUBSYSTEM_SCALING

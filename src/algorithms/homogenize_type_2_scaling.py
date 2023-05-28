@@ -14,6 +14,8 @@ def homogenize_type_2_scaling(snp_system: SnpSystem) -> RuleSet:
     Complexity: `O(n^2k)`
     """
     rule_sets = snp_system.get_unique_rule_sets()  #! O(nk)
+    print("rule_sets")
+    print(rule_sets)
 
     p = len(rule_sets)  #! O(1)
 
@@ -69,6 +71,8 @@ def homogenize_type_2_scaling(snp_system: SnpSystem) -> RuleSet:
     
     # print("R0")
     # print(R0)
+    # print("multipliers")
+    # print(multipliers)
 
 
     #! Step 5: Set the offset as the upper bound of the multipliers

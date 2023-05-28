@@ -24,7 +24,7 @@ def auto_layout(snp_system: SnpSystem):
     # Uses Fruchterman Reingold technique from networkx library to layout the graph
     pos = nx.fruchterman_reingold_layout(
         graph,
-        scale=550, 
+        scale=10.8696 * len(snp_system.neurons) + 391.304, 
         center=[250,250],
     )
 
