@@ -131,5 +131,19 @@ class SnpSystem:
         xml_str = '\n'.join(xml_str.split('\n')[1:])
 
         return xml_str
+    
+
+    #! Dunder Methods
+    def __str__(self) -> str:
+        snp_system_str = "\n--- SNP System ---\n"
+        for neuron in self.neurons:
+            snp_system_str += f" > {neuron}\n"
+        
+        snp_system_str += "--- SN P System ---\n\n"
+
+        return snp_system_str
+
+    def __repr__(self) -> str:
+        return self.__str__()
 
 

@@ -1,0 +1,35 @@
+<content>
+	<n1-bxrG78CHR>
+		<id>n1-bxrG78CHR</id>
+		<position>
+			<x>341.5</x>
+			<y>223.0</y>
+		</position>
+		<rules>(12a)*/6a-&gt;2a;0 a(6a)*/4a-&gt;2a;0 7a(10a)+/2a-&gt;2a;0</rules>
+		<startingSpikes>2</startingSpikes>
+		<delay>0</delay>
+		<spikes>5</spikes>
+		<isOutput>false</isOutput>
+		<isInput>false</isInput>
+		<out>n2-X-yMkMmr5</out>
+		<outWeights>
+			<n2-X-yMkMmr5>1</n2-X-yMkMmr5>
+		</outWeights>
+	</n1-bxrG78CHR>
+	<n2-X-yMkMmr5>
+		<id>n2-X-yMkMmr5</id>
+		<position>
+			<x>588.5</x>
+			<y>224.0</y>
+		</position>
+		<rules>(12a)*/6a-&gt;2a;0 a(6a)*/4a-&gt;2a;0 7a(10a)+/2a-&gt;2a;0</rules>
+		<startingSpikes>3</startingSpikes>
+		<delay>0</delay>
+		<spikes>6</spikes>
+		<isOutput>false</isOutput>
+		<isInput>false</isInput>
+		<outWeights>
+			<n3-in3_yulLQ>1</n3-in3_yulLQ>
+		</outWeights>
+	</n2-X-yMkMmr5>
+</content>

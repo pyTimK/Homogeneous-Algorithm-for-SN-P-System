@@ -51,14 +51,16 @@ class Rule:
 
         for reg_exp in re_list:
             #? Star Set
-            star_pattern = r"\((.*)\)\*"
+            # print(reg_exp)
+            star_pattern = r"\(([^()]+)\)\*"
             stars_str: List[str] = re.findall(star_pattern, reg_exp)
             reg_exp = re.sub(star_pattern, "", reg_exp)
             star_set: StarExpSet = StarExpSet({1 if x == "a" else int(x.replace("a", "")) for x in stars_str})
-
+            # print(reg_exp)
             #? Plus Set
-            plus_pattern = r"\((.*)\)\+"
+            plus_pattern = r"\(([^()]+)\)\+"
             pluses_str: List[str] = re.findall(plus_pattern, reg_exp)
+            # print(pluses_str)
             reg_exp = re.sub(plus_pattern, "", reg_exp)
             plus_set: PlusExpSet = PlusExpSet({1 if x == "a" else int(x.replace("a", "")) for x in pluses_str})
 

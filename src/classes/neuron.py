@@ -227,7 +227,7 @@ class Neuron:
         return hash(self.id)
     
     def __str__(self) -> str:
-        return f"{self.id}"
+        return f"{self.id} - {self.rules}"
 
     def __repr__(self) -> str:
         return self.__str__()
