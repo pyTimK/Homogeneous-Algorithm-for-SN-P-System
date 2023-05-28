@@ -135,7 +135,7 @@ class SnpSystem:
 
     #! Dunder Methods
     def __str__(self) -> str:
-        snp_system_str = "\n--- SNP System ---\n"
+        snp_system_str = "--- SNP System ---\n"
         for neuron in self.neurons:
             snp_system_str += f" > {neuron}\n"
         

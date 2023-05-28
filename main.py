@@ -25,17 +25,18 @@ def main():
     input_name = "ex3"
 
     # Set the scaling type to be used
-    scaling_type = ScalingType.RELEASED_SPIKE_SCALING
+    scaling_type = ScalingType.TYPE_2_SUBSYSTEM_SCALING
 
     # Load the SNP System dictionary from the input xmp file
     snp_system_dict = SnpSystemDict(FileManager.load_xmp(f"./input/{input_name}.xmp"))
 
     # Print the input SNP System
-    print(snp_system_dict)
+    # print(snp_system_dict)
 
     # Parse the SN P system dictionary into its equivalent SnpSystem object
     snp_system = SnpSystem.from_dict(snp_system_dict)  #! O(n^2 + nk + nt)
 
+    print("\nINPUT SNP SYSTEM: ")
     print(snp_system)
 
     # Perform the homogenization algorithm with the right scaling type
@@ -52,6 +53,10 @@ def main():
     # Save the homogenized SN P system into an xmp file. This can be found in the `output` folder
     output_name = f"./output/homogenized_{input_name}.xmp"
     FileManager.save_xmp(output_name, snp_system.to_xmp())
+
+    print("\nHOMOGENIZED SNP SYSTEM: ")
+    print(snp_system)
+
 
     # Print the location of the saved file
     print(f"Saved result to {output_name}")
