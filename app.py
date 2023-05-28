@@ -1,7 +1,8 @@
 from src.classes.snp_system import SnpSystem
 from src.types.snp_system_dict import SnpSystemDict
-from algorithms.homogenize_prime_released_spike_scaling import homogenize_prime_released_spike_scaling
-from algorithms.homogenize_type_2_scaling import homogenize_type_2_scaling
+from src.algorithms.homogenize_prime_released_spike_scaling import homogenize_prime_released_spike_scaling
+from src.algorithms.homogenize_type_2_scaling import homogenize_type_2_scaling
+from src.algorithms.auto_layout import auto_layout
 from flask import Flask, request
 from flask_cors import CORS
 from typing import Dict
@@ -13,35 +14,93 @@ CORS(app)
 @app.route('/')
 def index():
     return """
-    WEBSNAPSE V2.0 WITH HOMOGENIZATION BUTTON
-https://websnapse-homogenize.netlify.app/
-
-HOMOGENIZATION API
-https://homogenize.fly.dev/
-
-SAMPLE API REQUEST
-URL: https://homogenize.fly.dev/homogenize
-METHOD: POST
-BODY [json]: {
-    scaling_type: 0,
-    snp_system: "<content><n1><id>n1</id><position><x>66.5</x><y>200</y></position><rules>a/a-&gt;a;0 2a/a-&gt;a;0</rules><startingSpikes>2</startingSpikes><delay>0</delay><spikes>2</spikes><isOutput>false</isOutput><isInput>false</isInput><out>n2</out><outWeights><n2>1</n2><n3-nm2MDs9Nh>1</n3-nm2MDs9Nh></outWeights></n1><n2><id>n2</id><position><x>282.5</x><y>197</y></position><rules>3a/2a-&gt;a;0</rules><startingSpikes>3</startingSpikes><delay>0</delay><spikes>3</spikes><isOutput>false</isOutput><isInput>false</isInput><out>n4</out><outWeights><n4>1</n4></outWeights></n2><n4><id>n4</id><position><x>456.5</x><y>204</y></position><isOutput>true</isOutput><isInput>false</isInput><spikes>0</spikes><bitstring/></n4></content>"
+    <html>
+    <head>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .header {
+        font-size: 24px;
+        font-weight: bold;
+        color: #3366cc;
+        margin-bottom: 10px;
+    }
+    .section {
+        margin-bottom: 20px;
+    }
+    .section-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #009933;
+        margin-bottom: 5px;
+    }
+    .section-content {
+        font-size: 14px;
+        color: #333333;
+        margin-left: 20px;
+    }
+    </style>
+    </head>
+    <body>
+        <div class="header">WEBSNAPSE V2.0 WITH HOMOGENIZATION BUTTON</div>
+        <div class="section">
+            <div class="section-title">WEBSNAPSE V2.0:</div>
+            <div class="section-content">
+                <a href="https://websnapse-homogenize.netlify.app/">https://websnapse-homogenize.netlify.app/</a>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">HOMOGENIZATION API:</div>
+            <div class="section-content">
+                <a href="https://homogenize.fly.dev/">https://homogenize.fly.dev/</a>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">SAMPLE API REQUEST:</div>
+            <div class="section-content">
+                <div class="section-title">URL:</div>
+                <div class="section-content">https://homogenize.fly.dev/homogenize</div>
+                <div class="section-title">METHOD:</div>
+                <div class="section-content">POST</div>
+                <div class="section-title">BODY [json]:</div>
+                <div class="section-content">
+                    <pre>
+{
+    "scaling_type": 0,
+    "snp_system": "&lt;content&gt;&lt;n1&gt;&lt;id&gt;n1&lt;/id&gt;&lt;position&gt;&lt;x&gt;66.5&lt;/x&gt;&lt;y&gt;200&lt;/y&gt;&lt;/position&gt;&lt;rules&gt;a/a-&gt;a;0 2a/a-&gt;a;0&lt;/rules&gt;&lt;startingSpikes&gt;2&lt;/startingSpikes&gt;&lt;delay&gt;0&lt;/delay&gt;&lt;spikes&gt;2&lt;/spikes&gt;&lt;isOutput&gt;false&lt;/isOutput&gt;&lt;isInput&gt;false&lt;/isInput&gt;&lt;out&gt;n2&lt;/out&gt;&lt;outWeights&gt;&lt;n2&gt;1&lt;/n2&gt;&lt;n3-nm2MDs9Nh&gt;1&lt;/n3-nm2MDs9Nh&gt;&lt;/outWeights&gt;&lt;/n1&gt;&lt;n2&gt;&lt;id&gt;n2&lt;/id&gt;&lt;position&gt;&lt;x&gt;282.5&lt;/x&gt;&lt;y&gt;197&lt;/y&gt;&lt;/position&gt;&lt;rules&gt;3a/2a-&gt;a;0&lt;/rules&gt;&lt;startingSpikes&gt;3&lt;/startingSpikes&gt;&lt;delay&gt;0&lt;/delay&gt;&lt;spikes&gt;3&lt;/spikes&gt;&lt;isOutput&gt;false&lt;/isOutput&gt;&lt;isInput&gt;false&lt;/isInput&gt;&lt;out&gt;n4&lt;/out&gt;&lt;outWeights&gt;&lt;n4&gt;1&lt;/n4&gt;&lt;/outWeights&gt;&lt;/n2&gt;&lt;n4&gt;&lt;id&gt;n4&lt;/id&gt;&lt;position&gt;&lt;x&gt;456.5&lt;/x&gt;&lt;y&gt;204&lt;/y&gt;&lt;/position&gt;&lt;isOutput&gt;true&lt;/isOutput&gt;&lt;isInput&gt;false&lt;/isInput&gt;&lt;spikes&gt;0&lt;/spikes&gt;&lt;bitstring/&gt;&lt;/n4&gt;&lt;/content&gt;"
 }
-
-
-Notes
-* scaling_type: 0 => Type 2 Subsystem Scaling would be used.
-* scaling_type: 1 => Released Spike Scaling would be used.
-* snp_system is an SN P system with the same format as the xmp saved file of WebSnapse v2.0.
-
-
-
-SAMPLE RESPONSE
-BODY [json]: {
-    snp_system: "<content><n1><id>n1</id><position><x>66.5</x><y>200</y></position><rules>a/a-&gt;a;0 2a/a-&gt;a;0</rules><startingSpikes>2</startingSpikes><delay>0</delay><spikes>2</spikes><isOutput>false</isOutput><isInput>false</isInput><out>n2</out><outWeights><n2>1</n2><n3-nm2MDs9Nh>1</n3-nm2MDs9Nh></outWeights></n1><n2><id>n2</id><position><x>282.5</x><y>197</y></position><rules>3a/2a-&gt;a;0</rules><startingSpikes>3</startingSpikes><delay>0</delay><spikes>3</spikes><isOutput>false</isOutput><isInput>false</isInput><out>n4</out><outWeights><n4>1</n4></outWeights></n2><n4><id>n4</id><position><x>456.5</x><y>204</y></position><isOutput>true</isOutput><isInput>false</isInput><spikes>0</spikes><bitstring/></n4></content>",
-    errors: None,
-    homogenized_snp_system: "<content>\n\t<n1>\n\t\t<id>n1</id>\n\t\t<position>\n\t\t\t<x>66.5</x>\n\t\t\t<y>200.0</y>\n\t\t</position>\n\t\t<rules>3a/2a-&gt;2a;0 5a/2a-&gt;2a;0 6a/4a-&gt;2a;0</rules>\n\t\t<startingSpikes>2</startingSpikes>\n\t\t<delay>0</delay>\n\t\t<spikes>5</spikes>\n\t\t<isOutput>false</isOutput>\n\t\t<isInput>false</isInput>\n\t\t<out>n2</out>\n\t\t<outWeights>\n\t\t\t<n2>1</n2>\n\t\t\t<n3-nm2MDs9Nh>1</n3-nm2MDs9Nh>\n\t\t</outWeights>\n\t</n1>\n\t<n2>\n\t\t<id>n2</id>\n\t\t<position>\n\t\t\t<x>282.5</x>\n\t\t\t<y>197.0</y>\n\t\t</position>\n\t\t<rules>3a/2a-&gt;2a;0 5a/2a-&gt;2a;0 6a/4a-&gt;2a;0</rules>\n\t\t<startingSpikes>3</startingSpikes>\n\t\t<delay>0</delay>\n\t\t<spikes>6</spikes>\n\t\t<isOutput>false</isOutput>\n\t\t<isInput>false</isInput>\n\t\t<out>n4</out>\n\t\t<outWeights>\n\t\t\t<n4>1</n4>\n\t\t</outWeights>\n\t</n2>\n\t<n4>\n\t\t<id>n4</id>\n\t\t<position>\n\t\t\t<x>456.5</x>\n\t\t\t<y>204.0</y>\n\t\t</position>\n\t\t<isOutput>true</isOutput>\n\t\t<isInput>false</isInput>\n\t\t<spikes>0</spikes>\n\t\t<bitstring></bitstring>\n\t</n4>\n</content>"
+                    </pre>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">Notes:</div>
+            <div class="section-content">
+                <ul>
+                    <li>scaling_type: 0 => Type 2 Subsystem Scaling would be used.</li>
+                    <li>scaling_type: 1 => Released Spike Scaling would be used.</li>
+                    <li>snp_system is an SN P system with the same format as the xmp saved file of WebSnapse v2.0.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">SAMPLE RESPONSE:</div>
+            <div class="section-content">
+                <div class="section-title">BODY [json]:</div>
+                <div class="section-content">
+                    <pre>
+{
+    "snp_system": "&lt;content&gt;&lt;n1&gt;&lt;id&gt;n1&lt;/id&gt;&lt;position&gt;&lt;x&gt;66.5&lt;/x&gt;&lt;y&gt;200&lt;/y&gt;&lt;/position&gt;&lt;rules&gt;a/a-&gt;a;0 2a/a-&gt;a;0&lt;/rules&gt;&lt;startingSpikes&gt;2&lt;/startingSpikes&gt;&lt;delay&gt;0&lt;/delay&gt;&lt;spikes&gt;2&lt;/spikes&gt;&lt;isOutput&gt;false&lt;/isOutput&gt;&lt;isInput&gt;false&lt;/isInput&gt;&lt;out&gt;n2&lt;/out&gt;&lt;outWeights&gt;&lt;n2&gt;1&lt;/n2&gt;&lt;n3-nm2MDs9Nh&gt;1&lt;/n3-nm2MDs9Nh&gt;&lt;/outWeights&gt;&lt;/n1&gt;&lt;n2&gt;&lt;id&gt;n2&lt;/id&gt;&lt;position&gt;&lt;x&gt;282.5&lt;/x&gt;&lt;y&gt;197&lt;/y&gt;&lt;/position&gt;&lt;rules&gt;3a/2a-&gt;a;0&lt;/rules&gt;&lt;startingSpikes&gt;3&lt;/startingSpikes&gt;&lt;delay&gt;0&lt;/delay&gt;&lt;spikes&gt;3&lt;/spikes&gt;&lt;isOutput&gt;false&lt;/isOutput&gt;&lt;isInput&gt;false&lt;/isInput&gt;&lt;out&gt;n4&lt;/out&gt;&lt;outWeights&gt;&lt;n4&gt;1&lt;/n4&gt;&lt;/outWeights&gt;&lt;/n2&gt;&lt;n4&gt;&lt;id&gt;n4&lt;/id&gt;&lt;position&gt;&lt;x&gt;456.5&lt;/x&gt;&lt;y&gt;204&lt;/y&gt;&lt;/position&gt;&lt;isOutput&gt;true&lt;/isOutput&gt;&lt;isInput&gt;false&lt;/isInput&gt;&lt;spikes&gt;0&lt;/spikes&gt;&lt;bitstring/&gt;&lt;/n4&gt;&lt;/content&gt;",
+    "homogenized_snp_system": "&lt;content&gt;\n\t&lt;n1&gt;\n\t\t&lt;id&gt;n1&lt;/id&gt;\n\t\t&lt;position&gt;\n\t\t\t&lt;x&gt;66.5&lt;/x&gt;\n\t\t\t&lt;y&gt;200.0&lt;/y&gt;\n\t\t&lt;/position&gt;\n\t\t&lt;rules&gt;3a/2a-&gt;2a;0 5a/2a-&gt;2a;0 6a/4a-&gt;2a;0&lt;/rules&gt;\n\t\t&lt;startingSpikes&gt;2&lt;/startingSpikes&gt;\n\t\t&lt;delay&gt;0&lt;/delay&gt;\n\t\t&lt;spikes&gt;5&lt;/spikes&gt;\n\t\t&lt;isOutput&gt;false&lt;/isOutput&gt;\n\t\t&lt;isInput&gt;false&lt;/isInput&gt;\n\t\t&lt;out&gt;n2&lt;/out&gt;\n\t\t&lt;outWeights&gt;\n\t\t\t&lt;n2&gt;1&lt;/n2&gt;\n\t\t\t&lt;n3-nm2MDs9Nh&gt;1&lt;/n3-nm2MDs9Nh&gt;\n\t\t&lt;/outWeights&gt;\n\t&lt;/n1&gt;\n\t&lt;n2&gt;\n\t\t&lt;id&gt;n2&lt;/id&gt;\n\t\t&lt;position&gt;\n\t\t\t&lt;x&gt;282.5&lt;/x&gt;\n\t\t\t&lt;y&gt;197.0&lt;/y&gt;\n\t\t&lt;/position&gt;\n\t\t&lt;rules&gt;3a/2a-&gt;2a;0 5a/2a-&gt;2a;0 6a/4a-&gt;2a;0&lt;/rules&gt;\n\t\t&lt;startingSpikes&gt;3&lt;/startingSpikes&gt;\n\t\t&lt;delay&gt;0&lt;/delay&gt;\n\t\t&lt;spikes&gt;6&lt;/spikes&gt;\n\t\t&lt;isOutput&gt;false&lt;/isOutput&gt;\n\t\t&lt;isInput&gt;false&lt;/isInput&gt;\n\t\t&lt;out&gt;n4&lt;/out&gt;\n\t\t&lt;outWeights&gt;\n\t\t\t&lt;n4&gt;1&lt;/n4&gt;\n\t\t&lt;/outWeights&gt;\n\t&lt;/n2&gt;\n\t&lt;n4&gt;\n\t\t&lt;id&gt;n4&lt;/id&gt;\n\t\t&lt;position&gt;\n\t\t\t&lt;x&gt;456.5&lt;/x&gt;\n\t\t\t&lt;y&gt;204.0&lt;/y&gt;\n\t\t&lt;/position&gt;\n\t\t&lt;isOutput&gt;true&lt;/isOutput&gt;\n\t\t&lt;isInput&gt;false&lt;/isInput&gt;\n\t\t&lt;spikes&gt;0&lt;/spikes&gt;\n\t\t&lt;bitstring/&gt;\n\t&lt;/n4&gt;\n&lt;/content&gt;"
 }
-"""
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+    """
 
 
 @app.route('/homogenize', methods = ['POST'])
@@ -63,6 +122,7 @@ def homogenize_input():
     # Homogenize the SN P system using the requested scaling type.
     if scaling_type == 0:
         homogenize_type_2_scaling(snp_system)
+        auto_layout(snp_system)
     elif scaling_type == 1:
         homogenize_prime_released_spike_scaling(snp_system)  #! O(nk)
     else:
