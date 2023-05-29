@@ -2,40 +2,32 @@
 	<n1>
 		<id>n1</id>
 		<position>
-			<x>-155.11422874187775</x>
-			<y>237.01654291581298</y>
+			<x>50.0</x>
+			<y>50.0</y>
 		</position>
-		<rules>8a/6a-&gt;0;0 4a(3a)+/3a-&gt;a;0 6a/3a-&gt;0;0 9a/6a-&gt;a;0 a/a-&gt;a;0 5a/3a-&gt;a;0</rules>
+		<rules>4a/3a-&gt;0;0 7a/6a-&gt;3a;0 6a/6a-&gt;0;0 3a/3a-&gt;3a;0 2a(3a)+/3a-&gt;3a;0</rules>
 		<startingSpikes>8</startingSpikes>
 		<delay>0</delay>
-		<spikes>28</spikes>
+		<spikes>26</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>n1_n2_0</out>
-		<out>n1_n2_1</out>
-		<out>n1_n2_2</out>
-		<out>n1_n5_0</out>
-		<out>n1_n5_1</out>
-		<out>n1_n5_2</out>
+		<out>n2</out>
+		<out>n5-4RzUmMqzL</out>
 		<outWeights>
-			<n1_n2_0>1</n1_n2_0>
-			<n1_n2_1>1</n1_n2_1>
-			<n1_n2_2>1</n1_n2_2>
-			<n1_n5_0>1</n1_n5_0>
-			<n1_n5_1>1</n1_n5_1>
-			<n1_n5_2>1</n1_n5_2>
+			<n2>1</n2>
+			<n5-4RzUmMqzL>1</n5-4RzUmMqzL>
 		</outWeights>
 	</n1>
 	<n2>
 		<id>n2</id>
 		<position>
-			<x>363.0100406517883</x>
-			<y>333.24245991337</y>
+			<x>355.6666717529297</x>
+			<y>29.533340454101562</y>
 		</position>
-		<rules>8a/6a-&gt;0;0 4a(3a)+/3a-&gt;a;0 6a/3a-&gt;0;0 9a/6a-&gt;a;0 a/a-&gt;a;0 5a/3a-&gt;a;0</rules>
+		<rules>4a/3a-&gt;0;0 7a/6a-&gt;3a;0 6a/6a-&gt;0;0 3a/3a-&gt;3a;0 2a(3a)+/3a-&gt;3a;0</rules>
 		<startingSpikes>0</startingSpikes>
 		<delay>0</delay>
-		<spikes>3</spikes>
+		<spikes>1</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
 		<out>n4</out>
@@ -48,8 +40,8 @@
 	<n4>
 		<id>n4</id>
 		<position>
-			<x>263.4621185755234</x>
-			<y>699.6202981933444</y>
+			<x>649.6666717529297</x>
+			<y>67.53334045410156</y>
 		</position>
 		<isInput>false</isInput>
 		<isOutput>true</isOutput>
@@ -59,40 +51,32 @@
 	<n3-Ya7zAtdZO>
 		<id>n3-Ya7zAtdZO</id>
 		<position>
-			<x>652.4134963130007</x>
-			<y>250.8245541767007</y>
+			<x>69.66667175292969</x>
+			<y>280.53334045410156</y>
 		</position>
-		<rules>8a/6a-&gt;0;0 4a(3a)+/3a-&gt;a;0 6a/3a-&gt;0;0 9a/6a-&gt;a;0 a/a-&gt;a;0 5a/3a-&gt;a;0</rules>
+		<rules>4a/3a-&gt;0;0 7a/6a-&gt;3a;0 6a/6a-&gt;0;0 3a/3a-&gt;3a;0 2a(3a)+/3a-&gt;3a;0</rules>
 		<startingSpikes>5</startingSpikes>
 		<delay>0</delay>
-		<spikes>19</spikes>
+		<spikes>17</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>n3_n2_0</out>
-		<out>n3_n2_1</out>
-		<out>n3_n2_2</out>
-		<out>n3_n5_0</out>
-		<out>n3_n5_1</out>
-		<out>n3_n5_2</out>
+		<out>n5-4RzUmMqzL</out>
+		<out>n2</out>
 		<outWeights>
-			<n3_n2_0>1</n3_n2_0>
-			<n3_n2_1>1</n3_n2_1>
-			<n3_n2_2>1</n3_n2_2>
-			<n3_n5_0>1</n3_n5_0>
-			<n3_n5_1>1</n3_n5_1>
-			<n3_n5_2>1</n3_n5_2>
+			<n5-4RzUmMqzL>1</n5-4RzUmMqzL>
+			<n2>1</n2>
 		</outWeights>
 	</n3-Ya7zAtdZO>
 	<n5-4RzUmMqzL>
 		<id>n5-4RzUmMqzL</id>
 		<position>
-			<x>123.17151579110362</x>
-			<y>138.31787918882435</y>
+			<x>403.6666717529297</x>
+			<y>264.53334045410156</y>
 		</position>
-		<rules>8a/6a-&gt;0;0 4a(3a)+/3a-&gt;a;0 6a/3a-&gt;0;0 9a/6a-&gt;a;0 a/a-&gt;a;0 5a/3a-&gt;a;0</rules>
+		<rules>4a/3a-&gt;0;0 7a/6a-&gt;3a;0 6a/6a-&gt;0;0 3a/3a-&gt;3a;0 2a(3a)+/3a-&gt;3a;0</rules>
 		<startingSpikes>0</startingSpikes>
 		<delay>0</delay>
-		<spikes>2</spikes>
+		<spikes>0</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
 		<out>n6-TEqaMSlVi</out>
@@ -103,216 +87,12 @@
 	<n6-TEqaMSlVi>
 		<id>n6-TEqaMSlVi</id>
 		<position>
-			<x>276.59803074130957</x>
-			<y>-9.752113037800314</y>
+			<x>661.6666717529297</x>
+			<y>259.53334045410156</y>
 		</position>
 		<isInput>false</isInput>
 		<isOutput>true</isOutput>
 		<spikes>0</spikes>
 		<bitstring></bitstring>
 	</n6-TEqaMSlVi>
-	<n1_n2_0>
-		<id>n1_n2_0</id>
-		<position>
-			<x>16.807182529363644</x>
-			<y>519.0415716725432</y>
-		</position>
-		<rules>8a/6a-&gt;0;0 4a(3a)+/3a-&gt;a;0 6a/3a-&gt;0;0 9a/6a-&gt;a;0 a/a-&gt;a;0 5a/3a-&gt;a;0</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n2</out>
-		<outWeights>
-			<n2>1</n2>
-		</outWeights>
-	</n1_n2_0>
-	<n1_n2_1>
-		<id>n1_n2_1</id>
-		<position>
-			<x>48.053691367710115</x>
-			<y>394.07427842449283</y>
-		</position>
-		<rules>8a/6a-&gt;0;0 4a(3a)+/3a-&gt;a;0 6a/3a-&gt;0;0 9a/6a-&gt;a;0 a/a-&gt;a;0 5a/3a-&gt;a;0</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n2</out>
-		<outWeights>
-			<n2>1</n2>
-		</outWeights>
-	</n1_n2_1>
-	<n1_n2_2>
-		<id>n1_n2_2</id>
-		<position>
-			<x>33.247450680883986</x>
-			<y>104.34642654212496</y>
-		</position>
-		<rules>8a/6a-&gt;0;0 4a(3a)+/3a-&gt;a;0 6a/3a-&gt;0;0 9a/6a-&gt;a;0 a/a-&gt;a;0 5a/3a-&gt;a;0</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n2</out>
-		<outWeights>
-			<n2>1</n2>
-		</outWeights>
-	</n1_n2_2>
-	<n3_n2_0>
-		<id>n3_n2_0</id>
-		<position>
-			<x>800.0</x>
-			<y>316.2084928698524</y>
-		</position>
-		<rules>8a/6a-&gt;0;0 4a(3a)+/3a-&gt;a;0 6a/3a-&gt;0;0 9a/6a-&gt;a;0 a/a-&gt;a;0 5a/3a-&gt;a;0</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n2</out>
-		<outWeights>
-			<n2>1</n2>
-		</outWeights>
-	</n3_n2_0>
-	<n3_n2_1>
-		<id>n3_n2_1</id>
-		<position>
-			<x>723.1837929553641</x>
-			<y>111.54724790788714</y>
-		</position>
-		<rules>8a/6a-&gt;0;0 4a(3a)+/3a-&gt;a;0 6a/3a-&gt;0;0 9a/6a-&gt;a;0 a/a-&gt;a;0 5a/3a-&gt;a;0</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n2</out>
-		<outWeights>
-			<n2>1</n2>
-		</outWeights>
-	</n3_n2_1>
-	<n3_n2_2>
-		<id>n3_n2_2</id>
-		<position>
-			<x>679.4633528804343</x>
-			<y>514.1971676974624</y>
-		</position>
-		<rules>8a/6a-&gt;0;0 4a(3a)+/3a-&gt;a;0 6a/3a-&gt;0;0 9a/6a-&gt;a;0 a/a-&gt;a;0 5a/3a-&gt;a;0</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n2</out>
-		<outWeights>
-			<n2>1</n2>
-		</outWeights>
-	</n3_n2_2>
-	<n1_n5_0>
-		<id>n1_n5_0</id>
-		<position>
-			<x>-268.08799061138575</x>
-			<y>321.1517158140499</y>
-		</position>
-		<rules>8a/6a-&gt;0;0 4a(3a)+/3a-&gt;a;0 6a/3a-&gt;0;0 9a/6a-&gt;a;0 a/a-&gt;a;0 5a/3a-&gt;a;0</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n5-4RzUmMqzL</out>
-		<outWeights>
-			<n5-4RzUmMqzL>1</n5-4RzUmMqzL>
-		</outWeights>
-	</n1_n5_0>
-	<n1_n5_1>
-		<id>n1_n5_1</id>
-		<position>
-			<x>-157.63863676137726</x>
-			<y>-56.73208564746932</y>
-		</position>
-		<rules>8a/6a-&gt;0;0 4a(3a)+/3a-&gt;a;0 6a/3a-&gt;0;0 9a/6a-&gt;a;0 a/a-&gt;a;0 5a/3a-&gt;a;0</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n5-4RzUmMqzL</out>
-		<outWeights>
-			<n5-4RzUmMqzL>1</n5-4RzUmMqzL>
-		</outWeights>
-	</n1_n5_1>
-	<n1_n5_2>
-		<id>n1_n5_2</id>
-		<position>
-			<x>-269.64579597579745</x>
-			<y>67.92167931726769</y>
-		</position>
-		<rules>8a/6a-&gt;0;0 4a(3a)+/3a-&gt;a;0 6a/3a-&gt;0;0 9a/6a-&gt;a;0 a/a-&gt;a;0 5a/3a-&gt;a;0</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n5-4RzUmMqzL</out>
-		<outWeights>
-			<n5-4RzUmMqzL>1</n5-4RzUmMqzL>
-		</outWeights>
-	</n1_n5_2>
-	<n3_n5_0>
-		<id>n3_n5_0</id>
-		<position>
-			<x>474.9151445321603</x>
-			<y>-24.43723036847217</y>
-		</position>
-		<rules>8a/6a-&gt;0;0 4a(3a)+/3a-&gt;a;0 6a/3a-&gt;0;0 9a/6a-&gt;a;0 a/a-&gt;a;0 5a/3a-&gt;a;0</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n5-4RzUmMqzL</out>
-		<outWeights>
-			<n5-4RzUmMqzL>1</n5-4RzUmMqzL>
-		</outWeights>
-	</n3_n5_0>
-	<n3_n5_1>
-		<id>n3_n5_1</id>
-		<position>
-			<x>462.13855640106146</x>
-			<y>179.52744078794416</y>
-		</position>
-		<rules>8a/6a-&gt;0;0 4a(3a)+/3a-&gt;a;0 6a/3a-&gt;0;0 9a/6a-&gt;a;0 a/a-&gt;a;0 5a/3a-&gt;a;0</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n5-4RzUmMqzL</out>
-		<outWeights>
-			<n5-4RzUmMqzL>1</n5-4RzUmMqzL>
-		</outWeights>
-	</n3_n5_1>
-	<n3_n5_2>
-		<id>n3_n5_2</id>
-		<position>
-			<x>434.0222786707345</x>
-			<y>403.88367363206595</y>
-		</position>
-		<rules>8a/6a-&gt;0;0 4a(3a)+/3a-&gt;a;0 6a/3a-&gt;0;0 9a/6a-&gt;a;0 a/a-&gt;a;0 5a/3a-&gt;a;0</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n5-4RzUmMqzL</out>
-		<outWeights>
-			<n5-4RzUmMqzL>1</n5-4RzUmMqzL>
-		</outWeights>
-	</n3_n5_2>
 </content>

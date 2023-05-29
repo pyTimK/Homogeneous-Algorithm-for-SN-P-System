@@ -2,83 +2,53 @@
 	<n1>
 		<id>n1</id>
 		<position>
-			<x>353.56563745332846</x>
-			<y>-353.4685375375026</y>
+			<x>841.5196307950986</x>
+			<y>57.75994302775559</y>
 		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
+		<rules>7a/4a-&gt;4a;0 6a/4a-&gt;0;0 9a/8a-&gt;4a;0 10a/8a-&gt;4a;0 4a/4a-&gt;4a;0 13a/12a-&gt;0;0 4a/4a-&gt;4a;1</rules>
 		<startingSpikes>2</startingSpikes>
 		<delay>0</delay>
-		<spikes>12</spikes>
+		<spikes>10</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>n1_n2_0</out>
-		<out>n1_n2_1</out>
-		<out>n1_n2_2</out>
-		<out>n1_n2_3</out>
+		<out>n2</out>
 		<outWeights>
-			<n1_n2_0>1</n1_n2_0>
-			<n1_n2_1>1</n1_n2_1>
-			<n1_n2_2>1</n1_n2_2>
-			<n1_n2_3>1</n1_n2_3>
+			<n2>1</n2>
 		</outWeights>
 	</n1>
 	<n2>
 		<id>n2</id>
 		<position>
-			<x>129.40291456711986</x>
-			<y>-68.84074294236945</y>
+			<x>592.6666717529297</x>
+			<y>90.0</y>
 		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
+		<rules>7a/4a-&gt;4a;0 6a/4a-&gt;0;0 9a/8a-&gt;4a;0 10a/8a-&gt;4a;0 4a/4a-&gt;4a;0 13a/12a-&gt;0;0 4a/4a-&gt;4a;1</rules>
 		<startingSpikes>0</startingSpikes>
 		<delay>0</delay>
-		<spikes>2</spikes>
+		<spikes>0</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>n2_n1_0</out>
-		<out>n2_n1_1</out>
-		<out>n2_n1_2</out>
-		<out>n2_n1_3</out>
-		<out>n2_n3_0</out>
-		<out>n2_n3_1</out>
-		<out>n2_n3_2</out>
-		<out>n2_n3_3</out>
-		<out>n2_OU_Se5nmr_0</out>
-		<out>n2_OU_Se5nmr_1</out>
-		<out>n2_OU_Se5nmr_2</out>
-		<out>n2_OU_Se5nmr_3</out>
-		<out>n2_ghsld1QG1_0</out>
-		<out>n2_ghsld1QG1_1</out>
-		<out>n2_ghsld1QG1_2</out>
-		<out>n2_ghsld1QG1_3</out>
+		<out>n3</out>
+		<out>n1</out>
+		<out>OU_Se5nmr</out>
+		<out>ghsld1QG1</out>
 		<outWeights>
-			<n2_n1_0>1</n2_n1_0>
-			<n2_n1_1>1</n2_n1_1>
-			<n2_n1_2>1</n2_n1_2>
-			<n2_n1_3>1</n2_n1_3>
-			<n2_n3_0>1</n2_n3_0>
-			<n2_n3_1>1</n2_n3_1>
-			<n2_n3_2>1</n2_n3_2>
-			<n2_n3_3>1</n2_n3_3>
-			<n2_OU_Se5nmr_0>1</n2_OU_Se5nmr_0>
-			<n2_OU_Se5nmr_1>1</n2_OU_Se5nmr_1>
-			<n2_OU_Se5nmr_2>1</n2_OU_Se5nmr_2>
-			<n2_OU_Se5nmr_3>1</n2_OU_Se5nmr_3>
-			<n2_ghsld1QG1_0>1</n2_ghsld1QG1_0>
-			<n2_ghsld1QG1_1>1</n2_ghsld1QG1_1>
-			<n2_ghsld1QG1_2>1</n2_ghsld1QG1_2>
-			<n2_ghsld1QG1_3>1</n2_ghsld1QG1_3>
+			<n3>1</n3>
+			<n1>1</n1>
+			<OU_Se5nmr>1</OU_Se5nmr>
+			<ghsld1QG1>1</ghsld1QG1>
 		</outWeights>
 	</n2>
 	<n3>
 		<id>n3</id>
 		<position>
-			<x>280.080488663821</x>
-			<y>651.6811049563381</y>
+			<x>289.7729270385199</x>
+			<y>318.30699757947326</y>
 		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
+		<rules>7a/4a-&gt;4a;0 6a/4a-&gt;0;0 9a/8a-&gt;4a;0 10a/8a-&gt;4a;0 4a/4a-&gt;4a;0 13a/12a-&gt;0;0 4a/4a-&gt;4a;1</rules>
 		<startingSpikes>2</startingSpikes>
 		<delay>0</delay>
-		<spikes>11</spikes>
+		<spikes>9</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
 		<out>n4</out>
@@ -89,8 +59,8 @@
 	<n4>
 		<id>n4</id>
 		<position>
-			<x>404.7257678956381</x>
-			<y>1020.8398205690279</y>
+			<x>107.06644344645257</x>
+			<y>272.2718783784972</y>
 		</position>
 		<isInput>false</isInput>
 		<isOutput>true</isOutput>
@@ -100,933 +70,75 @@
 	<OU_Se5nmr>
 		<id>OU_Se5nmr</id>
 		<position>
-			<x>925.1184462338917</x>
-			<y>59.35568732578619</y>
+			<x>835.7722692976342</x>
+			<y>318.30699757947326</y>
 		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
+		<rules>7a/4a-&gt;4a;0 6a/4a-&gt;0;0 9a/8a-&gt;4a;0 10a/8a-&gt;4a;0 4a/4a-&gt;4a;0 13a/12a-&gt;0;0 4a/4a-&gt;4a;1</rules>
 		<startingSpikes>2</startingSpikes>
 		<delay>0</delay>
-		<spikes>12</spikes>
+		<spikes>10</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>OU_Se5nmr_mfmDlx8Ls_0</out>
-		<out>OU_Se5nmr_mfmDlx8Ls_1</out>
-		<out>OU_Se5nmr_mfmDlx8Ls_2</out>
-		<out>OU_Se5nmr_mfmDlx8Ls_3</out>
+		<out>mfmDlx8Ls</out>
 		<outWeights>
-			<OU_Se5nmr_mfmDlx8Ls_0>1</OU_Se5nmr_mfmDlx8Ls_0>
-			<OU_Se5nmr_mfmDlx8Ls_1>1</OU_Se5nmr_mfmDlx8Ls_1>
-			<OU_Se5nmr_mfmDlx8Ls_2>1</OU_Se5nmr_mfmDlx8Ls_2>
-			<OU_Se5nmr_mfmDlx8Ls_3>1</OU_Se5nmr_mfmDlx8Ls_3>
+			<mfmDlx8Ls>1</mfmDlx8Ls>
 		</outWeights>
 	</OU_Se5nmr>
 	<mfmDlx8Ls>
 		<id>mfmDlx8Ls</id>
 		<position>
-			<x>877.0558876242862</x>
-			<y>161.88205215620832</y>
+			<x>607.7935965648812</x>
+			<y>310.64384891618744</y>
 		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
+		<rules>7a/4a-&gt;4a;0 6a/4a-&gt;0;0 9a/8a-&gt;4a;0 10a/8a-&gt;4a;0 4a/4a-&gt;4a;0 13a/12a-&gt;0;0 4a/4a-&gt;4a;1</rules>
 		<startingSpikes>0</startingSpikes>
 		<delay>0</delay>
-		<spikes>5</spikes>
+		<spikes>3</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>mfmDlx8Ls_n1_0</out>
-		<out>mfmDlx8Ls_n1_1</out>
-		<out>mfmDlx8Ls_n1_2</out>
-		<out>mfmDlx8Ls_n1_3</out>
-		<out>mfmDlx8Ls_n3_0</out>
-		<out>mfmDlx8Ls_n3_1</out>
-		<out>mfmDlx8Ls_n3_2</out>
-		<out>mfmDlx8Ls_n3_3</out>
-		<out>mfmDlx8Ls_OU_Se5nmr_0</out>
-		<out>mfmDlx8Ls_OU_Se5nmr_1</out>
-		<out>mfmDlx8Ls_OU_Se5nmr_2</out>
-		<out>mfmDlx8Ls_OU_Se5nmr_3</out>
+		<out>n3</out>
+		<out>n1</out>
+		<out>OU_Se5nmr</out>
 		<outWeights>
-			<mfmDlx8Ls_n1_0>1</mfmDlx8Ls_n1_0>
-			<mfmDlx8Ls_n1_1>1</mfmDlx8Ls_n1_1>
-			<mfmDlx8Ls_n1_2>1</mfmDlx8Ls_n1_2>
-			<mfmDlx8Ls_n1_3>1</mfmDlx8Ls_n1_3>
-			<mfmDlx8Ls_n3_0>1</mfmDlx8Ls_n3_0>
-			<mfmDlx8Ls_n3_1>1</mfmDlx8Ls_n3_1>
-			<mfmDlx8Ls_n3_2>1</mfmDlx8Ls_n3_2>
-			<mfmDlx8Ls_n3_3>1</mfmDlx8Ls_n3_3>
-			<mfmDlx8Ls_OU_Se5nmr_0>1</mfmDlx8Ls_OU_Se5nmr_0>
-			<mfmDlx8Ls_OU_Se5nmr_1>1</mfmDlx8Ls_OU_Se5nmr_1>
-			<mfmDlx8Ls_OU_Se5nmr_2>1</mfmDlx8Ls_OU_Se5nmr_2>
-			<mfmDlx8Ls_OU_Se5nmr_3>1</mfmDlx8Ls_OU_Se5nmr_3>
+			<n3>1</n3>
+			<n1>1</n1>
+			<OU_Se5nmr>1</OU_Se5nmr>
 		</outWeights>
 	</mfmDlx8Ls>
 	<rNZ8WUWST>
 		<id>rNZ8WUWST</id>
 		<position>
-			<x>-403.1605016595406</x>
-			<y>871.1702586379663</y>
+			<x>623.1198938914529</x>
+			<y>525.2120114881902</y>
 		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
+		<rules>7a/4a-&gt;4a;0 6a/4a-&gt;0;0 9a/8a-&gt;4a;0 10a/8a-&gt;4a;0 4a/4a-&gt;4a;0 13a/12a-&gt;0;0 4a/4a-&gt;4a;1</rules>
 		<startingSpikes>0</startingSpikes>
 		<delay>0</delay>
-		<spikes>5</spikes>
+		<spikes>3</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>rNZ8WUWST_n3_0</out>
-		<out>rNZ8WUWST_n3_1</out>
-		<out>rNZ8WUWST_n3_2</out>
-		<out>rNZ8WUWST_n3_3</out>
-		<out>rNZ8WUWST_ghsld1QG1_0</out>
-		<out>rNZ8WUWST_ghsld1QG1_1</out>
-		<out>rNZ8WUWST_ghsld1QG1_2</out>
-		<out>rNZ8WUWST_ghsld1QG1_3</out>
+		<out>n3</out>
+		<out>ghsld1QG1</out>
 		<outWeights>
-			<rNZ8WUWST_n3_0>1</rNZ8WUWST_n3_0>
-			<rNZ8WUWST_n3_1>1</rNZ8WUWST_n3_1>
-			<rNZ8WUWST_n3_2>1</rNZ8WUWST_n3_2>
-			<rNZ8WUWST_n3_3>1</rNZ8WUWST_n3_3>
-			<rNZ8WUWST_ghsld1QG1_0>1</rNZ8WUWST_ghsld1QG1_0>
-			<rNZ8WUWST_ghsld1QG1_1>1</rNZ8WUWST_ghsld1QG1_1>
-			<rNZ8WUWST_ghsld1QG1_2>1</rNZ8WUWST_ghsld1QG1_2>
-			<rNZ8WUWST_ghsld1QG1_3>1</rNZ8WUWST_ghsld1QG1_3>
+			<n3>1</n3>
+			<ghsld1QG1>1</ghsld1QG1>
 		</outWeights>
 	</rNZ8WUWST>
 	<ghsld1QG1>
 		<id>ghsld1QG1</id>
 		<position>
-			<x>-502.1040087370968</x>
-			<y>555.418173253179</y>
+			<x>868.340651116599</x>
+			<y>529.0435858198332</y>
 		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
+		<rules>7a/4a-&gt;4a;0 6a/4a-&gt;0;0 9a/8a-&gt;4a;0 10a/8a-&gt;4a;0 4a/4a-&gt;4a;0 13a/12a-&gt;0;0 4a/4a-&gt;4a;1</rules>
 		<startingSpikes>2</startingSpikes>
 		<delay>0</delay>
-		<spikes>12</spikes>
+		<spikes>10</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>ghsld1QG1_rNZ8WUWST_0</out>
-		<out>ghsld1QG1_rNZ8WUWST_1</out>
-		<out>ghsld1QG1_rNZ8WUWST_2</out>
-		<out>ghsld1QG1_rNZ8WUWST_3</out>
+		<out>rNZ8WUWST</out>
 		<outWeights>
-			<ghsld1QG1_rNZ8WUWST_0>1</ghsld1QG1_rNZ8WUWST_0>
-			<ghsld1QG1_rNZ8WUWST_1>1</ghsld1QG1_rNZ8WUWST_1>
-			<ghsld1QG1_rNZ8WUWST_2>1</ghsld1QG1_rNZ8WUWST_2>
-			<ghsld1QG1_rNZ8WUWST_3>1</ghsld1QG1_rNZ8WUWST_3>
+			<rNZ8WUWST>1</rNZ8WUWST>
 		</outWeights>
 	</ghsld1QG1>
-	<n2_n1_0>
-		<id>n2_n1_0</id>
-		<position>
-			<x>174.55156969217265</x>
-			<y>-366.29394814222644</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n1</out>
-		<outWeights>
-			<n1>1</n1>
-		</outWeights>
-	</n2_n1_0>
-	<n2_n1_1>
-		<id>n2_n1_1</id>
-		<position>
-			<x>140.9166309371701</x>
-			<y>-503.6749549166643</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n1</out>
-		<outWeights>
-			<n1>1</n1>
-		</outWeights>
-	</n2_n1_1>
-	<n2_n1_2>
-		<id>n2_n1_2</id>
-		<position>
-			<x>225.20247037656046</x>
-			<y>-504.14663695990794</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n1</out>
-		<outWeights>
-			<n1>1</n1>
-		</outWeights>
-	</n2_n1_2>
-	<n2_n1_3>
-		<id>n2_n1_3</id>
-		<position>
-			<x>9.57977757985492</x>
-			<y>-411.9938494272661</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n1</out>
-		<outWeights>
-			<n1>1</n1>
-		</outWeights>
-	</n2_n1_3>
-	<mfmDlx8Ls_n1_0>
-		<id>mfmDlx8Ls_n1_0</id>
-		<position>
-			<x>783.5022947115491</x>
-			<y>-276.92280951340285</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n1</out>
-		<outWeights>
-			<n1>1</n1>
-		</outWeights>
-	</mfmDlx8Ls_n1_0>
-	<mfmDlx8Ls_n1_1>
-		<id>mfmDlx8Ls_n1_1</id>
-		<position>
-			<x>634.7442803381671</x>
-			<y>-175.8197491194921</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n1</out>
-		<outWeights>
-			<n1>1</n1>
-		</outWeights>
-	</mfmDlx8Ls_n1_1>
-	<mfmDlx8Ls_n1_2>
-		<id>mfmDlx8Ls_n1_2</id>
-		<position>
-			<x>718.6097622750133</x>
-			<y>-221.60806405518605</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n1</out>
-		<outWeights>
-			<n1>1</n1>
-		</outWeights>
-	</mfmDlx8Ls_n1_2>
-	<mfmDlx8Ls_n1_3>
-		<id>mfmDlx8Ls_n1_3</id>
-		<position>
-			<x>554.8464575753922</x>
-			<y>-116.87597100615687</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n1</out>
-		<outWeights>
-			<n1>1</n1>
-		</outWeights>
-	</mfmDlx8Ls_n1_3>
-	<n1_n2_0>
-		<id>n1_n2_0</id>
-		<position>
-			<x>-10.18998191723108</x>
-			<y>-323.17152632227214</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n2</out>
-		<outWeights>
-			<n2>1</n2>
-		</outWeights>
-	</n1_n2_0>
-	<n1_n2_1>
-		<id>n1_n2_1</id>
-		<position>
-			<x>66.24739395403068</x>
-			<y>-471.40221985014966</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n2</out>
-		<outWeights>
-			<n2>1</n2>
-		</outWeights>
-	</n1_n2_1>
-	<n1_n2_2>
-		<id>n1_n2_2</id>
-		<position>
-			<x>302.3492492662466</x>
-			<y>-457.1925797721161</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n2</out>
-		<outWeights>
-			<n2>1</n2>
-		</outWeights>
-	</n1_n2_2>
-	<n1_n2_3>
-		<id>n1_n2_3</id>
-		<position>
-			<x>96.77688192249795</x>
-			<y>-293.1821253949379</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n2</out>
-		<outWeights>
-			<n2>1</n2>
-		</outWeights>
-	</n1_n2_3>
-	<n2_n3_0>
-		<id>n2_n3_0</id>
-		<position>
-			<x>81.77829979983204</x>
-			<y>347.5196556704612</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n3</out>
-		<outWeights>
-			<n3>1</n3>
-		</outWeights>
-	</n2_n3_0>
-	<n2_n3_1>
-		<id>n2_n3_1</id>
-		<position>
-			<x>135.73935012299958</x>
-			<y>276.39026753556556</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n3</out>
-		<outWeights>
-			<n3>1</n3>
-		</outWeights>
-	</n2_n3_1>
-	<n2_n3_2>
-		<id>n2_n3_2</id>
-		<position>
-			<x>204.1194593483752</x>
-			<y>341.3425042498179</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n3</out>
-		<outWeights>
-			<n3>1</n3>
-		</outWeights>
-	</n2_n3_2>
-	<n2_n3_3>
-		<id>n2_n3_3</id>
-		<position>
-			<x>266.91226008854017</x>
-			<y>286.59640449530156</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n3</out>
-		<outWeights>
-			<n3>1</n3>
-		</outWeights>
-	</n2_n3_3>
-	<mfmDlx8Ls_n3_0>
-		<id>mfmDlx8Ls_n3_0</id>
-		<position>
-			<x>721.1359007283743</x>
-			<y>597.0842716295869</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n3</out>
-		<outWeights>
-			<n3>1</n3>
-		</outWeights>
-	</mfmDlx8Ls_n3_0>
-	<mfmDlx8Ls_n3_1>
-		<id>mfmDlx8Ls_n3_1</id>
-		<position>
-			<x>695.7329276871928</x>
-			<y>502.09096732467845</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n3</out>
-		<outWeights>
-			<n3>1</n3>
-		</outWeights>
-	</mfmDlx8Ls_n3_1>
-	<mfmDlx8Ls_n3_2>
-		<id>mfmDlx8Ls_n3_2</id>
-		<position>
-			<x>631.8692923332624</x>
-			<y>559.3862879065398</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n3</out>
-		<outWeights>
-			<n3>1</n3>
-		</outWeights>
-	</mfmDlx8Ls_n3_2>
-	<mfmDlx8Ls_n3_3>
-		<id>mfmDlx8Ls_n3_3</id>
-		<position>
-			<x>605.8271518169693</x>
-			<y>450.9021912692684</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n3</out>
-		<outWeights>
-			<n3>1</n3>
-		</outWeights>
-	</mfmDlx8Ls_n3_3>
-	<rNZ8WUWST_n3_0>
-		<id>rNZ8WUWST_n3_0</id>
-		<position>
-			<x>-84.08123083006416</x>
-			<y>807.219838147327</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n3</out>
-		<outWeights>
-			<n3>1</n3>
-		</outWeights>
-	</rNZ8WUWST_n3_0>
-	<rNZ8WUWST_n3_1>
-		<id>rNZ8WUWST_n3_1</id>
-		<position>
-			<x>11.792535133964321</x>
-			<y>969.8864298123272</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n3</out>
-		<outWeights>
-			<n3>1</n3>
-		</outWeights>
-	</rNZ8WUWST_n3_1>
-	<rNZ8WUWST_n3_2>
-		<id>rNZ8WUWST_n3_2</id>
-		<position>
-			<x>-70.5258126663038</x>
-			<y>963.235285222914</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n3</out>
-		<outWeights>
-			<n3>1</n3>
-		</outWeights>
-	</rNZ8WUWST_n3_2>
-	<rNZ8WUWST_n3_3>
-		<id>rNZ8WUWST_n3_3</id>
-		<position>
-			<x>-30.182031640384423</x>
-			<y>875.5564195301295</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n3</out>
-		<outWeights>
-			<n3>1</n3>
-		</outWeights>
-	</rNZ8WUWST_n3_3>
-	<n2_OU_Se5nmr_0>
-		<id>n2_OU_Se5nmr_0</id>
-		<position>
-			<x>595.9359872451003</x>
-			<y>-53.60348310671253</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>OU_Se5nmr</out>
-		<outWeights>
-			<OU_Se5nmr>1</OU_Se5nmr>
-		</outWeights>
-	</n2_OU_Se5nmr_0>
-	<n2_OU_Se5nmr_1>
-		<id>n2_OU_Se5nmr_1</id>
-		<position>
-			<x>554.1879485686645</x>
-			<y>14.658776367479305</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>OU_Se5nmr</out>
-		<outWeights>
-			<OU_Se5nmr>1</OU_Se5nmr>
-		</outWeights>
-	</n2_OU_Se5nmr_1>
-	<n2_OU_Se5nmr_2>
-		<id>n2_OU_Se5nmr_2</id>
-		<position>
-			<x>555.9068112465668</x>
-			<y>-221.34800187965044</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>OU_Se5nmr</out>
-		<outWeights>
-			<OU_Se5nmr>1</OU_Se5nmr>
-		</outWeights>
-	</n2_OU_Se5nmr_2>
-	<n2_OU_Se5nmr_3>
-		<id>n2_OU_Se5nmr_3</id>
-		<position>
-			<x>508.79942882719234</x>
-			<y>68.57915079085944</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>OU_Se5nmr</out>
-		<outWeights>
-			<OU_Se5nmr>1</OU_Se5nmr>
-		</outWeights>
-	</n2_OU_Se5nmr_3>
-	<mfmDlx8Ls_OU_Se5nmr_0>
-		<id>mfmDlx8Ls_OU_Se5nmr_0</id>
-		<position>
-			<x>1103.565083834593</x>
-			<y>-99.08792570124359</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>OU_Se5nmr</out>
-		<outWeights>
-			<OU_Se5nmr>1</OU_Se5nmr>
-		</outWeights>
-	</mfmDlx8Ls_OU_Se5nmr_0>
-	<mfmDlx8Ls_OU_Se5nmr_1>
-		<id>mfmDlx8Ls_OU_Se5nmr_1</id>
-		<position>
-			<x>1221.7793104518119</x>
-			<y>152.97208922934175</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>OU_Se5nmr</out>
-		<outWeights>
-			<OU_Se5nmr>1</OU_Se5nmr>
-		</outWeights>
-	</mfmDlx8Ls_OU_Se5nmr_1>
-	<mfmDlx8Ls_OU_Se5nmr_2>
-		<id>mfmDlx8Ls_OU_Se5nmr_2</id>
-		<position>
-			<x>1119.51630259026</x>
-			<y>199.1816655339976</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>OU_Se5nmr</out>
-		<outWeights>
-			<OU_Se5nmr>1</OU_Se5nmr>
-		</outWeights>
-	</mfmDlx8Ls_OU_Se5nmr_2>
-	<mfmDlx8Ls_OU_Se5nmr_3>
-		<id>mfmDlx8Ls_OU_Se5nmr_3</id>
-		<position>
-			<x>1206.6685727209203</x>
-			<y>54.777678090991856</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>OU_Se5nmr</out>
-		<outWeights>
-			<OU_Se5nmr>1</OU_Se5nmr>
-		</outWeights>
-	</mfmDlx8Ls_OU_Se5nmr_3>
-	<OU_Se5nmr_mfmDlx8Ls_0>
-		<id>OU_Se5nmr_mfmDlx8Ls_0</id>
-		<position>
-			<x>1188.652032659353</x>
-			<y>275.79753226909077</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>mfmDlx8Ls</out>
-		<outWeights>
-			<mfmDlx8Ls>1</mfmDlx8Ls>
-		</outWeights>
-	</OU_Se5nmr_mfmDlx8Ls_0>
-	<OU_Se5nmr_mfmDlx8Ls_1>
-		<id>OU_Se5nmr_mfmDlx8Ls_1</id>
-		<position>
-			<x>1174.384256829468</x>
-			<y>-30.64952624386416</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>mfmDlx8Ls</out>
-		<outWeights>
-			<mfmDlx8Ls>1</mfmDlx8Ls>
-		</outWeights>
-	</OU_Se5nmr_mfmDlx8Ls_1>
-	<OU_Se5nmr_mfmDlx8Ls_2>
-		<id>OU_Se5nmr_mfmDlx8Ls_2</id>
-		<position>
-			<x>1027.105350455449</x>
-			<y>275.0783685906625</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>mfmDlx8Ls</out>
-		<outWeights>
-			<mfmDlx8Ls>1</mfmDlx8Ls>
-		</outWeights>
-	</OU_Se5nmr_mfmDlx8Ls_2>
-	<OU_Se5nmr_mfmDlx8Ls_3>
-		<id>OU_Se5nmr_mfmDlx8Ls_3</id>
-		<position>
-			<x>1078.4267644595345</x>
-			<y>358.2659169287013</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>mfmDlx8Ls</out>
-		<outWeights>
-			<mfmDlx8Ls>1</mfmDlx8Ls>
-		</outWeights>
-	</OU_Se5nmr_mfmDlx8Ls_3>
-	<ghsld1QG1_rNZ8WUWST_0>
-		<id>ghsld1QG1_rNZ8WUWST_0</id>
-		<position>
-			<x>-524.8647275453559</x>
-			<y>932.9542701774981</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>rNZ8WUWST</out>
-		<outWeights>
-			<rNZ8WUWST>1</rNZ8WUWST>
-		</outWeights>
-	</ghsld1QG1_rNZ8WUWST_0>
-	<ghsld1QG1_rNZ8WUWST_1>
-		<id>ghsld1QG1_rNZ8WUWST_1</id>
-		<position>
-			<x>-738.4720022582505</x>
-			<y>686.8239680459299</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>rNZ8WUWST</out>
-		<outWeights>
-			<rNZ8WUWST>1</rNZ8WUWST>
-		</outWeights>
-	</ghsld1QG1_rNZ8WUWST_1>
-	<ghsld1QG1_rNZ8WUWST_2>
-		<id>ghsld1QG1_rNZ8WUWST_2</id>
-		<position>
-			<x>-617.3297920023869</x>
-			<y>951.2516749501783</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>rNZ8WUWST</out>
-		<outWeights>
-			<rNZ8WUWST>1</rNZ8WUWST>
-		</outWeights>
-	</ghsld1QG1_rNZ8WUWST_2>
-	<ghsld1QG1_rNZ8WUWST_3>
-		<id>ghsld1QG1_rNZ8WUWST_3</id>
-		<position>
-			<x>-529.3797288023125</x>
-			<y>773.1159176735002</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>rNZ8WUWST</out>
-		<outWeights>
-			<rNZ8WUWST>1</rNZ8WUWST>
-		</outWeights>
-	</ghsld1QG1_rNZ8WUWST_3>
-	<n2_ghsld1QG1_0>
-		<id>n2_ghsld1QG1_0</id>
-		<position>
-			<x>-343.23285746120234</x>
-			<y>119.13876401913103</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>ghsld1QG1</out>
-		<outWeights>
-			<ghsld1QG1>1</ghsld1QG1>
-		</outWeights>
-	</n2_ghsld1QG1_0>
-	<n2_ghsld1QG1_1>
-		<id>n2_ghsld1QG1_1</id>
-		<position>
-			<x>-311.7162091610812</x>
-			<y>207.14048421091402</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>ghsld1QG1</out>
-		<outWeights>
-			<ghsld1QG1>1</ghsld1QG1>
-		</outWeights>
-	</n2_ghsld1QG1_1>
-	<n2_ghsld1QG1_2>
-		<id>n2_ghsld1QG1_2</id>
-		<position>
-			<x>-223.52581260569855</x>
-			<y>260.64263784095937</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>ghsld1QG1</out>
-		<outWeights>
-			<ghsld1QG1>1</ghsld1QG1>
-		</outWeights>
-	</n2_ghsld1QG1_2>
-	<n2_ghsld1QG1_3>
-		<id>n2_ghsld1QG1_3</id>
-		<position>
-			<x>-251.69411248900133</x>
-			<y>161.26222375594853</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>ghsld1QG1</out>
-		<outWeights>
-			<ghsld1QG1>1</ghsld1QG1>
-		</outWeights>
-	</n2_ghsld1QG1_3>
-	<rNZ8WUWST_ghsld1QG1_0>
-		<id>rNZ8WUWST_ghsld1QG1_0</id>
-		<position>
-			<x>-636.0968193148506</x>
-			<y>669.5153117589573</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>ghsld1QG1</out>
-		<outWeights>
-			<ghsld1QG1>1</ghsld1QG1>
-		</outWeights>
-	</rNZ8WUWST_ghsld1QG1_0>
-	<rNZ8WUWST_ghsld1QG1_1>
-		<id>rNZ8WUWST_ghsld1QG1_1</id>
-		<position>
-			<x>-640.7353826002001</x>
-			<y>803.5937873596417</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>ghsld1QG1</out>
-		<outWeights>
-			<ghsld1QG1>1</ghsld1QG1>
-		</outWeights>
-	</rNZ8WUWST_ghsld1QG1_1>
-	<rNZ8WUWST_ghsld1QG1_2>
-		<id>rNZ8WUWST_ghsld1QG1_2</id>
-		<position>
-			<x>-699.8183263242097</x>
-			<y>892.4499823351795</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>ghsld1QG1</out>
-		<outWeights>
-			<ghsld1QG1>1</ghsld1QG1>
-		</outWeights>
-	</rNZ8WUWST_ghsld1QG1_2>
-	<rNZ8WUWST_ghsld1QG1_3>
-		<id>rNZ8WUWST_ghsld1QG1_3</id>
-		<position>
-			<x>-750.0015999999999</x>
-			<y>794.5248322697331</y>
-		</position>
-		<rules>15a/12a-&gt;0;0 6a/4a-&gt;a;0 8a/4a-&gt;0;0 11a/8a-&gt;a;0 9a/4a-&gt;a;0 12a/8a-&gt;a;0 a/a-&gt;a;0 6a/4a-&gt;a;1</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>ghsld1QG1</out>
-		<outWeights>
-			<ghsld1QG1>1</ghsld1QG1>
-		</outWeights>
-	</rNZ8WUWST_ghsld1QG1_3>
 </content>

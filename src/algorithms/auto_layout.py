@@ -2,6 +2,9 @@ from src.classes.snp_system import SnpSystem
 import networkx as nx
 
 def auto_layout(snp_system: SnpSystem):
+    """
+    Uses Fruchterman Reingold technique from networkx library to auto layout the graph
+    """
     graph = nx.Graph()
     nx.spring_layout
 
