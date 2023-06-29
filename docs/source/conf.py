@@ -27,7 +27,7 @@ sys.path.insert(0, os.path.abspath('../../src'))
 sys.path.insert(0, os.path.abspath('../../src/algorithms'))
 sys.path.insert(0, os.path.abspath('../../src/classes'))
 sys.path.insert(0, os.path.abspath('../../src/services'))
-print(os.path.abspath('../../src'))
+#!!print(os.path.abspath('../../src'))
 
 templates_path = ['_templates']
 exclude_patterns = []

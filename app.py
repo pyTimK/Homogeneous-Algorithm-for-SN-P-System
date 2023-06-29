@@ -3,6 +3,8 @@ from src.types.snp_system_dict import SnpSystemDict
 from src.algorithms.homogenize_prime_released_spike_scaling import homogenize_prime_released_spike_scaling
 from src.algorithms.homogenize_type_2_scaling import homogenize_type_2_scaling
 from src.algorithms.auto_layout import auto_layout
+from src.converter.converter import convert
+from src.converter.src.globals import XML, JSON, YAML
 from flask import Flask, request
 from flask_cors import CORS
 from typing import Dict
@@ -109,8 +111,18 @@ def homogenize_input():
     # Get the JSON body of the request
     input: Dict[str, any] = request.json
 
-    # Get the SN P system from the body
+    # Get the format of the input
+    format_plain = input.get('format')
+    format = JSON if format_plain == 'json' else YAML if format_plain == 'yaml' else XML
+
+    # Get the SN P system from the body and convert it to an xmp format
     input_snp_system_xmp_str = input.get('snp_system')
+    if format == JSON:
+        input_snp_system_xmp_str = convert(input_snp_system_xmp_str, JSON, XML)
+    elif format == YAML:
+        input_snp_system_xmp_str = convert(input_snp_system_xmp_str, YAML, XML)
+    
+
 
     # Get the scaling type to be used from the body
     scaling_type = input.get('scaling_type')
@@ -129,13 +141,19 @@ def homogenize_input():
         raise ValueError("Invalid `scaling_type`. Please use 0 for Type-2 Subsystem Scaling or 1 for Released Spike Scaling")
     
 
-    print(f"Homogenized an SN P System")
+    #!!print(f"Homogenized an SN P System")
+
+    output_str = snp_system.to_xmp()
+    if format == JSON:
+        output_str = convert(output_str, XML, JSON)
+    elif format == YAML:
+        output_str = convert(output_str, XML, YAML)
     
 
     # Returns the original SN P system, its homogenized form, and if there are any errors encountered.
     return {
         'snp_system': input_snp_system_xmp_str,
-        'homogenized_snp_system': snp_system.to_xmp(),
+        'homogenized_snp_system': output_str,
         'errors': None,
     }
 

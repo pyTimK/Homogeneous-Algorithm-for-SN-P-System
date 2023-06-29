@@ -90,7 +90,7 @@ class Neuron:
         else:  #! O(1)
             self.spikes += x  #! O(1)
             self.rules = RuleSet({rule.translate(x) for rule in self.rules})  #! O(k)
-            print(f"{self.id} is translated by {x} -> {self.rules}")
+            #!!print(f"{self.id} is translated by {x} -> {self.rules}")
 
 
     def scale(self, x: int, scale_release = True):
@@ -103,7 +103,7 @@ class Neuron:
         """
         if self.is_input:  #! O(1)
             self.bitstring = [b * x for b in self.bitstring]  #! O(t) Note: In true SN P systems, the input neuron is not included in time analysis
-            print(f"Input neuron {self.id} is scaled by {x} -> {self.rules}")
+            # #!!print(f"Input neuron {self.id} is scaled by {x} -> {self.rules}")
         
         elif self.is_output:  #! O(1)
             pass  #! O(1)
@@ -111,7 +111,7 @@ class Neuron:
         else:
             self.spikes *= x  #! O(1)
             self.rules = RuleSet({rule.scale(x, scale_release) for rule in self.rules})  #! O(k)
-            print(f"{self.id} is scaled by {x} -> {self.rules}")
+            # #!!print(f"{self.id} is scaled by {x} -> {self.rules}")
 
 
     def get_rules_xmp_str(self):

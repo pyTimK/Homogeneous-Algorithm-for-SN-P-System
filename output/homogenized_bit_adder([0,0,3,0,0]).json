@@ -1,0 +1,687 @@
+{
+  "neurons": [
+    {
+      "id": "in_0",
+      "type": "input",
+      "position": {
+        "x": 458,
+        "y": -408
+      },
+      "content": ""
+    },
+    {
+      "id": "in_1",
+      "type": "input",
+      "position": {
+        "x": 266,
+        "y": -519
+      },
+      "content": ""
+    },
+    {
+      "id": "in_2",
+      "type": "input",
+      "position": {
+        "x": -251,
+        "y": -169
+      },
+      "content": "11"
+    },
+    {
+      "id": "in_3",
+      "type": "input",
+      "position": {
+        "x": 70,
+        "y": 268
+      },
+      "content": ""
+    },
+    {
+      "id": "in_4",
+      "type": "input",
+      "position": {
+        "x": 29,
+        "y": 1120
+      },
+      "content": ""
+    },
+    {
+      "id": "stall_20",
+      "type": "input",
+      "position": {
+        "x": -66,
+        "y": -100
+      },
+      "content": ""
+    },
+    {
+      "id": "stall_30",
+      "type": "input",
+      "position": {
+        "x": 244,
+        "y": 232
+      },
+      "content": ""
+    },
+    {
+      "id": "stall_31",
+      "type": "input",
+      "position": {
+        "x": 446,
+        "y": 209
+      },
+      "content": ""
+    },
+    {
+      "id": "stall_40",
+      "type": "input",
+      "position": {
+        "x": 90,
+        "y": 998
+      },
+      "content": ""
+    },
+    {
+      "id": "stall_41",
+      "type": "input",
+      "position": {
+        "x": 196,
+        "y": 825
+      },
+      "content": ""
+    },
+    {
+      "id": "stall_42",
+      "type": "input",
+      "position": {
+        "x": 377,
+        "y": 709
+      },
+      "content": ""
+    },
+    {
+      "id": "add_01",
+      "type": "input",
+      "position": {
+        "x": 301,
+        "y": -319
+      },
+      "content": ""
+    },
+    {
+      "id": "add_012",
+      "type": "input",
+      "position": {
+        "x": 211,
+        "y": -29
+      },
+      "content": ""
+    },
+    {
+      "id": "add_0123",
+      "type": "input",
+      "position": {
+        "x": 423,
+        "y": 257
+      },
+      "content": ""
+    },
+    {
+      "id": "add_01234",
+      "type": "input",
+      "position": {
+        "x": 513,
+        "y": 537
+      },
+      "content": ""
+    },
+    {
+      "id": "out",
+      "type": "input",
+      "position": {
+        "x": 612,
+        "y": 585
+      },
+      "content": ""
+    },
+    {
+      "id": "in_2_stall_20_0",
+      "type": "input",
+      "position": {
+        "x": -169,
+        "y": -162
+      },
+      "content": ""
+    },
+    {
+      "id": "in_2_stall_20_1",
+      "type": "input",
+      "position": {
+        "x": -186,
+        "y": -119
+      },
+      "content": ""
+    },
+    {
+      "id": "in_3_stall_30_0",
+      "type": "input",
+      "position": {
+        "x": 147,
+        "y": 277
+      },
+      "content": ""
+    },
+    {
+      "id": "in_3_stall_30_1",
+      "type": "input",
+      "position": {
+        "x": 136,
+        "y": 229
+      },
+      "content": ""
+    },
+    {
+      "id": "stall_30_stall_31_0",
+      "type": "input",
+      "position": {
+        "x": 357,
+        "y": 191
+      },
+      "content": ""
+    },
+    {
+      "id": "stall_30_stall_31_1",
+      "type": "input",
+      "position": {
+        "x": 347,
+        "y": 236
+      },
+      "content": ""
+    },
+    {
+      "id": "in_4_stall_40_0",
+      "type": "input",
+      "position": {
+        "x": 22,
+        "y": 1048
+      },
+      "content": ""
+    },
+    {
+      "id": "in_4_stall_40_1",
+      "type": "input",
+      "position": {
+        "x": 84,
+        "y": 1078
+      },
+      "content": ""
+    },
+    {
+      "id": "stall_40_stall_41_0",
+      "type": "input",
+      "position": {
+        "x": 114,
+        "y": 905
+      },
+      "content": ""
+    },
+    {
+      "id": "stall_40_stall_41_1",
+      "type": "input",
+      "position": {
+        "x": 155,
+        "y": 925
+      },
+      "content": ""
+    },
+    {
+      "id": "stall_41_stall_42_0",
+      "type": "input",
+      "position": {
+        "x": 288,
+        "y": 770
+      },
+      "content": ""
+    },
+    {
+      "id": "stall_41_stall_42_1",
+      "type": "input",
+      "position": {
+        "x": 263,
+        "y": 733
+      },
+      "content": ""
+    },
+    {
+      "id": "in_0_add_01_0",
+      "type": "input",
+      "position": {
+        "x": 404,
+        "y": -354
+      },
+      "content": ""
+    },
+    {
+      "id": "in_0_add_01_1",
+      "type": "input",
+      "position": {
+        "x": 382,
+        "y": -396
+      },
+      "content": ""
+    },
+    {
+      "id": "in_1_add_01_0",
+      "type": "input",
+      "position": {
+        "x": 299,
+        "y": -444
+      },
+      "content": ""
+    },
+    {
+      "id": "in_1_add_01_1",
+      "type": "input",
+      "position": {
+        "x": 255,
+        "y": -434
+      },
+      "content": ""
+    },
+    {
+      "id": "stall_20_add_012_0",
+      "type": "input",
+      "position": {
+        "x": 57,
+        "y": -46
+      },
+      "content": ""
+    },
+    {
+      "id": "stall_20_add_012_1",
+      "type": "input",
+      "position": {
+        "x": 66,
+        "y": -81
+      },
+      "content": ""
+    },
+    {
+      "id": "add_01_add_012_0",
+      "type": "input",
+      "position": {
+        "x": 271,
+        "y": -175
+      },
+      "content": ""
+    },
+    {
+      "id": "add_01_add_012_1",
+      "type": "input",
+      "position": {
+        "x": 237,
+        "y": -186
+      },
+      "content": ""
+    },
+    {
+      "id": "stall_31_add_0123_0",
+      "type": "input",
+      "position": {
+        "x": 518,
+        "y": 218
+      },
+      "content": ""
+    },
+    {
+      "id": "stall_31_add_0123_1",
+      "type": "input",
+      "position": {
+        "x": 505,
+        "y": 260
+      },
+      "content": ""
+    },
+    {
+      "id": "add_012_add_0123_0",
+      "type": "input",
+      "position": {
+        "x": 327,
+        "y": 102
+      },
+      "content": ""
+    },
+    {
+      "id": "add_012_add_0123_1",
+      "type": "input",
+      "position": {
+        "x": 298,
+        "y": 132
+      },
+      "content": ""
+    },
+    {
+      "id": "stall_42_add_01234_0",
+      "type": "input",
+      "position": {
+        "x": 483,
+        "y": 660
+      },
+      "content": ""
+    },
+    {
+      "id": "stall_42_add_01234_1",
+      "type": "input",
+      "position": {
+        "x": 453,
+        "y": 634
+      },
+      "content": ""
+    },
+    {
+      "id": "add_0123_add_01234_0",
+      "type": "input",
+      "position": {
+        "x": 502,
+        "y": 398
+      },
+      "content": ""
+    },
+    {
+      "id": "add_0123_add_01234_1",
+      "type": "input",
+      "position": {
+        "x": 467,
+        "y": 407
+      },
+      "content": ""
+    }
+  ],
+  "synapses": [
+    {
+      "from": "in_0",
+      "to": "in_0_add_01_0",
+      "weight": 1
+    },
+    {
+      "from": "in_0",
+      "to": "in_0_add_01_1",
+      "weight": 1
+    },
+    {
+      "from": "in_1",
+      "to": "in_1_add_01_0",
+      "weight": 1
+    },
+    {
+      "from": "in_1",
+      "to": "in_1_add_01_1",
+      "weight": 1
+    },
+    {
+      "from": "in_2",
+      "to": "in_2_stall_20_0",
+      "weight": 1
+    },
+    {
+      "from": "in_2",
+      "to": "in_2_stall_20_1",
+      "weight": 1
+    },
+    {
+      "from": "in_3",
+      "to": "in_3_stall_30_0",
+      "weight": 1
+    },
+    {
+      "from": "in_3",
+      "to": "in_3_stall_30_1",
+      "weight": 1
+    },
+    {
+      "from": "in_4",
+      "to": "in_4_stall_40_0",
+      "weight": 1
+    },
+    {
+      "from": "in_4",
+      "to": "in_4_stall_40_1",
+      "weight": 1
+    },
+    {
+      "from": "stall_20",
+      "to": "stall_20_add_012_0",
+      "weight": 1
+    },
+    {
+      "from": "stall_20",
+      "to": "stall_20_add_012_1",
+      "weight": 1
+    },
+    {
+      "from": "stall_30",
+      "to": "stall_30_stall_31_0",
+      "weight": 1
+    },
+    {
+      "from": "stall_30",
+      "to": "stall_30_stall_31_1",
+      "weight": 1
+    },
+    {
+      "from": "stall_31",
+      "to": "stall_31_add_0123_0",
+      "weight": 1
+    },
+    {
+      "from": "stall_31",
+      "to": "stall_31_add_0123_1",
+      "weight": 1
+    },
+    {
+      "from": "stall_40",
+      "to": "stall_40_stall_41_0",
+      "weight": 1
+    },
+    {
+      "from": "stall_40",
+      "to": "stall_40_stall_41_1",
+      "weight": 1
+    },
+    {
+      "from": "stall_41",
+      "to": "stall_41_stall_42_0",
+      "weight": 1
+    },
+    {
+      "from": "stall_41",
+      "to": "stall_41_stall_42_1",
+      "weight": 1
+    },
+    {
+      "from": "stall_42",
+      "to": "stall_42_add_01234_0",
+      "weight": 1
+    },
+    {
+      "from": "stall_42",
+      "to": "stall_42_add_01234_1",
+      "weight": 1
+    },
+    {
+      "from": "add_01",
+      "to": "add_01_add_012_0",
+      "weight": 1
+    },
+    {
+      "from": "add_01",
+      "to": "add_01_add_012_1",
+      "weight": 1
+    },
+    {
+      "from": "add_012",
+      "to": "add_012_add_0123_0",
+      "weight": 1
+    },
+    {
+      "from": "add_012",
+      "to": "add_012_add_0123_1",
+      "weight": 1
+    },
+    {
+      "from": "add_0123",
+      "to": "add_0123_add_01234_0",
+      "weight": 1
+    },
+    {
+      "from": "add_0123",
+      "to": "add_0123_add_01234_1",
+      "weight": 1
+    },
+    {
+      "from": "add_01234",
+      "to": "out",
+      "weight": 1
+    },
+    {
+      "from": "in_2_stall_20_0",
+      "to": "stall_20",
+      "weight": 1
+    },
+    {
+      "from": "in_2_stall_20_1",
+      "to": "stall_20",
+      "weight": 1
+    },
+    {
+      "from": "in_3_stall_30_0",
+      "to": "stall_30",
+      "weight": 1
+    },
+    {
+      "from": "in_3_stall_30_1",
+      "to": "stall_30",
+      "weight": 1
+    },
+    {
+      "from": "stall_30_stall_31_0",
+      "to": "stall_31",
+      "weight": 1
+    },
+    {
+      "from": "stall_30_stall_31_1",
+      "to": "stall_31",
+      "weight": 1
+    },
+    {
+      "from": "in_4_stall_40_0",
+      "to": "stall_40",
+      "weight": 1
+    },
+    {
+      "from": "in_4_stall_40_1",
+      "to": "stall_40",
+      "weight": 1
+    },
+    {
+      "from": "stall_40_stall_41_0",
+      "to": "stall_41",
+      "weight": 1
+    },
+    {
+      "from": "stall_40_stall_41_1",
+      "to": "stall_41",
+      "weight": 1
+    },
+    {
+      "from": "stall_41_stall_42_0",
+      "to": "stall_42",
+      "weight": 1
+    },
+    {
+      "from": "stall_41_stall_42_1",
+      "to": "stall_42",
+      "weight": 1
+    },
+    {
+      "from": "in_0_add_01_0",
+      "to": "add_01",
+      "weight": 1
+    },
+    {
+      "from": "in_0_add_01_1",
+      "to": "add_01",
+      "weight": 1
+    },
+    {
+      "from": "in_1_add_01_0",
+      "to": "add_01",
+      "weight": 1
+    },
+    {
+      "from": "in_1_add_01_1",
+      "to": "add_01",
+      "weight": 1
+    },
+    {
+      "from": "stall_20_add_012_0",
+      "to": "add_012",
+      "weight": 1
+    },
+    {
+      "from": "stall_20_add_012_1",
+      "to": "add_012",
+      "weight": 1
+    },
+    {
+      "from": "add_01_add_012_0",
+      "to": "add_012",
+      "weight": 1
+    },
+    {
+      "from": "add_01_add_012_1",
+      "to": "add_012",
+      "weight": 1
+    },
+    {
+      "from": "stall_31_add_0123_0",
+      "to": "add_0123",
+      "weight": 1
+    },
+    {
+      "from": "stall_31_add_0123_1",
+      "to": "add_0123",
+      "weight": 1
+    },
+    {
+      "from": "add_012_add_0123_0",
+      "to": "add_0123",
+      "weight": 1
+    },
+    {
+      "from": "add_012_add_0123_1",
+      "to": "add_0123",
+      "weight": 1
+    },
+    {
+      "from": "stall_42_add_01234_0",
+      "to": "add_01234",
+      "weight": 1
+    },
+    {
+      "from": "stall_42_add_01234_1",
+      "to": "add_01234",
+      "weight": 1
+    },
+    {
+      "from": "add_0123_add_01234_0",
+      "to": "add_01234",
+      "weight": 1
+    },
+    {
+      "from": "add_0123_add_01234_1",
+      "to": "add_01234",
+      "weight": 1
+    }
+  ]
+}

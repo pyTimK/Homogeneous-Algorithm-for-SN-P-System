@@ -51,32 +51,32 @@ class Rule:
 
         for reg_exp in re_list:
             #? Star Set
-            # print(reg_exp)
+            # #!!print(reg_exp)
             star_pattern = r"(a)\*|\(([^()]+)\)\*"
             result: List = re.findall(star_pattern, reg_exp)
             stars_str = [group[0] if group[0] else group[1] for group in result]
             reg_exp = re.sub(star_pattern, "", reg_exp)
             star_set: StarExpSet = StarExpSet({1 if x == "a" else int(x.replace("a", "")) for x in stars_str})
-            # print(reg_exp)
+            # #!!print(reg_exp)
             #? Plus Set
             plus_pattern = r"(a)\+|\(([^()]+)\)\+"
             result: List = re.findall(plus_pattern, reg_exp)
             pluses_str = [group[0] if group[0] else group[1] for group in result]
-            # print(pluses_str)
+            # #!!print(pluses_str)
             reg_exp = re.sub(plus_pattern, "", reg_exp)
             plus_set: PlusExpSet = PlusExpSet({1 if x == "a" else int(x.replace("a", "")) for x in pluses_str})
 
             #? Bounded List
-            # print(unb_reg_exp)
+            # #!!print(unb_reg_exp)
             reg_exp = reg_exp.replace('(', '')
             reg_exp = reg_exp.replace(')', '')
-            # print(unb_reg_exp)
+            # #!!print(unb_reg_exp)
             constant_str = reg_exp.split(Rule.__symbol)[:-1]
             constant_list: List[int] = [1 if x == "" else int(x) for x in constant_str]
             constant = sum(constant_list)
 
             rule_re.add((constant, star_set, plus_set))
-            # print(rule_re)
+            # #!!print(rule_re)
 
         return rule_re
     

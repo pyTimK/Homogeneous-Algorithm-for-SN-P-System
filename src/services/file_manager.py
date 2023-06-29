@@ -4,6 +4,14 @@ import xmltodict
 
 class FileManager:
     @staticmethod
+    def load_file(name: str) -> str:
+        """
+        Load the input file
+        """
+        with open(name) as input_file:
+            return input_file.read()
+        
+    @staticmethod
     def load_xmp(name: str) -> OrderedDict[str, Any]:
         """
         Load the input file and convert from xmp to python dictionary

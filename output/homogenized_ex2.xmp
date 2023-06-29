@@ -2,8 +2,8 @@
 	<n4>
 		<id>n4</id>
 		<position>
-			<x>727.8535284547465</x>
-			<y>219.56093942404686</y>
+			<x>-139.2982975738738</x>
+			<y>447.35358196966496</y>
 		</position>
 		<isInput>false</isInput>
 		<isOutput>true</isOutput>
@@ -13,8 +13,8 @@
 	<n0-phVoNyY4r>
 		<id>n0-phVoNyY4r</id>
 		<position>
-			<x>121.66667175292969</x>
-			<y>84.53334045410156</y>
+			<x>614.9694913162259</x>
+			<y>487.5040140995568</y>
 		</position>
 		<rules>10a/6a-&gt;3a;0 8a/6a-&gt;3a;1 6a/3a-&gt;0;0 3a/3a-&gt;3a;0 4a/3a-&gt;3a;0 9a/6a-&gt;3a;0</rules>
 		<startingSpikes>2</startingSpikes>
@@ -30,8 +30,8 @@
 	<n1-ItXCNFOva>
 		<id>n1-ItXCNFOva</id>
 		<position>
-			<x>116.66667175292969</x>
-			<y>355.53334045410156</y>
+			<x>274.189893817985</x>
+			<y>-184.78239999999994</y>
 		</position>
 		<rules>10a/6a-&gt;3a;0 8a/6a-&gt;3a;1 6a/3a-&gt;0;0 3a/3a-&gt;3a;0 4a/3a-&gt;3a;0 9a/6a-&gt;3a;0</rules>
 		<startingSpikes>3</startingSpikes>
@@ -47,8 +47,8 @@
 	<n2-Tx5pOCJeb>
 		<id>n2-Tx5pOCJeb</id>
 		<position>
-			<x>461.6035284547466</x>
-			<y>225.81093942404686</y>
+			<x>250.13891243966285</x>
+			<y>249.92480393077807</y>
 		</position>
 		<rules>10a/6a-&gt;3a;0 8a/6a-&gt;3a;1 6a/3a-&gt;0;0 3a/3a-&gt;3a;0 4a/3a-&gt;3a;0 9a/6a-&gt;3a;0</rules>
 		<startingSpikes>0</startingSpikes>

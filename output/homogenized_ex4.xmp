@@ -2,8 +2,8 @@
 	<n1>
 		<id>n1</id>
 		<position>
-			<x>841.5196307950986</x>
-			<y>57.75994302775559</y>
+			<x>491.7808297378346</x>
+			<y>51.45258788328519</y>
 		</position>
 		<rules>7a/4a-&gt;4a;0 6a/4a-&gt;0;0 9a/8a-&gt;4a;0 10a/8a-&gt;4a;0 4a/4a-&gt;4a;0 13a/12a-&gt;0;0 4a/4a-&gt;4a;1</rules>
 		<startingSpikes>2</startingSpikes>
@@ -19,8 +19,8 @@
 	<n2>
 		<id>n2</id>
 		<position>
-			<x>592.6666717529297</x>
-			<y>90.0</y>
+			<x>478.64467802862</x>
+			<y>-14.09537425113757</y>
 		</position>
 		<rules>7a/4a-&gt;4a;0 6a/4a-&gt;0;0 9a/8a-&gt;4a;0 10a/8a-&gt;4a;0 4a/4a-&gt;4a;0 13a/12a-&gt;0;0 4a/4a-&gt;4a;1</rules>
 		<startingSpikes>0</startingSpikes>
@@ -28,10 +28,22 @@
 		<spikes>0</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>n3</out>
-		<out>n1</out>
-		<out>OU_Se5nmr</out>
-		<out>ghsld1QG1</out>
+		<out>n2_n1_0</out>
+		<out>n2_n1_1</out>
+		<out>n2_n1_2</out>
+		<out>n2_n1_3</out>
+		<out>n2_n3_0</out>
+		<out>n2_n3_1</out>
+		<out>n2_n3_2</out>
+		<out>n2_n3_3</out>
+		<out>n2_OU_Se5nmr_0</out>
+		<out>n2_OU_Se5nmr_1</out>
+		<out>n2_OU_Se5nmr_2</out>
+		<out>n2_OU_Se5nmr_3</out>
+		<out>n2_ghsld1QG1_0</out>
+		<out>n2_ghsld1QG1_1</out>
+		<out>n2_ghsld1QG1_2</out>
+		<out>n2_ghsld1QG1_3</out>
 		<outWeights>
 			<n3>1</n3>
 			<n1>1</n1>
@@ -42,8 +54,8 @@
 	<n3>
 		<id>n3</id>
 		<position>
-			<x>289.7729270385199</x>
-			<y>318.30699757947326</y>
+			<x>-157.1109636500126</x>
+			<y>690.27468826113</y>
 		</position>
 		<rules>7a/4a-&gt;4a;0 6a/4a-&gt;0;0 9a/8a-&gt;4a;0 10a/8a-&gt;4a;0 4a/4a-&gt;4a;0 13a/12a-&gt;0;0 4a/4a-&gt;4a;1</rules>
 		<startingSpikes>2</startingSpikes>
@@ -59,8 +71,8 @@
 	<n4>
 		<id>n4</id>
 		<position>
-			<x>107.06644344645257</x>
-			<y>272.2718783784972</y>
+			<x>-131.35076190642303</x>
+			<y>659.4189697833859</y>
 		</position>
 		<isInput>false</isInput>
 		<isOutput>true</isOutput>
@@ -70,8 +82,8 @@
 	<OU_Se5nmr>
 		<id>OU_Se5nmr</id>
 		<position>
-			<x>835.7722692976342</x>
-			<y>318.30699757947326</y>
+			<x>-34.143635141183154</x>
+			<y>249.2700950320457</y>
 		</position>
 		<rules>7a/4a-&gt;4a;0 6a/4a-&gt;0;0 9a/8a-&gt;4a;0 10a/8a-&gt;4a;0 4a/4a-&gt;4a;0 13a/12a-&gt;0;0 4a/4a-&gt;4a;1</rules>
 		<startingSpikes>2</startingSpikes>
@@ -87,8 +99,8 @@
 	<mfmDlx8Ls>
 		<id>mfmDlx8Ls</id>
 		<position>
-			<x>607.7935965648812</x>
-			<y>310.64384891618744</y>
+			<x>-81.55062179773546</x>
+			<y>225.47850570970357</y>
 		</position>
 		<rules>7a/4a-&gt;4a;0 6a/4a-&gt;0;0 9a/8a-&gt;4a;0 10a/8a-&gt;4a;0 4a/4a-&gt;4a;0 13a/12a-&gt;0;0 4a/4a-&gt;4a;1</rules>
 		<startingSpikes>0</startingSpikes>
@@ -96,9 +108,18 @@
 		<spikes>3</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>n3</out>
-		<out>n1</out>
-		<out>OU_Se5nmr</out>
+		<out>mfmDlx8Ls_n1_0</out>
+		<out>mfmDlx8Ls_n1_1</out>
+		<out>mfmDlx8Ls_n1_2</out>
+		<out>mfmDlx8Ls_n1_3</out>
+		<out>mfmDlx8Ls_n3_0</out>
+		<out>mfmDlx8Ls_n3_1</out>
+		<out>mfmDlx8Ls_n3_2</out>
+		<out>mfmDlx8Ls_n3_3</out>
+		<out>mfmDlx8Ls_OU_Se5nmr_0</out>
+		<out>mfmDlx8Ls_OU_Se5nmr_1</out>
+		<out>mfmDlx8Ls_OU_Se5nmr_2</out>
+		<out>mfmDlx8Ls_OU_Se5nmr_3</out>
 		<outWeights>
 			<n3>1</n3>
 			<n1>1</n1>
@@ -108,8 +129,8 @@
 	<rNZ8WUWST>
 		<id>rNZ8WUWST</id>
 		<position>
-			<x>623.1198938914529</x>
-			<y>525.2120114881902</y>
+			<x>379.567777342755</x>
+			<y>674.376912093581</y>
 		</position>
 		<rules>7a/4a-&gt;4a;0 6a/4a-&gt;0;0 9a/8a-&gt;4a;0 10a/8a-&gt;4a;0 4a/4a-&gt;4a;0 13a/12a-&gt;0;0 4a/4a-&gt;4a;1</rules>
 		<startingSpikes>0</startingSpikes>
@@ -117,8 +138,14 @@
 		<spikes>3</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>n3</out>
-		<out>ghsld1QG1</out>
+		<out>rNZ8WUWST_n3_0</out>
+		<out>rNZ8WUWST_n3_1</out>
+		<out>rNZ8WUWST_n3_2</out>
+		<out>rNZ8WUWST_n3_3</out>
+		<out>rNZ8WUWST_ghsld1QG1_0</out>
+		<out>rNZ8WUWST_ghsld1QG1_1</out>
+		<out>rNZ8WUWST_ghsld1QG1_2</out>
+		<out>rNZ8WUWST_ghsld1QG1_3</out>
 		<outWeights>
 			<n3>1</n3>
 			<ghsld1QG1>1</ghsld1QG1>
@@ -127,8 +154,8 @@
 	<ghsld1QG1>
 		<id>ghsld1QG1</id>
 		<position>
-			<x>868.340651116599</x>
-			<y>529.0435858198332</y>
+			<x>426.2853019989493</x>
+			<y>655.24849752829</y>
 		</position>
 		<rules>7a/4a-&gt;4a;0 6a/4a-&gt;0;0 9a/8a-&gt;4a;0 10a/8a-&gt;4a;0 4a/4a-&gt;4a;0 13a/12a-&gt;0;0 4a/4a-&gt;4a;1</rules>
 		<startingSpikes>2</startingSpikes>

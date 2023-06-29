@@ -45,20 +45,4 @@
         <spikes>0</spikes>
         <bitstring/>
     </n4>
-    <n0-j5Lto5JHr>
-        <id>n0-j5Lto5JHr</id>
-        <position>
-            <x>-99.03146026371645</x>
-            <y>203.33935202870637</y>
-        </position>
-        <isInput>true</isInput>
-        <isOutput>false</isOutput>
-        <spikes>0</spikes>
-        <delay>0</delay>
-        <out>n1</out>
-        <bitstring>1,0,1,1</bitstring>
-        <outWeights>
-            <n1>1</n1>
-        </outWeights>
-    </n0-j5Lto5JHr>
 </content>

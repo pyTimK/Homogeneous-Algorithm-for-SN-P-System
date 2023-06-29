@@ -2,55 +2,47 @@
 	<n1>
 		<id>n1</id>
 		<position>
-			<x>628.7507600578233</x>
-			<y>-39.253786807957454</y>
+			<x>386.7072843931654</x>
+			<y>684.7824</y>
 		</position>
-		<rules>7a/3a-&gt;a;0 6a/3a-&gt;a;1 a/a-&gt;a;0 2a(3a)+/3a-&gt;a;2</rules>
+		<rules>5a/3a-&gt;3a;0 (3a)+/3a-&gt;3a;2 4a/3a-&gt;3a;1</rules>
 		<startingSpikes>1</startingSpikes>
 		<delay>0</delay>
-		<spikes>5</spikes>
+		<spikes>3</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>n1_n2_0</out>
-		<out>n1_n2_1</out>
-		<out>n1_n2_2</out>
+		<out>n2</out>
 		<outWeights>
-			<n1_n2_0>1</n1_n2_0>
-			<n1_n2_1>1</n1_n2_1>
-			<n1_n2_2>1</n1_n2_2>
+			<n2>1</n2>
 		</outWeights>
 	</n1>
 	<n2>
 		<id>n2</id>
 		<position>
-			<x>310.8604545077679</x>
-			<y>204.1037965854577</y>
+			<x>298.3034113317993</x>
+			<y>403.5739983156751</y>
 		</position>
-		<rules>7a/3a-&gt;a;0 6a/3a-&gt;a;1 a/a-&gt;a;0 2a(3a)+/3a-&gt;a;2</rules>
+		<rules>5a/3a-&gt;3a;0 (3a)+/3a-&gt;3a;2 4a/3a-&gt;3a;1</rules>
 		<startingSpikes>0</startingSpikes>
 		<delay>0</delay>
-		<spikes>3</spikes>
+		<spikes>1</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>n2_n3_0</out>
-		<out>n2_n3_1</out>
-		<out>n2_n3_2</out>
+		<out>n3</out>
 		<outWeights>
-			<n2_n3_0>1</n2_n3_0>
-			<n2_n3_1>1</n2_n3_1>
-			<n2_n3_2>1</n2_n3_2>
+			<n3>1</n3>
 		</outWeights>
 	</n2>
 	<n3>
 		<id>n3</id>
 		<position>
-			<x>-41.58701331024662</x>
-			<y>472.34438569303285</y>
+			<x>201.51416722948392</x>
+			<y>95.76528239917565</y>
 		</position>
-		<rules>7a/3a-&gt;a;0 6a/3a-&gt;a;1 a/a-&gt;a;0 2a(3a)+/3a-&gt;a;2</rules>
+		<rules>5a/3a-&gt;3a;0 (3a)+/3a-&gt;3a;2 4a/3a-&gt;3a;1</rules>
 		<startingSpikes>1</startingSpikes>
 		<delay>0</delay>
-		<spikes>7</spikes>
+		<spikes>5</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
 		<out>n4</out>
@@ -61,114 +53,12 @@
 	<n4>
 		<id>n4</id>
 		<position>
-			<x>-250.0</x>
-			<y>630.6773436817098</y>
+			<x>113.47513704555146</x>
+			<y>-184.1216807148508</y>
 		</position>
 		<isInput>false</isInput>
 		<isOutput>true</isOutput>
 		<spikes>0</spikes>
 		<bitstring></bitstring>
 	</n4>
-	<n1_n2_0>
-		<id>n1_n2_0</id>
-		<position>
-			<x>596.4422408051742</x>
-			<y>176.78086272358024</y>
-		</position>
-		<rules>7a/3a-&gt;a;0 6a/3a-&gt;a;1 a/a-&gt;a;0 2a(3a)+/3a-&gt;a;2</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n2</out>
-		<outWeights>
-			<n2>1</n2>
-		</outWeights>
-	</n1_n2_0>
-	<n1_n2_1>
-		<id>n1_n2_1</id>
-		<position>
-			<x>494.55822812488884</x>
-			<y>63.17380435646061</y>
-		</position>
-		<rules>7a/3a-&gt;a;0 6a/3a-&gt;a;1 a/a-&gt;a;0 2a(3a)+/3a-&gt;a;2</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n2</out>
-		<outWeights>
-			<n2>1</n2>
-		</outWeights>
-	</n1_n2_1>
-	<n1_n2_2>
-		<id>n1_n2_2</id>
-		<position>
-			<x>412.2530488486495</x>
-			<y>-65.26141746417835</y>
-		</position>
-		<rules>7a/3a-&gt;a;0 6a/3a-&gt;a;1 a/a-&gt;a;0 2a(3a)+/3a-&gt;a;2</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n2</out>
-		<outWeights>
-			<n2>1</n2>
-		</outWeights>
-	</n1_n2_2>
-	<n2_n3_0>
-		<id>n2_n3_0</id>
-		<position>
-			<x>203.89927586260734</x>
-			<y>470.376604669102</y>
-		</position>
-		<rules>7a/3a-&gt;a;0 6a/3a-&gt;a;1 a/a-&gt;a;0 2a(3a)+/3a-&gt;a;2</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n3</out>
-		<outWeights>
-			<n3>1</n3>
-		</outWeights>
-	</n2_n3_0>
-	<n2_n3_1>
-		<id>n2_n3_1</id>
-		<position>
-			<x>118.09910741341383</x>
-			<y>351.7438771664258</y>
-		</position>
-		<rules>7a/3a-&gt;a;0 6a/3a-&gt;a;1 a/a-&gt;a;0 2a(3a)+/3a-&gt;a;2</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n3</out>
-		<outWeights>
-			<n3>1</n3>
-		</outWeights>
-	</n2_n3_1>
-	<n2_n3_2>
-		<id>n2_n3_2</id>
-		<position>
-			<x>26.72389768992184</x>
-			<y>235.31452939636677</y>
-		</position>
-		<rules>7a/3a-&gt;a;0 6a/3a-&gt;a;1 a/a-&gt;a;0 2a(3a)+/3a-&gt;a;2</rules>
-		<startingSpikes>0</startingSpikes>
-		<delay>0</delay>
-		<spikes>0</spikes>
-		<isOutput>false</isOutput>
-		<isInput>false</isInput>
-		<out>n3</out>
-		<outWeights>
-			<n3>1</n3>
-		</outWeights>
-	</n2_n3_2>
 </content>

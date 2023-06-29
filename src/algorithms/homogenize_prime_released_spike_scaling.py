@@ -50,7 +50,7 @@ def homogenize_prime_released_spike_scaling(snp_system: SnpSystem) -> RuleSet:
 
 
     #! Step 4: Translate Neurons
-    print(rule_set_to_translate_param)
+    #!!print(rule_set_to_translate_param)
     for neuron in snp_system.neurons:  #! O(n)
         t = rule_set_to_translate_param.get(neuron.rules, 0)  #! O(n)
         neuron.translate(t)  #! O(nk)

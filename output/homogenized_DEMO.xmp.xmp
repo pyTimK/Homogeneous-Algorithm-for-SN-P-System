@@ -2,8 +2,8 @@
 	<n1>
 		<id>n1</id>
 		<position>
-			<x>226.74621602514094</x>
-			<y>586.1493382835813</y>
+			<x>585.9714007696427</x>
+			<y>485.4065340234598</y>
 		</position>
 		<rules>8a/4a-&gt;a;0 7a/2a-&gt;a;0 a/a-&gt;a;0 5a/2a-&gt;a;0</rules>
 		<startingSpikes>2</startingSpikes>
@@ -22,8 +22,8 @@
 	<n2>
 		<id>n2</id>
 		<position>
-			<x>259.1434985163156</x>
-			<y>117.84209878763184</y>
+			<x>116.9827475029953</x>
+			<y>155.69744623641452</y>
 		</position>
 		<rules>8a/4a-&gt;a;0 7a/2a-&gt;a;0 a/a-&gt;a;0 5a/2a-&gt;a;0</rules>
 		<startingSpikes>3</startingSpikes>
@@ -39,8 +39,8 @@
 	<n4>
 		<id>n4</id>
 		<position>
-			<x>280.8256680460757</x>
-			<y>-195.652</y>
+			<x>-195.65200000000004</x>
+			<y>-58.99917374236372</y>
 		</position>
 		<isInput>false</isInput>
 		<isOutput>true</isOutput>
@@ -50,8 +50,8 @@
 	<n1_n2_0>
 		<id>n1_n2_0</id>
 		<position>
-			<x>75.70220721918696</x>
-			<y>359.34963134357764</y>
+			<x>486.32517103567096</x>
+			<y>171.3191312319798</y>
 		</position>
 		<rules>8a/4a-&gt;a;0 7a/2a-&gt;a;0 a/a-&gt;a;0 5a/2a-&gt;a;0</rules>
 		<startingSpikes>0</startingSpikes>
@@ -67,8 +67,8 @@
 	<n1_n2_1>
 		<id>n1_n2_1</id>
 		<position>
-			<x>407.582410193281</x>
-			<y>382.3109315852091</y>
+			<x>256.37268069169085</x>
+			<y>496.5760622505095</y>
 		</position>
 		<rules>8a/4a-&gt;a;0 7a/2a-&gt;a;0 a/a-&gt;a;0 5a/2a-&gt;a;0</rules>
 		<startingSpikes>0</startingSpikes>

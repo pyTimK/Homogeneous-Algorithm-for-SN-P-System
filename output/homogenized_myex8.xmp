@@ -2,8 +2,8 @@
 	<n0-y3GhuUwyF>
 		<id>n0-y3GhuUwyF</id>
 		<position>
-			<x>12.130376564235243</x>
-			<y>-24.704475304459482</y>
+			<x>-56.57467892417634</x>
+			<y>609.6625808071949</y>
 		</position>
 		<rules>114a/64a-&gt;64a;6 109a/64a-&gt;64a;4 111a/64a-&gt;64a;6 72a/64a-&gt;64a;5 92a/64a-&gt;64a;0 107a/64a-&gt;64a;9 105a/64a-&gt;64a;5 70a/64a-&gt;64a;3</rules>
 		<startingSpikes>1</startingSpikes>
@@ -11,13 +11,62 @@
 		<spikes>8</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>n1-1kD186AwQ</out>
-		<out>n2-AJScUd32V</out>
-		<out>n3-lKOewZMyt</out>
-		<out>n4-Sd-pxRELT</out>
-		<out>n5-yO508WkNN</out>
-		<out>n6-wBnggYVEs</out>
-		<out>n9-AArRYXm-Z</out>
+		<out>n0_n1_0</out>
+		<out>n0_n1_1</out>
+		<out>n0_n1_2</out>
+		<out>n0_n1_3</out>
+		<out>n0_n1_4</out>
+		<out>n0_n1_5</out>
+		<out>n0_n1_6</out>
+		<out>n0_n1_7</out>
+		<out>n0_n2_0</out>
+		<out>n0_n2_1</out>
+		<out>n0_n2_2</out>
+		<out>n0_n2_3</out>
+		<out>n0_n2_4</out>
+		<out>n0_n2_5</out>
+		<out>n0_n2_6</out>
+		<out>n0_n2_7</out>
+		<out>n0_n3_0</out>
+		<out>n0_n3_1</out>
+		<out>n0_n3_2</out>
+		<out>n0_n3_3</out>
+		<out>n0_n3_4</out>
+		<out>n0_n3_5</out>
+		<out>n0_n3_6</out>
+		<out>n0_n3_7</out>
+		<out>n0_n4_0</out>
+		<out>n0_n4_1</out>
+		<out>n0_n4_2</out>
+		<out>n0_n4_3</out>
+		<out>n0_n4_4</out>
+		<out>n0_n4_5</out>
+		<out>n0_n4_6</out>
+		<out>n0_n4_7</out>
+		<out>n0_n5_0</out>
+		<out>n0_n5_1</out>
+		<out>n0_n5_2</out>
+		<out>n0_n5_3</out>
+		<out>n0_n5_4</out>
+		<out>n0_n5_5</out>
+		<out>n0_n5_6</out>
+		<out>n0_n5_7</out>
+		<out>n0_n6_0</out>
+		<out>n0_n6_1</out>
+		<out>n0_n6_2</out>
+		<out>n0_n6_3</out>
+		<out>n0_n6_4</out>
+		<out>n0_n6_5</out>
+		<out>n0_n6_6</out>
+		<out>n0_n6_7</out>
+		<out>n0_n9_0</out>
+		<out>n0_n9_1</out>
+		<out>n0_n9_2</out>
+		<out>n0_n9_3</out>
+		<out>n0_n9_4</out>
+		<out>n0_n9_5</out>
+		<out>n0_n9_6</out>
+		<out>n0_n9_7</out>
 		<outWeights>
 			<n1-1kD186AwQ>1</n1-1kD186AwQ>
 			<n2-AJScUd32V>1</n2-AJScUd32V>
@@ -31,8 +80,8 @@
 	<n1-1kD186AwQ>
 		<id>n1-1kD186AwQ</id>
 		<position>
-			<x>182.13037656423538</x>
-			<y>-55.70447530445951</y>
+			<x>594.2915337653753</x>
+			<y>12.335129932377356</y>
 		</position>
 		<rules>114a/64a-&gt;64a;6 109a/64a-&gt;64a;4 111a/64a-&gt;64a;6 72a/64a-&gt;64a;5 92a/64a-&gt;64a;0 107a/64a-&gt;64a;9 105a/64a-&gt;64a;5 70a/64a-&gt;64a;3</rules>
 		<startingSpikes>0</startingSpikes>
@@ -40,13 +89,62 @@
 		<spikes>6</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>n2-AJScUd32V</out>
-		<out>n0-y3GhuUwyF</out>
-		<out>n3-lKOewZMyt</out>
-		<out>n4-Sd-pxRELT</out>
-		<out>n5-yO508WkNN</out>
-		<out>n6-wBnggYVEs</out>
-		<out>n9-AArRYXm-Z</out>
+		<out>n1_n0_0</out>
+		<out>n1_n0_1</out>
+		<out>n1_n0_2</out>
+		<out>n1_n0_3</out>
+		<out>n1_n0_4</out>
+		<out>n1_n0_5</out>
+		<out>n1_n0_6</out>
+		<out>n1_n0_7</out>
+		<out>n1_n2_0</out>
+		<out>n1_n2_1</out>
+		<out>n1_n2_2</out>
+		<out>n1_n2_3</out>
+		<out>n1_n2_4</out>
+		<out>n1_n2_5</out>
+		<out>n1_n2_6</out>
+		<out>n1_n2_7</out>
+		<out>n1_n3_0</out>
+		<out>n1_n3_1</out>
+		<out>n1_n3_2</out>
+		<out>n1_n3_3</out>
+		<out>n1_n3_4</out>
+		<out>n1_n3_5</out>
+		<out>n1_n3_6</out>
+		<out>n1_n3_7</out>
+		<out>n1_n4_0</out>
+		<out>n1_n4_1</out>
+		<out>n1_n4_2</out>
+		<out>n1_n4_3</out>
+		<out>n1_n4_4</out>
+		<out>n1_n4_5</out>
+		<out>n1_n4_6</out>
+		<out>n1_n4_7</out>
+		<out>n1_n5_0</out>
+		<out>n1_n5_1</out>
+		<out>n1_n5_2</out>
+		<out>n1_n5_3</out>
+		<out>n1_n5_4</out>
+		<out>n1_n5_5</out>
+		<out>n1_n5_6</out>
+		<out>n1_n5_7</out>
+		<out>n1_n6_0</out>
+		<out>n1_n6_1</out>
+		<out>n1_n6_2</out>
+		<out>n1_n6_3</out>
+		<out>n1_n6_4</out>
+		<out>n1_n6_5</out>
+		<out>n1_n6_6</out>
+		<out>n1_n6_7</out>
+		<out>n1_n9_0</out>
+		<out>n1_n9_1</out>
+		<out>n1_n9_2</out>
+		<out>n1_n9_3</out>
+		<out>n1_n9_4</out>
+		<out>n1_n9_5</out>
+		<out>n1_n9_6</out>
+		<out>n1_n9_7</out>
 		<outWeights>
 			<n2-AJScUd32V>1</n2-AJScUd32V>
 			<n0-y3GhuUwyF>1</n0-y3GhuUwyF>
@@ -60,8 +158,8 @@
 	<n2-AJScUd32V>
 		<id>n2-AJScUd32V</id>
 		<position>
-			<x>320.13037656423546</x>
-			<y>-21.704475304459482</y>
+			<x>683.2439403868482</x>
+			<y>405.011865335068</y>
 		</position>
 		<rules>114a/64a-&gt;64a;6 109a/64a-&gt;64a;4 111a/64a-&gt;64a;6 72a/64a-&gt;64a;5 92a/64a-&gt;64a;0 107a/64a-&gt;64a;9 105a/64a-&gt;64a;5 70a/64a-&gt;64a;3</rules>
 		<startingSpikes>0</startingSpikes>
@@ -69,13 +167,62 @@
 		<spikes>4</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>n3-lKOewZMyt</out>
-		<out>n1-1kD186AwQ</out>
-		<out>n0-y3GhuUwyF</out>
-		<out>n4-Sd-pxRELT</out>
-		<out>n9-AArRYXm-Z</out>
-		<out>n6-wBnggYVEs</out>
-		<out>n5-yO508WkNN</out>
+		<out>n2_n0_0</out>
+		<out>n2_n0_1</out>
+		<out>n2_n0_2</out>
+		<out>n2_n0_3</out>
+		<out>n2_n0_4</out>
+		<out>n2_n0_5</out>
+		<out>n2_n0_6</out>
+		<out>n2_n0_7</out>
+		<out>n2_n1_0</out>
+		<out>n2_n1_1</out>
+		<out>n2_n1_2</out>
+		<out>n2_n1_3</out>
+		<out>n2_n1_4</out>
+		<out>n2_n1_5</out>
+		<out>n2_n1_6</out>
+		<out>n2_n1_7</out>
+		<out>n2_n3_0</out>
+		<out>n2_n3_1</out>
+		<out>n2_n3_2</out>
+		<out>n2_n3_3</out>
+		<out>n2_n3_4</out>
+		<out>n2_n3_5</out>
+		<out>n2_n3_6</out>
+		<out>n2_n3_7</out>
+		<out>n2_n4_0</out>
+		<out>n2_n4_1</out>
+		<out>n2_n4_2</out>
+		<out>n2_n4_3</out>
+		<out>n2_n4_4</out>
+		<out>n2_n4_5</out>
+		<out>n2_n4_6</out>
+		<out>n2_n4_7</out>
+		<out>n2_n5_0</out>
+		<out>n2_n5_1</out>
+		<out>n2_n5_2</out>
+		<out>n2_n5_3</out>
+		<out>n2_n5_4</out>
+		<out>n2_n5_5</out>
+		<out>n2_n5_6</out>
+		<out>n2_n5_7</out>
+		<out>n2_n6_0</out>
+		<out>n2_n6_1</out>
+		<out>n2_n6_2</out>
+		<out>n2_n6_3</out>
+		<out>n2_n6_4</out>
+		<out>n2_n6_5</out>
+		<out>n2_n6_6</out>
+		<out>n2_n6_7</out>
+		<out>n2_n9_0</out>
+		<out>n2_n9_1</out>
+		<out>n2_n9_2</out>
+		<out>n2_n9_3</out>
+		<out>n2_n9_4</out>
+		<out>n2_n9_5</out>
+		<out>n2_n9_6</out>
+		<out>n2_n9_7</out>
 		<outWeights>
 			<n3-lKOewZMyt>1</n3-lKOewZMyt>
 			<n1-1kD186AwQ>1</n1-1kD186AwQ>
@@ -89,8 +236,8 @@
 	<n3-lKOewZMyt>
 		<id>n3-lKOewZMyt</id>
 		<position>
-			<x>442.1303765642356</x>
-			<y>-26.704475304459486</y>
+			<x>361.5716053268752</x>
+			<y>686.6241742221587</y>
 		</position>
 		<rules>114a/64a-&gt;64a;6 109a/64a-&gt;64a;4 111a/64a-&gt;64a;6 72a/64a-&gt;64a;5 92a/64a-&gt;64a;0 107a/64a-&gt;64a;9 105a/64a-&gt;64a;5 70a/64a-&gt;64a;3</rules>
 		<startingSpikes>0</startingSpikes>
@@ -98,13 +245,62 @@
 		<spikes>2</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>n4-Sd-pxRELT</out>
-		<out>n2-AJScUd32V</out>
-		<out>n1-1kD186AwQ</out>
-		<out>n0-y3GhuUwyF</out>
-		<out>n9-AArRYXm-Z</out>
-		<out>n6-wBnggYVEs</out>
-		<out>n5-yO508WkNN</out>
+		<out>n3_n0_0</out>
+		<out>n3_n0_1</out>
+		<out>n3_n0_2</out>
+		<out>n3_n0_3</out>
+		<out>n3_n0_4</out>
+		<out>n3_n0_5</out>
+		<out>n3_n0_6</out>
+		<out>n3_n0_7</out>
+		<out>n3_n1_0</out>
+		<out>n3_n1_1</out>
+		<out>n3_n1_2</out>
+		<out>n3_n1_3</out>
+		<out>n3_n1_4</out>
+		<out>n3_n1_5</out>
+		<out>n3_n1_6</out>
+		<out>n3_n1_7</out>
+		<out>n3_n2_0</out>
+		<out>n3_n2_1</out>
+		<out>n3_n2_2</out>
+		<out>n3_n2_3</out>
+		<out>n3_n2_4</out>
+		<out>n3_n2_5</out>
+		<out>n3_n2_6</out>
+		<out>n3_n2_7</out>
+		<out>n3_n4_0</out>
+		<out>n3_n4_1</out>
+		<out>n3_n4_2</out>
+		<out>n3_n4_3</out>
+		<out>n3_n4_4</out>
+		<out>n3_n4_5</out>
+		<out>n3_n4_6</out>
+		<out>n3_n4_7</out>
+		<out>n3_n5_0</out>
+		<out>n3_n5_1</out>
+		<out>n3_n5_2</out>
+		<out>n3_n5_3</out>
+		<out>n3_n5_4</out>
+		<out>n3_n5_5</out>
+		<out>n3_n5_6</out>
+		<out>n3_n5_7</out>
+		<out>n3_n6_0</out>
+		<out>n3_n6_1</out>
+		<out>n3_n6_2</out>
+		<out>n3_n6_3</out>
+		<out>n3_n6_4</out>
+		<out>n3_n6_5</out>
+		<out>n3_n6_6</out>
+		<out>n3_n6_7</out>
+		<out>n3_n9_0</out>
+		<out>n3_n9_1</out>
+		<out>n3_n9_2</out>
+		<out>n3_n9_3</out>
+		<out>n3_n9_4</out>
+		<out>n3_n9_5</out>
+		<out>n3_n9_6</out>
+		<out>n3_n9_7</out>
 		<outWeights>
 			<n4-Sd-pxRELT>1</n4-Sd-pxRELT>
 			<n2-AJScUd32V>1</n2-AJScUd32V>
@@ -118,8 +314,8 @@
 	<n4-Sd-pxRELT>
 		<id>n4-Sd-pxRELT</id>
 		<position>
-			<x>559.1303765642357</x>
-			<y>-2.7044753044594665</y>
+			<x>-195.61744925063294</x>
+			<y>56.4260206782221</y>
 		</position>
 		<rules>114a/64a-&gt;64a;6 109a/64a-&gt;64a;4 111a/64a-&gt;64a;6 72a/64a-&gt;64a;5 92a/64a-&gt;64a;0 107a/64a-&gt;64a;9 105a/64a-&gt;64a;5 70a/64a-&gt;64a;3</rules>
 		<startingSpikes>0</startingSpikes>
@@ -127,13 +323,62 @@
 		<spikes>5</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>n5-yO508WkNN</out>
-		<out>n3-lKOewZMyt</out>
-		<out>n2-AJScUd32V</out>
-		<out>n1-1kD186AwQ</out>
-		<out>n0-y3GhuUwyF</out>
-		<out>n6-wBnggYVEs</out>
-		<out>n9-AArRYXm-Z</out>
+		<out>n4_n0_0</out>
+		<out>n4_n0_1</out>
+		<out>n4_n0_2</out>
+		<out>n4_n0_3</out>
+		<out>n4_n0_4</out>
+		<out>n4_n0_5</out>
+		<out>n4_n0_6</out>
+		<out>n4_n0_7</out>
+		<out>n4_n1_0</out>
+		<out>n4_n1_1</out>
+		<out>n4_n1_2</out>
+		<out>n4_n1_3</out>
+		<out>n4_n1_4</out>
+		<out>n4_n1_5</out>
+		<out>n4_n1_6</out>
+		<out>n4_n1_7</out>
+		<out>n4_n2_0</out>
+		<out>n4_n2_1</out>
+		<out>n4_n2_2</out>
+		<out>n4_n2_3</out>
+		<out>n4_n2_4</out>
+		<out>n4_n2_5</out>
+		<out>n4_n2_6</out>
+		<out>n4_n2_7</out>
+		<out>n4_n3_0</out>
+		<out>n4_n3_1</out>
+		<out>n4_n3_2</out>
+		<out>n4_n3_3</out>
+		<out>n4_n3_4</out>
+		<out>n4_n3_5</out>
+		<out>n4_n3_6</out>
+		<out>n4_n3_7</out>
+		<out>n4_n5_0</out>
+		<out>n4_n5_1</out>
+		<out>n4_n5_2</out>
+		<out>n4_n5_3</out>
+		<out>n4_n5_4</out>
+		<out>n4_n5_5</out>
+		<out>n4_n5_6</out>
+		<out>n4_n5_7</out>
+		<out>n4_n6_0</out>
+		<out>n4_n6_1</out>
+		<out>n4_n6_2</out>
+		<out>n4_n6_3</out>
+		<out>n4_n6_4</out>
+		<out>n4_n6_5</out>
+		<out>n4_n6_6</out>
+		<out>n4_n6_7</out>
+		<out>n4_n9_0</out>
+		<out>n4_n9_1</out>
+		<out>n4_n9_2</out>
+		<out>n4_n9_3</out>
+		<out>n4_n9_4</out>
+		<out>n4_n9_5</out>
+		<out>n4_n9_6</out>
+		<out>n4_n9_7</out>
 		<outWeights>
 			<n5-yO508WkNN>1</n5-yO508WkNN>
 			<n3-lKOewZMyt>1</n3-lKOewZMyt>
@@ -147,8 +392,8 @@
 	<n5-yO508WkNN>
 		<id>n5-yO508WkNN</id>
 		<position>
-			<x>-43.8696234357648</x>
-			<y>218.2955246955407</y>
+			<x>-4.435060152140977</x>
+			<y>156.4834209740057</y>
 		</position>
 		<rules>114a/64a-&gt;64a;6 109a/64a-&gt;64a;4 111a/64a-&gt;64a;6 72a/64a-&gt;64a;5 92a/64a-&gt;64a;0 107a/64a-&gt;64a;9 105a/64a-&gt;64a;5 70a/64a-&gt;64a;3</rules>
 		<startingSpikes>0</startingSpikes>
@@ -156,13 +401,62 @@
 		<spikes>1</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>n6-wBnggYVEs</out>
-		<out>n0-y3GhuUwyF</out>
-		<out>n1-1kD186AwQ</out>
-		<out>n2-AJScUd32V</out>
-		<out>n3-lKOewZMyt</out>
-		<out>n4-Sd-pxRELT</out>
-		<out>n9-AArRYXm-Z</out>
+		<out>n5_n0_0</out>
+		<out>n5_n0_1</out>
+		<out>n5_n0_2</out>
+		<out>n5_n0_3</out>
+		<out>n5_n0_4</out>
+		<out>n5_n0_5</out>
+		<out>n5_n0_6</out>
+		<out>n5_n0_7</out>
+		<out>n5_n1_0</out>
+		<out>n5_n1_1</out>
+		<out>n5_n1_2</out>
+		<out>n5_n1_3</out>
+		<out>n5_n1_4</out>
+		<out>n5_n1_5</out>
+		<out>n5_n1_6</out>
+		<out>n5_n1_7</out>
+		<out>n5_n2_0</out>
+		<out>n5_n2_1</out>
+		<out>n5_n2_2</out>
+		<out>n5_n2_3</out>
+		<out>n5_n2_4</out>
+		<out>n5_n2_5</out>
+		<out>n5_n2_6</out>
+		<out>n5_n2_7</out>
+		<out>n5_n3_0</out>
+		<out>n5_n3_1</out>
+		<out>n5_n3_2</out>
+		<out>n5_n3_3</out>
+		<out>n5_n3_4</out>
+		<out>n5_n3_5</out>
+		<out>n5_n3_6</out>
+		<out>n5_n3_7</out>
+		<out>n5_n4_0</out>
+		<out>n5_n4_1</out>
+		<out>n5_n4_2</out>
+		<out>n5_n4_3</out>
+		<out>n5_n4_4</out>
+		<out>n5_n4_5</out>
+		<out>n5_n4_6</out>
+		<out>n5_n4_7</out>
+		<out>n5_n6_0</out>
+		<out>n5_n6_1</out>
+		<out>n5_n6_2</out>
+		<out>n5_n6_3</out>
+		<out>n5_n6_4</out>
+		<out>n5_n6_5</out>
+		<out>n5_n6_6</out>
+		<out>n5_n6_7</out>
+		<out>n5_n9_0</out>
+		<out>n5_n9_1</out>
+		<out>n5_n9_2</out>
+		<out>n5_n9_3</out>
+		<out>n5_n9_4</out>
+		<out>n5_n9_5</out>
+		<out>n5_n9_6</out>
+		<out>n5_n9_7</out>
 		<outWeights>
 			<n6-wBnggYVEs>1</n6-wBnggYVEs>
 			<n0-y3GhuUwyF>1</n0-y3GhuUwyF>
@@ -176,8 +470,8 @@
 	<n6-wBnggYVEs>
 		<id>n6-wBnggYVEs</id>
 		<position>
-			<x>160.13037656423535</x>
-			<y>109.29552469554062</y>
+			<x>344.5183940268814</x>
+			<y>-182.03289993677498</y>
 		</position>
 		<rules>114a/64a-&gt;64a;6 109a/64a-&gt;64a;4 111a/64a-&gt;64a;6 72a/64a-&gt;64a;5 92a/64a-&gt;64a;0 107a/64a-&gt;64a;9 105a/64a-&gt;64a;5 70a/64a-&gt;64a;3</rules>
 		<startingSpikes>0</startingSpikes>
@@ -185,13 +479,62 @@
 		<spikes>7</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>n9-AArRYXm-Z</out>
-		<out>n0-y3GhuUwyF</out>
-		<out>n1-1kD186AwQ</out>
-		<out>n2-AJScUd32V</out>
-		<out>n3-lKOewZMyt</out>
-		<out>n4-Sd-pxRELT</out>
-		<out>n5-yO508WkNN</out>
+		<out>n6_n0_0</out>
+		<out>n6_n0_1</out>
+		<out>n6_n0_2</out>
+		<out>n6_n0_3</out>
+		<out>n6_n0_4</out>
+		<out>n6_n0_5</out>
+		<out>n6_n0_6</out>
+		<out>n6_n0_7</out>
+		<out>n6_n1_0</out>
+		<out>n6_n1_1</out>
+		<out>n6_n1_2</out>
+		<out>n6_n1_3</out>
+		<out>n6_n1_4</out>
+		<out>n6_n1_5</out>
+		<out>n6_n1_6</out>
+		<out>n6_n1_7</out>
+		<out>n6_n2_0</out>
+		<out>n6_n2_1</out>
+		<out>n6_n2_2</out>
+		<out>n6_n2_3</out>
+		<out>n6_n2_4</out>
+		<out>n6_n2_5</out>
+		<out>n6_n2_6</out>
+		<out>n6_n2_7</out>
+		<out>n6_n3_0</out>
+		<out>n6_n3_1</out>
+		<out>n6_n3_2</out>
+		<out>n6_n3_3</out>
+		<out>n6_n3_4</out>
+		<out>n6_n3_5</out>
+		<out>n6_n3_6</out>
+		<out>n6_n3_7</out>
+		<out>n6_n4_0</out>
+		<out>n6_n4_1</out>
+		<out>n6_n4_2</out>
+		<out>n6_n4_3</out>
+		<out>n6_n4_4</out>
+		<out>n6_n4_5</out>
+		<out>n6_n4_6</out>
+		<out>n6_n4_7</out>
+		<out>n6_n5_0</out>
+		<out>n6_n5_1</out>
+		<out>n6_n5_2</out>
+		<out>n6_n5_3</out>
+		<out>n6_n5_4</out>
+		<out>n6_n5_5</out>
+		<out>n6_n5_6</out>
+		<out>n6_n5_7</out>
+		<out>n6_n9_0</out>
+		<out>n6_n9_1</out>
+		<out>n6_n9_2</out>
+		<out>n6_n9_3</out>
+		<out>n6_n9_4</out>
+		<out>n6_n9_5</out>
+		<out>n6_n9_6</out>
+		<out>n6_n9_7</out>
 		<outWeights>
 			<n7-WzTEC2ios>1</n7-WzTEC2ios>
 			<n9-AArRYXm-Z>1</n9-AArRYXm-Z>
@@ -206,8 +549,8 @@
 	<n9-AArRYXm-Z>
 		<id>n9-AArRYXm-Z</id>
 		<position>
-			<x>333.1303765642355</x>
-			<y>292.29552469554073</y>
+			<x>274.06245854341114</x>
+			<y>256.50792611318275</y>
 		</position>
 		<rules>114a/64a-&gt;64a;6 109a/64a-&gt;64a;4 111a/64a-&gt;64a;6 72a/64a-&gt;64a;5 92a/64a-&gt;64a;0 107a/64a-&gt;64a;9 105a/64a-&gt;64a;5 70a/64a-&gt;64a;3</rules>
 		<startingSpikes>2</startingSpikes>
@@ -216,13 +559,62 @@
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
 		<out>n10-2W80kOwiS</out>
-		<out>n0-y3GhuUwyF</out>
-		<out>n6-wBnggYVEs</out>
-		<out>n5-yO508WkNN</out>
-		<out>n1-1kD186AwQ</out>
-		<out>n2-AJScUd32V</out>
-		<out>n3-lKOewZMyt</out>
-		<out>n4-Sd-pxRELT</out>
+		<out>n9_n0_0</out>
+		<out>n9_n0_1</out>
+		<out>n9_n0_2</out>
+		<out>n9_n0_3</out>
+		<out>n9_n0_4</out>
+		<out>n9_n0_5</out>
+		<out>n9_n0_6</out>
+		<out>n9_n0_7</out>
+		<out>n9_n1_0</out>
+		<out>n9_n1_1</out>
+		<out>n9_n1_2</out>
+		<out>n9_n1_3</out>
+		<out>n9_n1_4</out>
+		<out>n9_n1_5</out>
+		<out>n9_n1_6</out>
+		<out>n9_n1_7</out>
+		<out>n9_n2_0</out>
+		<out>n9_n2_1</out>
+		<out>n9_n2_2</out>
+		<out>n9_n2_3</out>
+		<out>n9_n2_4</out>
+		<out>n9_n2_5</out>
+		<out>n9_n2_6</out>
+		<out>n9_n2_7</out>
+		<out>n9_n3_0</out>
+		<out>n9_n3_1</out>
+		<out>n9_n3_2</out>
+		<out>n9_n3_3</out>
+		<out>n9_n3_4</out>
+		<out>n9_n3_5</out>
+		<out>n9_n3_6</out>
+		<out>n9_n3_7</out>
+		<out>n9_n4_0</out>
+		<out>n9_n4_1</out>
+		<out>n9_n4_2</out>
+		<out>n9_n4_3</out>
+		<out>n9_n4_4</out>
+		<out>n9_n4_5</out>
+		<out>n9_n4_6</out>
+		<out>n9_n4_7</out>
+		<out>n9_n5_0</out>
+		<out>n9_n5_1</out>
+		<out>n9_n5_2</out>
+		<out>n9_n5_3</out>
+		<out>n9_n5_4</out>
+		<out>n9_n5_5</out>
+		<out>n9_n5_6</out>
+		<out>n9_n5_7</out>
+		<out>n9_n6_0</out>
+		<out>n9_n6_1</out>
+		<out>n9_n6_2</out>
+		<out>n9_n6_3</out>
+		<out>n9_n6_4</out>
+		<out>n9_n6_5</out>
+		<out>n9_n6_6</out>
+		<out>n9_n6_7</out>
 		<outWeights>
 			<n10-2W80kOwiS>1</n10-2W80kOwiS>
 			<n0-y3GhuUwyF>1</n0-y3GhuUwyF>
@@ -237,8 +629,8 @@
 	<n10-2W80kOwiS>
 		<id>n10-2W80kOwiS</id>
 		<position>
-			<x>537.8651347711278</x>
-			<y>248.23603841109977</y>
+			<x>303.57228960663303</x>
+			<y>280.7028449256675</y>
 		</position>
 		<isInput>false</isInput>
 		<isOutput>true</isOutput>

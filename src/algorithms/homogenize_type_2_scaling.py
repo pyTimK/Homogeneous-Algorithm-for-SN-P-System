@@ -23,7 +23,7 @@ def homogenize_type_2_scaling(snp_system: SnpSystem) -> RuleSet:
     
 
     if p == 1:  #! O(1)
-        return rule_sets.pop()  #! O(1)
+        return rule_sets.pop()  #! O(1   )
     
     # Used to remember the translate param of a rule set
     rule_set_to_translate_param: Dict[RuleSet, int] = {}  #! O(1)
@@ -51,7 +51,7 @@ def homogenize_type_2_scaling(snp_system: SnpSystem) -> RuleSet:
     #! Step 2: Scale Neurons
     for neuron in nonmultiplier_neurons:  #! O(n)
         neuron.scale(p, scale_release=False)  #! O(nk)
-        multipliers.update(snp_system.type_2_subsystem_scaling(neuron, p))  #! O(n^2k)
+        multipliers.update(snp_system.type_2_subsystem_scaling(neuron, p))  #! O(n^3k)
 
     #! Step 3: Translate Neurons
     for neuron in nonmultiplier_neurons:
@@ -68,16 +68,16 @@ def homogenize_type_2_scaling(snp_system: SnpSystem) -> RuleSet:
         delay = 0,  #! O(1)
         ) for spike_produced in multipliers})  #! O(nk)
     
-    # print("R0")
-    # print(R0)
-    # print("multipliers")
-    # print(multipliers)
+    # #!!print("R0")
+    # #!!print(R0)
+    # #!!print("multipliers")
+    # #!!print(multipliers)
 
 
     #! Step 5: Set the offset as the upper bound of the multipliers
     t = 0 if len(multipliers) == 0 else max(multipliers) + 1  #! O(1)
-    # print("t")
-    # print(t)
+    # #!!print("t")
+    # #!!print(t)
     #! Step 6: Get the final rule set
     R = R0.union(R.translate(t))  #! O(nk)
 

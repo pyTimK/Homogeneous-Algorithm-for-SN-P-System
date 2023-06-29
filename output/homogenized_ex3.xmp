@@ -2,8 +2,8 @@
 	<n1>
 		<id>n1</id>
 		<position>
-			<x>50.0</x>
-			<y>50.0</y>
+			<x>344.8923827896389</x>
+			<y>-52.6446737703659</y>
 		</position>
 		<rules>4a/3a-&gt;0;0 7a/6a-&gt;3a;0 6a/6a-&gt;0;0 3a/3a-&gt;3a;0 2a(3a)+/3a-&gt;3a;0</rules>
 		<startingSpikes>8</startingSpikes>
@@ -11,8 +11,12 @@
 		<spikes>26</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>n2</out>
-		<out>n5-4RzUmMqzL</out>
+		<out>n1_n2_0</out>
+		<out>n1_n2_1</out>
+		<out>n1_n2_2</out>
+		<out>n1_n5_0</out>
+		<out>n1_n5_1</out>
+		<out>n1_n5_2</out>
 		<outWeights>
 			<n2>1</n2>
 			<n5-4RzUmMqzL>1</n5-4RzUmMqzL>
@@ -21,8 +25,8 @@
 	<n2>
 		<id>n2</id>
 		<position>
-			<x>355.6666717529297</x>
-			<y>29.533340454101562</y>
+			<x>-204.53200159527898</x>
+			<y>246.3738653168066</y>
 		</position>
 		<rules>4a/3a-&gt;0;0 7a/6a-&gt;3a;0 6a/6a-&gt;0;0 3a/3a-&gt;3a;0 2a(3a)+/3a-&gt;3a;0</rules>
 		<startingSpikes>0</startingSpikes>
@@ -40,8 +44,8 @@
 	<n4>
 		<id>n4</id>
 		<position>
-			<x>649.6666717529297</x>
-			<y>67.53334045410156</y>
+			<x>-206.52159999999998</x>
+			<y>294.5026688583067</y>
 		</position>
 		<isInput>false</isInput>
 		<isOutput>true</isOutput>
@@ -51,8 +55,8 @@
 	<n3-Ya7zAtdZO>
 		<id>n3-Ya7zAtdZO</id>
 		<position>
-			<x>69.66667175292969</x>
-			<y>280.53334045410156</y>
+			<x>404.43566648263106</x>
+			<y>569.0424995867563</y>
 		</position>
 		<rules>4a/3a-&gt;0;0 7a/6a-&gt;3a;0 6a/6a-&gt;0;0 3a/3a-&gt;3a;0 2a(3a)+/3a-&gt;3a;0</rules>
 		<startingSpikes>5</startingSpikes>
@@ -60,8 +64,12 @@
 		<spikes>17</spikes>
 		<isOutput>false</isOutput>
 		<isInput>false</isInput>
-		<out>n5-4RzUmMqzL</out>
-		<out>n2</out>
+		<out>n3_n2_0</out>
+		<out>n3_n2_1</out>
+		<out>n3_n2_2</out>
+		<out>n3_n5_0</out>
+		<out>n3_n5_1</out>
+		<out>n3_n5_2</out>
 		<outWeights>
 			<n5-4RzUmMqzL>1</n5-4RzUmMqzL>
 			<n2>1</n2>
@@ -70,8 +78,8 @@
 	<n5-4RzUmMqzL>
 		<id>n5-4RzUmMqzL</id>
 		<position>
-			<x>403.6666717529297</x>
-			<y>264.53334045410156</y>
+			<x>-172.51926777478695</x>
+			<y>150.27144111142448</y>
 		</position>
 		<rules>4a/3a-&gt;0;0 7a/6a-&gt;3a;0 6a/6a-&gt;0;0 3a/3a-&gt;3a;0 2a(3a)+/3a-&gt;3a;0</rules>
 		<startingSpikes>0</startingSpikes>
@@ -87,8 +95,8 @@
 	<n6-TEqaMSlVi>
 		<id>n6-TEqaMSlVi</id>
 		<position>
-			<x>661.6666717529297</x>
-			<y>259.53334045410156</y>
+			<x>-193.97372865467025</x>
+			<y>194.2401994256282</y>
 		</position>
 		<isInput>false</isInput>
 		<isOutput>true</isOutput>

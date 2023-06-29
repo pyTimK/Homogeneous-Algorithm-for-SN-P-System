@@ -86,8 +86,8 @@ class SnpSystem:
 
                 # 2. Connect the subsystem neuron to multiplier neurons
                 neuron_prime.out.append(multiplier_neuron.id)  #! O(n^2)
-                # print(f"multiplier_neuron.id:{multiplier_neuron.id}")
-                # print(f"neuron_prime.out: {neuron_prime.out}")
+                # #!!print(f"multiplier_neuron.id:{multiplier_neuron.id}")
+                # #!!print(f"neuron_prime.out: {neuron_prime.out}")
                 neuron_prime.out_weights[multiplier_neuron.id] = 1  #! O(n^2)
             
             # 3. Disconnect the subsystem neuron to the selected neuron

@@ -2,10 +2,10 @@
 	<n0-y3GhuUwyF>
 		<id>n0-y3GhuUwyF</id>
 		<position>
-			<x>651.8901062011719</x>
-			<y>101.58131408691406</y>
+			<x>560.5954284667969</x>
+			<y>650.7948303222656</y>
 		</position>
-		<rules>11a/10a-&gt;a;5 10a/10a-&gt;a;3 16a/10a-&gt;a;4 14a/10a-&gt;a;2 15a/10a-&gt;a;7 19a/10a-&gt;a;1 13a/10a-&gt;a;0 18a/10a-&gt;a;8 17a/10a-&gt;a;6 22a/10a-&gt;a;0</rules>
+		<rules>10a/10a-&gt;10a;3 16a/10a-&gt;10a;4 15a/10a-&gt;10a;7 13a/10a-&gt;10a;0 18a/10a-&gt;10a;8 17a/10a-&gt;10a;6 22a/10a-&gt;10a;0 14a/10a-&gt;10a;2 19a/10a-&gt;10a;1 11a/10a-&gt;10a;5</rules>
 		<startingSpikes>1</startingSpikes>
 		<delay>0</delay>
 		<spikes>13</spikes>
@@ -116,10 +116,10 @@
 	<n1-1kD186AwQ>
 		<id>n1-1kD186AwQ</id>
 		<position>
-			<x>-148.331787109375</x>
-			<y>-49.43743896484375</y>
+			<x>705.4314270019531</x>
+			<y>225.00303649902344</y>
 		</position>
-		<rules>11a/10a-&gt;a;5 10a/10a-&gt;a;3 16a/10a-&gt;a;4 14a/10a-&gt;a;2 15a/10a-&gt;a;7 19a/10a-&gt;a;1 13a/10a-&gt;a;0 18a/10a-&gt;a;8 17a/10a-&gt;a;6 22a/10a-&gt;a;0</rules>
+		<rules>10a/10a-&gt;10a;3 16a/10a-&gt;10a;4 15a/10a-&gt;10a;7 13a/10a-&gt;10a;0 18a/10a-&gt;10a;8 17a/10a-&gt;10a;6 22a/10a-&gt;10a;0 14a/10a-&gt;10a;2 19a/10a-&gt;10a;1 11a/10a-&gt;10a;5</rules>
 		<startingSpikes>0</startingSpikes>
 		<delay>0</delay>
 		<spikes>9</spikes>
@@ -230,10 +230,10 @@
 	<n2-AJScUd32V>
 		<id>n2-AJScUd32V</id>
 		<position>
-			<x>515.0461730957031</x>
-			<y>593.2214050292969</y>
+			<x>220.2255516052246</x>
+			<y>709.04345703125</y>
 		</position>
-		<rules>11a/10a-&gt;a;5 10a/10a-&gt;a;3 16a/10a-&gt;a;4 14a/10a-&gt;a;2 15a/10a-&gt;a;7 19a/10a-&gt;a;1 13a/10a-&gt;a;0 18a/10a-&gt;a;8 17a/10a-&gt;a;6 22a/10a-&gt;a;0</rules>
+		<rules>10a/10a-&gt;10a;3 16a/10a-&gt;10a;4 15a/10a-&gt;10a;7 13a/10a-&gt;10a;0 18a/10a-&gt;10a;8 17a/10a-&gt;10a;6 22a/10a-&gt;10a;0 14a/10a-&gt;10a;2 19a/10a-&gt;10a;1 11a/10a-&gt;10a;5</rules>
 		<startingSpikes>0</startingSpikes>
 		<delay>0</delay>
 		<spikes>4</spikes>
@@ -344,10 +344,10 @@
 	<n3-lKOewZMyt>
 		<id>n3-lKOewZMyt</id>
 		<position>
-			<x>474.5109405517578</x>
-			<y>-134.975830078125</y>
+			<x>-87.21328735351562</x>
+			<y>62.45233154296875</y>
 		</position>
-		<rules>11a/10a-&gt;a;5 10a/10a-&gt;a;3 16a/10a-&gt;a;4 14a/10a-&gt;a;2 15a/10a-&gt;a;7 19a/10a-&gt;a;1 13a/10a-&gt;a;0 18a/10a-&gt;a;8 17a/10a-&gt;a;6 22a/10a-&gt;a;0</rules>
+		<rules>10a/10a-&gt;10a;3 16a/10a-&gt;10a;4 15a/10a-&gt;10a;7 13a/10a-&gt;10a;0 18a/10a-&gt;10a;8 17a/10a-&gt;10a;6 22a/10a-&gt;10a;0 14a/10a-&gt;10a;2 19a/10a-&gt;10a;1 11a/10a-&gt;10a;5</rules>
 		<startingSpikes>0</startingSpikes>
 		<delay>0</delay>
 		<spikes>0</spikes>
@@ -458,10 +458,10 @@
 	<n4-Sd-pxRELT>
 		<id>n4-Sd-pxRELT</id>
 		<position>
-			<x>676.9776611328125</x>
-			<y>380.4101257324219</y>
+			<x>-45.30499267578125</x>
+			<y>594.5932006835938</y>
 		</position>
-		<rules>11a/10a-&gt;a;5 10a/10a-&gt;a;3 16a/10a-&gt;a;4 14a/10a-&gt;a;2 15a/10a-&gt;a;7 19a/10a-&gt;a;1 13a/10a-&gt;a;0 18a/10a-&gt;a;8 17a/10a-&gt;a;6 22a/10a-&gt;a;0</rules>
+		<rules>10a/10a-&gt;10a;3 16a/10a-&gt;10a;4 15a/10a-&gt;10a;7 13a/10a-&gt;10a;0 18a/10a-&gt;10a;8 17a/10a-&gt;10a;6 22a/10a-&gt;10a;0 14a/10a-&gt;10a;2 19a/10a-&gt;10a;1 11a/10a-&gt;10a;5</rules>
 		<startingSpikes>0</startingSpikes>
 		<delay>0</delay>
 		<spikes>6</spikes>
@@ -572,10 +572,10 @@
 	<n5-yO508WkNN>
 		<id>n5-yO508WkNN</id>
 		<position>
-			<x>200.48562240600586</x>
-			<y>-174.59100341796875</y>
+			<x>360.1255187988281</x>
+			<y>-208.09616088867188</y>
 		</position>
-		<rules>11a/10a-&gt;a;5 10a/10a-&gt;a;3 16a/10a-&gt;a;4 14a/10a-&gt;a;2 15a/10a-&gt;a;7 19a/10a-&gt;a;1 13a/10a-&gt;a;0 18a/10a-&gt;a;8 17a/10a-&gt;a;6 22a/10a-&gt;a;0</rules>
+		<rules>10a/10a-&gt;10a;3 16a/10a-&gt;10a;4 15a/10a-&gt;10a;7 13a/10a-&gt;10a;0 18a/10a-&gt;10a;8 17a/10a-&gt;10a;6 22a/10a-&gt;10a;0 14a/10a-&gt;10a;2 19a/10a-&gt;10a;1 11a/10a-&gt;10a;5</rules>
 		<startingSpikes>0</startingSpikes>
 		<delay>0</delay>
 		<spikes>1</spikes>
@@ -686,10 +686,10 @@
 	<n6-wBnggYVEs>
 		<id>n6-wBnggYVEs</id>
 		<position>
-			<x>-17.315155029296875</x>
-			<y>608.8445129394531</y>
+			<x>563.4701538085938</x>
+			<y>-17.564117431640625</y>
 		</position>
-		<rules>11a/10a-&gt;a;5 10a/10a-&gt;a;3 16a/10a-&gt;a;4 14a/10a-&gt;a;2 15a/10a-&gt;a;7 19a/10a-&gt;a;1 13a/10a-&gt;a;0 18a/10a-&gt;a;8 17a/10a-&gt;a;6 22a/10a-&gt;a;0</rules>
+		<rules>10a/10a-&gt;10a;3 16a/10a-&gt;10a;4 15a/10a-&gt;10a;7 13a/10a-&gt;10a;0 18a/10a-&gt;10a;8 17a/10a-&gt;10a;6 22a/10a-&gt;10a;0 14a/10a-&gt;10a;2 19a/10a-&gt;10a;1 11a/10a-&gt;10a;5</rules>
 		<startingSpikes>0</startingSpikes>
 		<delay>0</delay>
 		<spikes>7</spikes>
@@ -800,10 +800,10 @@
 	<n7-WzTEC2ios>
 		<id>n7-WzTEC2ios</id>
 		<position>
-			<x>-221.44479370117188</x>
-			<y>324.93556213378906</y>
+			<x>-221.29815673828125</x>
+			<y>301.9516067504883</y>
 		</position>
-		<rules>11a/10a-&gt;a;5 10a/10a-&gt;a;3 16a/10a-&gt;a;4 14a/10a-&gt;a;2 15a/10a-&gt;a;7 19a/10a-&gt;a;1 13a/10a-&gt;a;0 18a/10a-&gt;a;8 17a/10a-&gt;a;6 22a/10a-&gt;a;0</rules>
+		<rules>10a/10a-&gt;10a;3 16a/10a-&gt;10a;4 15a/10a-&gt;10a;7 13a/10a-&gt;10a;0 18a/10a-&gt;10a;8 17a/10a-&gt;10a;6 22a/10a-&gt;10a;0 14a/10a-&gt;10a;2 19a/10a-&gt;10a;1 11a/10a-&gt;10a;5</rules>
 		<startingSpikes>0</startingSpikes>
 		<delay>0</delay>
 		<spikes>5</spikes>
@@ -914,10 +914,10 @@
 	<n8-3VBAspDnR>
 		<id>n8-3VBAspDnR</id>
 		<position>
-			<x>256.9176411628723</x>
-			<y>676.130126953125</y>
+			<x>59.46705627441406</x>
+			<y>-179.25686645507812</y>
 		</position>
-		<rules>11a/10a-&gt;a;5 10a/10a-&gt;a;3 16a/10a-&gt;a;4 14a/10a-&gt;a;2 15a/10a-&gt;a;7 19a/10a-&gt;a;1 13a/10a-&gt;a;0 18a/10a-&gt;a;8 17a/10a-&gt;a;6 22a/10a-&gt;a;0</rules>
+		<rules>10a/10a-&gt;10a;3 16a/10a-&gt;10a;4 15a/10a-&gt;10a;7 13a/10a-&gt;10a;0 18a/10a-&gt;10a;8 17a/10a-&gt;10a;6 22a/10a-&gt;10a;0 14a/10a-&gt;10a;2 19a/10a-&gt;10a;1 11a/10a-&gt;10a;5</rules>
 		<startingSpikes>0</startingSpikes>
 		<delay>0</delay>
 		<spikes>8</spikes>
@@ -1028,10 +1028,10 @@
 	<n9-AArRYXm-Z>
 		<id>n9-AArRYXm-Z</id>
 		<position>
-			<x>112.95829772949219</x>
-			<y>175.3260269165039</y>
+			<x>382.75755310058594</x>
+			<y>359.2032699584961</y>
 		</position>
-		<rules>11a/10a-&gt;a;5 10a/10a-&gt;a;3 16a/10a-&gt;a;4 14a/10a-&gt;a;2 15a/10a-&gt;a;7 19a/10a-&gt;a;1 13a/10a-&gt;a;0 18a/10a-&gt;a;8 17a/10a-&gt;a;6 22a/10a-&gt;a;0</rules>
+		<rules>10a/10a-&gt;10a;3 16a/10a-&gt;10a;4 15a/10a-&gt;10a;7 13a/10a-&gt;10a;0 18a/10a-&gt;10a;8 17a/10a-&gt;10a;6 22a/10a-&gt;10a;0 14a/10a-&gt;10a;2 19a/10a-&gt;10a;1 11a/10a-&gt;10a;5</rules>
 		<startingSpikes>2</startingSpikes>
 		<delay>0</delay>
 		<spikes>22</spikes>
@@ -1144,8 +1144,8 @@
 	<n10-2W80kOwiS>
 		<id>n10-2W80kOwiS</id>
 		<position>
-			<x>128.8094024658203</x>
-			<y>146.30296325683594</y>
+			<x>416.85284423828125</x>
+			<y>362.39778900146484</y>
 		</position>
 		<isInput>false</isInput>
 		<isOutput>true</isOutput>
