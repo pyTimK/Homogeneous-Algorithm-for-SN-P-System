@@ -3,7 +3,7 @@ from src.types.snp_system_dict import SnpSystemDict
 from src.algorithms.homogenize_prime_released_spike_scaling import homogenize_prime_released_spike_scaling
 from src.algorithms.homogenize_type_2_scaling import homogenize_type_2_scaling
 from src.algorithms.auto_layout import auto_layout
-from src.converter.converter import convert
+from src.converter.converter import convert, convert_dict
 from src.converter.src.globals import XML, JSON, YAML
 from flask import Flask, request
 from flask_cors import CORS
@@ -69,6 +69,7 @@ def index():
                 <div class="section-content">
                     <pre>
 {
+    "format": "json",
     "scaling_type": 0,
     "snp_system": "&lt;content&gt;&lt;n1&gt;&lt;id&gt;n1&lt;/id&gt;&lt;position&gt;&lt;x&gt;66.5&lt;/x&gt;&lt;y&gt;200&lt;/y&gt;&lt;/position&gt;&lt;rules&gt;a/a-&gt;a;0 2a/a-&gt;a;0&lt;/rules&gt;&lt;startingSpikes&gt;2&lt;/startingSpikes&gt;&lt;delay&gt;0&lt;/delay&gt;&lt;spikes&gt;2&lt;/spikes&gt;&lt;isOutput&gt;false&lt;/isOutput&gt;&lt;isInput&gt;false&lt;/isInput&gt;&lt;out&gt;n2&lt;/out&gt;&lt;outWeights&gt;&lt;n2&gt;1&lt;/n2&gt;&lt;n3-nm2MDs9Nh&gt;1&lt;/n3-nm2MDs9Nh&gt;&lt;/outWeights&gt;&lt;/n1&gt;&lt;n2&gt;&lt;id&gt;n2&lt;/id&gt;&lt;position&gt;&lt;x&gt;282.5&lt;/x&gt;&lt;y&gt;197&lt;/y&gt;&lt;/position&gt;&lt;rules&gt;3a/2a-&gt;a;0&lt;/rules&gt;&lt;startingSpikes&gt;3&lt;/startingSpikes&gt;&lt;delay&gt;0&lt;/delay&gt;&lt;spikes&gt;3&lt;/spikes&gt;&lt;isOutput&gt;false&lt;/isOutput&gt;&lt;isInput&gt;false&lt;/isInput&gt;&lt;out&gt;n4&lt;/out&gt;&lt;outWeights&gt;&lt;n4&gt;1&lt;/n4&gt;&lt;/outWeights&gt;&lt;/n2&gt;&lt;n4&gt;&lt;id&gt;n4&lt;/id&gt;&lt;position&gt;&lt;x&gt;456.5&lt;/x&gt;&lt;y&gt;204&lt;/y&gt;&lt;/position&gt;&lt;isOutput&gt;true&lt;/isOutput&gt;&lt;isInput&gt;false&lt;/isInput&gt;&lt;spikes&gt;0&lt;/spikes&gt;&lt;bitstring/&gt;&lt;/n4&gt;&lt;/content&gt;"
 }
@@ -118,7 +119,8 @@ def homogenize_input():
     # Get the SN P system from the body and convert it to an xmp format
     input_snp_system_xmp_str = input.get('snp_system')
     if format == JSON:
-        input_snp_system_xmp_str = convert(input_snp_system_xmp_str, JSON, XML)
+        # input_snp_system_xmp_str = convert(input_snp_system_xmp_str, JSON, XML)
+        input_snp_system_xmp_str = convert_dict(input_snp_system_xmp_str, JSON, XML)
     elif format == YAML:
         input_snp_system_xmp_str = convert(input_snp_system_xmp_str, YAML, XML)
     
