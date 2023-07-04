@@ -3,7 +3,7 @@ from src.types.snp_system_dict import SnpSystemDict
 from src.algorithms.homogenize_prime_released_spike_scaling import homogenize_prime_released_spike_scaling
 from src.algorithms.homogenize_type_2_scaling import homogenize_type_2_scaling
 from src.algorithms.auto_layout import auto_layout
-from src.converter.converter import convert, convert_dict
+from src.converter.converter import convert, convert_dict, convert_to_dict
 from src.converter.src.globals import XML, JSON, YAML
 from flask import Flask, request
 from flask_cors import CORS
@@ -147,7 +147,7 @@ def homogenize_input():
 
     output_str = snp_system.to_xmp()
     if format == JSON:
-        output_str = convert(output_str, XML, JSON)
+        output_str = convert_to_dict(output_str, XML, JSON)
     elif format == YAML:
         output_str = convert(output_str, XML, YAML)
     
