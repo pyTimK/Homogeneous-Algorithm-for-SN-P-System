@@ -9,3 +9,9 @@ def convert(str_input: str, from_format: Format, to_format: Format) -> str:
     system = parse_dict_xml(d) if from_format == XML else parse_dict(d)
     d = system.to_dict_xml() if to_format == XML else system.to_dict()
     return to_format.write_function(d)
+
+
+def convert_dict(d: dict, from_format: Format, to_format: Format) -> str:
+    system = parse_dict_xml(d) if from_format == XML else parse_dict(d)
+    d = system.to_dict_xml() if to_format == XML else system.to_dict()
+    return to_format.write_function(d)
